@@ -1,0 +1,10 @@
+{
+  "totalReviews": 60026,
+  "uniqueProducts": 130,
+  "sources": {
+    "Amazon": 6581,
+    "Sephora": 12232,
+    "Ulta": 41213
+  },
+  "matchRate": "69.0"
+}

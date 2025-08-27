@@ -9,6 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import json
 import os
+import re
 from typing import List, Optional
 import uvicorn
 
@@ -30,6 +31,35 @@ class ReviewSearchEngine:
         self.products = []
         self.embeddings = None
         
+    def preprocess_text(self, text):
+        """Preprocess text for better embedding quality"""
+        if not text:
+            return ""
+        
+        # Convert to lowercase
+        text = str(text).lower()
+        
+        # Remove URLs
+        text = re.sub(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '', text)
+        
+        # Remove special characters but keep important ones
+        text = re.sub(r'[^\w\s\-\.\,\!\?]', ' ', text)
+        
+        # Normalize whitespace
+        text = re.sub(r'\s+', ' ', text).strip()
+        
+        return text
+    
+    def create_search_query(self, query_text, product_name):
+        """Create an enhanced search query that includes product context"""
+        if product_name and product_name != "all":
+            # Combine product context with user query for better matching
+            enhanced_query = f"{product_name} {query_text}"
+        else:
+            enhanced_query = query_text
+        
+        return self.preprocess_text(enhanced_query)
+    
     def clean_product_name(self, name):
         """Extract clean product name from messy names"""
         if not name or name == 'Dermalogica Product':
@@ -99,6 +129,10 @@ class ReviewSearchEngine:
         self.df['review_text'] = self.df['review_text'].astype(str)
         self.df['product_name'] = self.df['product_name'].astype(str)
         
+        # Preprocess review text for better embeddings
+        print("Preprocessing review text...")
+        self.df['processed_review_text'] = self.df['review_text'].apply(self.preprocess_text)
+        
         # Create clean product names
         print("Cleaning product names...")
         self.df['clean_product_name'] = self.df['product_name'].apply(self.clean_product_name)
@@ -126,8 +160,8 @@ class ReviewSearchEngine:
             
         print("Creating new vector database...")
         
-        # Create embeddings for all reviews
-        review_texts = self.df['review_text'].tolist()
+        # Create embeddings for all processed reviews
+        review_texts = self.df['processed_review_text'].tolist()
         
         # Process in batches to avoid memory issues
         batch_size = 500
@@ -156,8 +190,11 @@ class ReviewSearchEngine:
         if self.embeddings is None:
             return []
         
-        # Create embedding for the query
-        query_embedding = model.encode([query_text])
+        # Create enhanced search query with product context
+        enhanced_query = self.create_search_query(query_text, product_name)
+        
+        # Create embedding for the enhanced query
+        query_embedding = model.encode([enhanced_query])
         
         # Filter dataframe by product if specified
         if product_name != "all":
@@ -180,8 +217,16 @@ class ReviewSearchEngine:
         # Calculate cosine similarities
         similarities = cosine_similarity(query_embedding, filtered_embeddings)[0]
         
-        # Get top results
-        top_indices = np.argsort(similarities)[::-1][:limit]
+        # Apply similarity threshold (only show results above 0.1 similarity)
+        similarity_threshold = 0.1
+        valid_indices = np.where(similarities >= similarity_threshold)[0]
+        
+        if len(valid_indices) == 0:
+            return []
+        
+        # Sort by similarity and get top results
+        sorted_indices = valid_indices[np.argsort(similarities[valid_indices])[::-1]]
+        top_indices = sorted_indices[:limit]
         
         # Format results
         formatted_results = []

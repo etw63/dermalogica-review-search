@@ -1,0 +1,21 @@
+name: dermalogica-review-search
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: etw63/dermalogica-review-search
+    branch: main
+  run_command: uvicorn vector_search_app:app --host 0.0.0.0 --port $PORT
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  http_port: 8000
+  routes:
+  - path: /
+  envs:
+  - key: PYTHON_VERSION
+    value: "3.11"
+  - key: SIMILARITY_THRESHOLD
+    value: "0.1"
+  - key: MAX_RESULTS
+    value: "1000"

@@ -50,15 +50,20 @@ class ReviewSearchEngine:
         
         return text
     
-    def create_search_query(self, query_text, product_name):
-        """Create an enhanced search query that includes product context"""
-        if product_name and product_name != "all":
-            # Combine product context with user query for better matching
-            enhanced_query = f"{product_name} {query_text}"
-        else:
-            enhanced_query = query_text
+    def has_exact_keywords(self, text, query):
+        """Check if text contains exact keywords from query"""
+        text_lower = text.lower()
+        query_words = query.lower().split()
         
-        return self.preprocess_text(enhanced_query)
+        # Check for exact phrase first
+        if query.lower() in text_lower:
+            return True, 1.0  # Exact phrase match
+        
+        # Check for all keywords present
+        words_found = sum(1 for word in query_words if word in text_lower)
+        keyword_score = words_found / len(query_words)
+        
+        return keyword_score > 0.5, keyword_score  # At least half the words must match
     
     def clean_product_name(self, name):
         """Extract clean product name from messy names"""
@@ -68,7 +73,7 @@ class ReviewSearchEngine:
         name_str = str(name).strip()
         
         # If it's already clean (no prices, ratings, etc.), return as is
-        if not any(char in name_str for char in ['$', '★', 'out of', 'stars', 'reviews']):
+        if not any(char in name_str for char in ['$', 'â˜…', 'out of', 'stars', 'reviews']):
             # Remove "dermalogica" prefix if present
             clean = name_str.lower().replace('dermalogica ', '').strip()
             if clean and len(clean) > 2:
@@ -190,20 +195,18 @@ class ReviewSearchEngine:
         if self.embeddings is None:
             return []
         
-        # Create enhanced search query with product context
-        enhanced_query = self.create_search_query(query_text, product_name)
-        
-        # Create embedding for the enhanced query
-        query_embedding = model.encode([enhanced_query])
+        # Clean the query
+        clean_query = self.preprocess_text(query_text)
+        if not clean_query:
+            return []
         
         # Filter dataframe by product if specified
         if product_name != "all":
-            # Use like match for product names
             mask = self.df['clean_product_name'].str.contains(product_name, case=False, na=False)
             filtered_df = self.df[mask]
             if filtered_df.empty:
                 return []
-            # Get the positional indices (not DataFrame indices) for embeddings
+            # Get the positional indices for embeddings
             filtered_positions = []
             for i, (idx, row) in enumerate(self.df.iterrows()):
                 if mask.iloc[i]:
@@ -214,27 +217,90 @@ class ReviewSearchEngine:
             filtered_positions = list(range(len(self.df)))
             filtered_embeddings = self.embeddings
         
+        # STEP 1: Keyword pre-filtering
+        # Only consider reviews that have some keyword relevance
+        keyword_filtered_indices = []
+        keyword_scores = []
+        
+        for idx, (_, row) in enumerate(filtered_df.iterrows()):
+            has_keywords, keyword_score = self.has_exact_keywords(row['review_text'], query_text)
+            if has_keywords:
+                keyword_filtered_indices.append(idx)
+                keyword_scores.append(keyword_score)
+        
+        # If no keyword matches found, fall back to semantic search with higher threshold
+        if not keyword_filtered_indices:
+            print(f"No keyword matches found for '{query_text}', falling back to semantic search")
+            # Use only semantic similarity with higher threshold
+            query_embedding = model.encode([clean_query])
+            similarities = cosine_similarity(query_embedding, filtered_embeddings)[0]
+            
+            # Higher threshold for semantic-only search
+            similarity_threshold = 0.5
+            valid_indices = np.where(similarities >= similarity_threshold)[0]
+            
+            if len(valid_indices) == 0:
+                return []
+            
+            # Sort and limit
+            sorted_indices = valid_indices[np.argsort(similarities[valid_indices])[::-1]]
+            top_indices = sorted_indices[:limit]
+            
+            # Format results
+            formatted_results = []
+            for idx in top_indices:
+                original_position = filtered_positions[idx]
+                row = self.df.iloc[original_position]
+                similarity_score = similarities[idx]
+                
+                formatted_results.append({
+                    'review_text': row['review_text'],
+                    'product_name': row['clean_product_name'],
+                    'source': row['source'],
+                    'rating': str(row.get('rating', '')),
+                    'title': str(row.get('title', '')),
+                    'reviewer': str(row.get('reviewer', '')),
+                    'date': str(row.get('date', '')),
+                    'similarity_score': float(similarity_score)
+                })
+            
+            return formatted_results
+        
+        # STEP 2: Semantic similarity on keyword-filtered results
+        keyword_filtered_embeddings = filtered_embeddings[keyword_filtered_indices]
+        
+        # Create embedding for the query (no product context)
+        query_embedding = model.encode([clean_query])
+        
         # Calculate cosine similarities
-        similarities = cosine_similarity(query_embedding, filtered_embeddings)[0]
+        semantic_similarities = cosine_similarity(query_embedding, keyword_filtered_embeddings)[0]
         
-        # Apply similarity threshold (only show results above 0.1 similarity)
-        similarity_threshold = 0.1
-        valid_indices = np.where(similarities >= similarity_threshold)[0]
+        # STEP 3: Combine keyword and semantic scores
+        combined_scores = []
+        for i, semantic_sim in enumerate(semantic_similarities):
+            keyword_score = keyword_scores[i]
+            
+            # Weight exact matches heavily
+            if keyword_score == 1.0:  # Exact phrase match
+                combined_score = 0.8 + 0.2 * semantic_sim  # Minimum 80% for exact matches
+            else:
+                combined_score = 0.4 * keyword_score + 0.6 * semantic_sim
+            
+            combined_scores.append(combined_score)
         
-        if len(valid_indices) == 0:
-            return []
+        combined_scores = np.array(combined_scores)
         
-        # Sort by similarity and get top results
-        sorted_indices = valid_indices[np.argsort(similarities[valid_indices])[::-1]]
+        # Sort by combined score
+        sorted_indices = np.argsort(combined_scores)[::-1]
         top_indices = sorted_indices[:limit]
         
         # Format results
         formatted_results = []
         for idx in top_indices:
-            # Get the original positional index
-            original_position = filtered_positions[idx]
+            original_keyword_idx = keyword_filtered_indices[idx]
+            original_position = filtered_positions[original_keyword_idx]
             row = self.df.iloc[original_position]
-            similarity_score = similarities[idx]
+            combined_score = combined_scores[idx]
             
             formatted_results.append({
                 'review_text': row['review_text'],
@@ -244,7 +310,7 @@ class ReviewSearchEngine:
                 'title': str(row.get('title', '')),
                 'reviewer': str(row.get('reviewer', '')),
                 'date': str(row.get('date', '')),
-                'similarity_score': float(similarity_score)
+                'similarity_score': float(combined_score)
             })
         
         return formatted_results
@@ -292,7 +358,7 @@ async def search_reviews(
     # Pagination logic
     per_page = 25
     total_results = len(all_results)
-    total_pages = (total_results + per_page - 1) // per_page  # Ceiling division
+    total_pages = (total_results + per_page - 1) // per_page
     
     # Ensure page is within valid range
     page = max(1, min(page, total_pages)) if total_pages > 0 else 1

@@ -205,6 +205,144 @@
                 margin: 20px;
             }
         }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+        
+        .modal-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .close:hover {
+            opacity: 1;
+        }
+        
+        .modal-body {
+            padding: 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .modal-reviews {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .modal-review {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .modal-review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .modal-review-rating {
+            background: #ffd700;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .modal-review-text {
+            line-height: 1.6;
+            color: #333;
+            font-style: italic;
+        }
+        
+        .paradigm-clickable {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .paradigm-clickable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .paradigm-clickable::after {
+            content: "Click to view all reviews";
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 0.8em;
+            color: #667eea;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .paradigm-clickable:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -259,7 +397,7 @@
 
             <div class="paradigms-grid">
                 {% for paradigm_id, paradigm in analysis.paradigms.items() %}
-                <div class="paradigm">
+                <div class="paradigm paradigm-clickable" onclick="openModal('{{paradigm_id}}', '{{paradigm.name|replace("'", "\\'")}}', '{{paradigm.description|replace("'", "\\'")}}', {{paradigm.all_reviews|tojson}}, {{paradigm.size}}, '{{paradigm.context}}', '{{paradigm.role}}')">
                     <div class="paradigm-header">
                         <div class="paradigm-name">{{paradigm.name}}</div>
                         <div class="paradigm-stats">
@@ -293,5 +431,77 @@
             </div>
         {% endif %}
     </div>
+    
+    <!-- Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Usage Occasion</h2>
+                <p id="modalDescription">Description</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-reviews" id="modalReviews">
+                    <!-- Reviews will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(paradigmId, name, description, reviews, totalReviews, context, role) {
+            const modal = document.getElementById('reviewModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalReviews = document.getElementById('modalReviews');
+            
+            // Set modal content
+            modalTitle.textContent = name;
+            modalDescription.textContent = `${description} (${totalReviews} reviews)`;
+            
+            // Clear previous reviews
+            modalReviews.innerHTML = '';
+            
+            // Add all reviews
+            reviews.forEach((review, index) => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = 'modal-review';
+                reviewDiv.innerHTML = `
+                    <div class="modal-review-header">
+                        <span>Review ${index + 1}</span>
+                    </div>
+                    <div class="modal-review-text">
+                        "${review}"
+                    </div>
+                `;
+                modalReviews.appendChild(reviewDiv);
+            });
+            
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('reviewModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('reviewModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>

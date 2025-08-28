@@ -388,7 +388,7 @@ class UsagePatternQueryEngine:
         
         # Filter for product
         if product_name != "all":
-            product_df = self.df_with_usage[self.df_with_usage['clean_product_name'].str.contains(
+            product_df = self.df_with_usage[self.df_with_usage['product_name'].str.contains(
                 product_name, case=False, na=False)]
         else:
             product_df = self.df_with_usage
@@ -433,7 +433,8 @@ class UsagePatternQueryEngine:
                     'description': self._generate_paradigm_description(context, role),
                     'avg_rating': np.mean([float(r['rating']) for r in reviews 
                                          if r['rating'] and str(r['rating']).replace('.','').isdigit()]),
-                    'sample_reviews': [r['review_text'] for r in reviews[:3]]
+                    'sample_reviews': [r['review_text'] for r in reviews[:3]],
+                    'all_reviews': [r['review_text'] for r in reviews]
                 }
                 paradigm_id += 1
         

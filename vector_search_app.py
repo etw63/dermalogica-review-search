@@ -10,8 +10,23 @@ from fastapi.templating import Jinja2Templates
 import json
 import os
 import re
+import logging
 from typing import List, Optional
+from collections import defaultdict
 import uvicorn
+# Add these imports to the top of your existing vector_search_app.py
+from collections import Counter, defaultdict
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('app.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 # Initialize FastAPI app
 app = FastAPI(title="Dermalogica Review Search")
@@ -192,19 +207,26 @@ class ReviewSearchEngine:
     
     def search_reviews(self, product_name: str, query_text: str, limit: int = 10):
         """Search for reviews matching the query text for a specific product"""
+        logger.info(f"Starting search: product='{product_name}', query='{query_text}', limit={limit}")
+        
         if self.embeddings is None:
+            logger.error("No embeddings available")
             return []
         
         # Clean the query
         clean_query = self.preprocess_text(query_text)
         if not clean_query:
+            logger.warning(f"Query '{query_text}' was empty after preprocessing")
             return []
+        
+        logger.info(f"Cleaned query: '{clean_query}'")
         
         # Filter dataframe by product if specified
         if product_name != "all":
             mask = self.df['clean_product_name'].str.contains(product_name, case=False, na=False)
             filtered_df = self.df[mask]
             if filtered_df.empty:
+                logger.warning(f"No products found matching '{product_name}'")
                 return []
             # Get the positional indices for embeddings
             filtered_positions = []
@@ -212,25 +234,30 @@ class ReviewSearchEngine:
                 if mask.iloc[i]:
                     filtered_positions.append(i)
             filtered_embeddings = self.embeddings[filtered_positions]
+            logger.info(f"Filtered to {len(filtered_df)} reviews for product '{product_name}'")
         else:
             filtered_df = self.df
             filtered_positions = list(range(len(self.df)))
             filtered_embeddings = self.embeddings
+            logger.info(f"Searching all {len(filtered_df)} reviews")
         
         # STEP 1: Keyword pre-filtering
         # Only consider reviews that have some keyword relevance
         keyword_filtered_indices = []
         keyword_scores = []
         
+        logger.info(f"Starting keyword pre-filtering for '{query_text}'")
         for idx, (_, row) in enumerate(filtered_df.iterrows()):
             has_keywords, keyword_score = self.has_exact_keywords(row['review_text'], query_text)
             if has_keywords:
                 keyword_filtered_indices.append(idx)
                 keyword_scores.append(keyword_score)
         
+        logger.info(f"Found {len(keyword_filtered_indices)} reviews with keyword matches")
+        
         # If no keyword matches found, fall back to semantic search with higher threshold
         if not keyword_filtered_indices:
-            print(f"No keyword matches found for '{query_text}', falling back to semantic search")
+            logger.info(f"No keyword matches found for '{query_text}', falling back to semantic search")
             # Use only semantic similarity with higher threshold
             query_embedding = model.encode([clean_query])
             similarities = cosine_similarity(query_embedding, filtered_embeddings)[0]
@@ -239,12 +266,17 @@ class ReviewSearchEngine:
             similarity_threshold = 0.5
             valid_indices = np.where(similarities >= similarity_threshold)[0]
             
+            logger.info(f"Semantic search found {len(valid_indices)} results above threshold {similarity_threshold}")
+            
             if len(valid_indices) == 0:
+                logger.warning(f"No semantic matches found above threshold {similarity_threshold}")
                 return []
             
             # Sort and limit
             sorted_indices = valid_indices[np.argsort(similarities[valid_indices])[::-1]]
             top_indices = sorted_indices[:limit]
+            
+            logger.info(f"Returning {len(top_indices)} semantic-only results")
             
             # Format results
             formatted_results = []
@@ -268,6 +300,8 @@ class ReviewSearchEngine:
         
         # STEP 2: Semantic similarity on keyword-filtered results
         keyword_filtered_embeddings = filtered_embeddings[keyword_filtered_indices]
+        
+        logger.info(f"Calculating semantic similarities for {len(keyword_filtered_indices)} keyword-matched reviews")
         
         # Create embedding for the query (no product context)
         query_embedding = model.encode([clean_query])
@@ -294,6 +328,9 @@ class ReviewSearchEngine:
         sorted_indices = np.argsort(combined_scores)[::-1]
         top_indices = sorted_indices[:limit]
         
+        logger.info(f"Returning {len(top_indices)} hybrid search results")
+        logger.info(f"Top score: {combined_scores[top_indices[0]]:.3f}, Bottom score: {combined_scores[top_indices[-1]]:.3f}")
+        
         # Format results
         formatted_results = []
         for idx in top_indices:
@@ -313,16 +350,187 @@ class ReviewSearchEngine:
                 'similarity_score': float(combined_score)
             })
         
+        logger.info(f"Search completed successfully for '{query_text}'")
         return formatted_results
 
 # Initialize the search engine
 search_engine = ReviewSearchEngine()
+
+# Add this class after your ReviewSearchEngine class
+class UsagePatternQueryEngine:
+    """Fast query interface for preprocessed usage patterns"""
+    
+    def __init__(self):
+        self.df_with_usage = None
+        self.usage_loaded = False
+        
+    def load_usage_patterns(self, csv_file_with_patterns):
+        """Load the preprocessed dataset with usage patterns"""
+        try:
+            print(f"Loading preprocessed usage patterns from {csv_file_with_patterns}...")
+            self.df_with_usage = pd.read_csv(csv_file_with_patterns)
+            self.usage_loaded = True
+            print(f"Loaded {len(self.df_with_usage)} reviews with usage patterns")
+            return True
+        except FileNotFoundError:
+            print(f"Usage patterns file not found: {csv_file_with_patterns}")
+            print("Run preprocess_usage_patterns.py first to generate usage patterns")
+            return False
+        except Exception as e:
+            print(f"Error loading usage patterns: {e}")
+            return False
+    
+    def get_usage_paradigms(self, product_name, min_size=5):
+        """Get major usage paradigms for a product (combinations of context + role)"""
+        
+        if not self.usage_loaded:
+            return {"error": "Usage patterns not loaded. Run preprocessing first."}
+        
+        # Filter for product
+        if product_name != "all":
+            product_df = self.df_with_usage[self.df_with_usage['clean_product_name'].str.contains(
+                product_name, case=False, na=False)]
+        else:
+            product_df = self.df_with_usage
+            
+        if len(product_df) < min_size:
+            return {"error": f"Not enough reviews for {product_name}"}
+        
+        # Find context+role combinations
+        paradigm_combinations = defaultdict(list)
+        
+        for idx, row in product_df.iterrows():
+            context = row['usage_context']
+            role = row['usage_role']
+            
+            # Skip low-quality assignments
+            if (context in ['insufficient_text', 'general_context'] and 
+                role in ['insufficient_text', 'general_role']):
+                continue
+                
+            paradigm_key = f"{context}_{role}"
+            paradigm_combinations[paradigm_key].append({
+                'review_text': row['review_text'],
+                'rating': row.get('rating', ''),
+                'context_confidence': row.get('context_confidence', 0),
+                'role_confidence': row.get('role_confidence', 0)
+            })
+        
+        # Filter paradigms by minimum size and create summaries
+        paradigms = {}
+        paradigm_id = 1
+        
+        for paradigm_key, reviews in paradigm_combinations.items():
+            if len(reviews) >= min_size:
+                context, role = paradigm_key.split('_', 1)
+                
+                paradigms[f"paradigm_{paradigm_id}"] = {
+                    'name': self._generate_paradigm_name(context, role),
+                    'context': context,
+                    'role': role,
+                    'size': len(reviews),
+                    'percentage': len(reviews) / len(product_df) * 100,
+                    'description': self._generate_paradigm_description(context, role),
+                    'avg_rating': np.mean([float(r['rating']) for r in reviews 
+                                         if r['rating'] and str(r['rating']).replace('.','').isdigit()]),
+                    'sample_reviews': [r['review_text'] for r in reviews[:3]]
+                }
+                paradigm_id += 1
+        
+        # Sort by size
+        sorted_paradigms = dict(sorted(paradigms.items(), 
+                                     key=lambda x: x[1]['size'], reverse=True))
+        
+        return {
+            'product': product_name,
+            'total_reviews': len(product_df),
+            'paradigms': sorted_paradigms,
+            'summary': self._generate_paradigm_summary(sorted_paradigms, product_name)
+        }
+    
+    def _generate_paradigm_name(self, context, role):
+        """Generate human-readable name for context+role combination"""
+        
+        context_names = {
+            'daily_routine': 'Daily Routine',
+            'shower_routine': 'Shower Routine', 
+            'pre_makeup': 'Pre-Makeup',
+            'special_events': 'Special Events',
+            'pre_workout': 'Pre-Workout',
+            'travel': 'Travel/On-the-Go',
+            'sensitive_periods': 'Sensitive Skin/Pregnancy'
+        }
+        
+        role_names = {
+            'replacement': 'Primary Product',
+            'consolidator': 'Multi-Function Product',
+            'prep_enhancer': 'Enhancement/Prep',
+            'treatment': 'Problem Treatment'
+        }
+        
+        context_display = context_names.get(context, context.replace('_', ' ').title())
+        role_display = role_names.get(role, role.replace('_', ' ').title())
+        
+        return f"{context_display} {role_display}"
+    
+    def _generate_paradigm_description(self, context, role):
+        """Generate description for context+role combination"""
+        
+        context_desc = {
+            'daily_routine': 'part of daily skincare routine',
+            'shower_routine': 'during shower or bath time',
+            'pre_makeup': 'before applying makeup',
+            'special_events': 'for special occasions or events',
+            'pre_workout': 'before exercise or physical activity',
+            'travel': 'during travel or on-the-go situations',
+            'sensitive_periods': 'during sensitive periods or for reactive skin'
+        }
+        
+        role_desc = {
+            'replacement': 'as primary/only product for this purpose',
+            'consolidator': 'combining multiple functions in one product',
+            'prep_enhancer': 'to prepare or enhance skin appearance',
+            'treatment': 'to treat specific skin problems'
+        }
+        
+        context_text = context_desc.get(context, context.replace('_', ' '))
+        role_text = role_desc.get(role, role.replace('_', ' '))
+        
+        return f"Used {context_text} {role_text}"
+    
+    def _generate_paradigm_summary(self, paradigms, product_name):
+        """Generate executive summary"""
+        if not paradigms:
+            return f"No major usage paradigms found for {product_name}"
+        
+        summary_lines = [
+            f"Found {len(paradigms)} major usage paradigms for {product_name}:",
+            ""
+        ]
+        
+        for i, (paradigm_id, paradigm) in enumerate(paradigms.items(), 1):
+            percentage = paradigm['percentage']
+            summary_lines.append(
+                f"{i}. {paradigm['name']} ({percentage:.0f}% of users)"
+            )
+            summary_lines.append(f"   → {paradigm['description']}")
+            
+            if i >= 3:  # Limit to top 3 for summary
+                break
+        
+        return "\n".join(summary_lines)
+
+# Initialize the usage pattern query engine (add after search_engine initialization)
+usage_query_engine = UsagePatternQueryEngine()
 
 @app.on_event("startup")
 async def startup_event():
     """Initialize the database on startup"""
     search_engine.load_data("dermalogica_aggregated_reviews.csv")
     search_engine.create_vector_database()
+    
+    # Try to load usage patterns if available
+    usage_query_engine.load_usage_patterns("dermalogica_aggregated_reviews_with_usage_patterns.csv")
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
@@ -422,6 +630,50 @@ async def export_reviews(product: str, query: str, limit: int = 1000):
         media_type="text/csv",
         headers={"Content-Disposition": f"attachment; filename={filename}"}
     )
+
+# Add these new endpoints to your existing FastAPI app
+@app.get("/usage-paradigms/{product_name}")
+async def get_usage_paradigms(product_name: str):
+    """Get major usage paradigms for a product using preprocessed data"""
+    return usage_query_engine.get_usage_paradigms(product_name)
+
+@app.get("/paradigms-dashboard", response_class=HTMLResponse)
+async def paradigms_dashboard(request: Request, product: str = "daily microfoliant"):
+    """Dashboard showing major usage paradigms"""
+    
+    analysis = usage_query_engine.get_usage_paradigms(product)
+    
+    return templates.TemplateResponse("paradigms_dashboard.html", {
+        "request": request,
+        "products": search_engine.products,
+        "selected_product": product,
+        "analysis": analysis
+    })
+
+@app.get("/usage-distribution")
+async def get_usage_distribution():
+    """Get overall distribution of usage contexts and roles"""
+    if not usage_query_engine.usage_loaded:
+        return {"error": "Usage patterns not preprocessed"}
+    
+    df = usage_query_engine.df_with_usage
+    
+    context_dist = df['usage_context'].value_counts()
+    role_dist = df['usage_role'].value_counts()
+    
+    # Filter out low-quality assignments
+    context_dist = context_dist[~context_dist.index.isin(['insufficient_text', 'general_context'])]
+    role_dist = role_dist[~role_dist.index.isin(['insufficient_text', 'general_role'])]
+    
+    return {
+        'contexts': context_dist.to_dict(),
+        'roles': role_dist.to_dict(),
+        'total_reviews': len(df),
+        'classified_reviews': len(df) - len(df[
+            (df['usage_context'].isin(['insufficient_text', 'general_context'])) |
+            (df['usage_role'].isin(['insufficient_text', 'general_role']))
+        ])
+    }
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Major Usage Paradigms - {{selected_product}}</title>
+    <title>Usage Occasions - {{selected_product}}</title>
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -35,6 +35,10 @@
             font-size: 1.8em; 
             margin: 0;
             text-transform: capitalize;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         
         .product-selector {
@@ -52,6 +56,14 @@
             margin: 0 10px;
             background: white;
             min-width: 200px;
+            max-width: 400px;
+        }
+        
+        .product-selector option {
+            max-width: 350px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         
         .summary {
@@ -200,7 +212,7 @@
         <a href="/" class="back-link">← Back to Search</a>
         
         <div class="header">
-            <h1>Major Usage Paradigms</h1>
+            <h1>Usage Occasions</h1>
             <h2>{{selected_product}}</h2>
         </div>
         
@@ -209,7 +221,12 @@
             <select onchange="window.location.href='/paradigms-dashboard?product=' + encodeURIComponent(this.value)">
                 {% for product in products %}
                 <option value="{{product}}" {{'selected' if product == selected_product else ''}}>
-                    {{product|title}}
+                    {% set display_name = product.replace('_', ' ').title() %}
+                    {% if display_name|length > 50 %}
+                        {{ display_name[:47] }}...
+                    {% else %}
+                        {{ display_name }}
+                    {% endif %}
                 </option>
                 {% endfor %}
             </select>
@@ -227,15 +244,15 @@
             </div>
         {% elif not analysis.paradigms %}
             <div class="no-data">
-                <h3>No usage paradigms found</h3>
+                <h3>No usage occasions found</h3>
                 <p>This product may not have enough reviews or distinct usage patterns.</p>
             </div>
         {% else %}
             <div class="summary">
-                <h3>Usage Paradigm Summary</h3>
+                <h3>Usage Occasions Summary</h3>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                     <span><strong>Total Reviews:</strong> {{analysis.total_reviews}}</span>
-                    <span><strong>Major Paradigms:</strong> {{analysis.paradigms|length}}</span>
+                    <span><strong>Major Occasions:</strong> {{analysis.paradigms|length}}</span>
                 </div>
                 <pre>{{analysis.summary}}</pre>
             </div>

@@ -45,6 +45,34 @@
             opacity: 0.9;
         }
         
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
         .search-section {
             padding: 40px;
             background: #f8f9fa;
@@ -427,6 +455,12 @@
         <div class="header">
             <h1>🔍 Dermalogica Review Search</h1>
             <p>Find reviews that match your interests using AI-powered semantic search</p>
+            
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <a href="/" class="nav-tab active">🔍 Search Reviews</a>
+                <a href="/paradigms-dashboard" class="nav-tab">📊 Usage Paradigms</a>
+            </div>
         </div>
         
         <div class="search-section">

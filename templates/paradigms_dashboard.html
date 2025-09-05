@@ -24,6 +24,35 @@
             border-bottom: 2px solid #f0f0f0;
             padding-bottom: 30px;
         }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-tab:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
         .header h1 { 
             color: #333; 
             font-size: 2.5em; 
@@ -278,6 +307,27 @@
             opacity: 1;
         }
         
+        .export-btn {
+            position: absolute;
+            right: 70px;
+            top: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .export-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-1px);
+        }
+        
         .modal-body {
             padding: 30px;
             max-height: 60vh;
@@ -347,11 +397,16 @@
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← Back to Search</a>
-        
         <div class="header">
             <h1>Usage Occasions</h1>
             <h2>{{selected_product}}</h2>
+            
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <a href="/{% if selected_product %}?product={{selected_product|urlencode}}{% endif %}" class="nav-tab">🔍 Search Reviews</a>
+                <a href="/paradigms-dashboard" class="nav-tab active">📊 Usage Paradigms</a>
+                <a href="/divergent-dashboard" class="nav-tab">🎯 Divergent Discovery</a>
+            </div>
         </div>
         
         <div class="product-selector">
@@ -397,7 +452,14 @@
 
             <div class="paradigms-grid">
                 {% for paradigm_id, paradigm in analysis.paradigms.items() %}
-                <div class="paradigm paradigm-clickable" onclick="openModal('{{paradigm_id}}', '{{paradigm.name|replace("'", "\\'")}}', '{{paradigm.description|replace("'", "\\'")}}', {{paradigm.all_reviews|tojson}}, {{paradigm.size}}, '{{paradigm.context}}', '{{paradigm.role}}')">
+                <div class="paradigm paradigm-clickable" 
+                     data-paradigm-id="{{paradigm_id}}"
+                     data-paradigm-name="{{paradigm.name}}"
+                     data-paradigm-description="{{paradigm.description}}"
+                     data-paradigm-size="{{paradigm.size}}"
+                     data-paradigm-context="{{paradigm.context}}"
+                     data-paradigm-role="{{paradigm.role}}"
+                     onclick="openModalFromData(this)">
                     <div class="paradigm-header">
                         <div class="paradigm-name">{{paradigm.name}}</div>
                         <div class="paradigm-stats">
@@ -439,6 +501,9 @@
                 <span class="close" onclick="closeModal()">&times;</span>
                 <h2 id="modalTitle">Usage Occasion</h2>
                 <p id="modalDescription">Description</p>
+                <button id="exportCsvBtn" class="export-btn" onclick="exportToCsv()">
+                    📥 Export to CSV
+                </button>
             </div>
             <div class="modal-body">
                 <div class="modal-reviews" id="modalReviews">
@@ -449,11 +514,62 @@
     </div>
     
     <script>
+        function openModalFromData(element) {
+            console.log('openModalFromData called');
+            
+            const paradigmId = element.getAttribute('data-paradigm-id');
+            const name = element.getAttribute('data-paradigm-name');
+            const description = element.getAttribute('data-paradigm-description');
+            const totalReviews = element.getAttribute('data-paradigm-size');
+            const context = element.getAttribute('data-paradigm-context');
+            const role = element.getAttribute('data-paradigm-role');
+            
+            console.log('Data from element:', { paradigmId, name, description, totalReviews, context, role });
+            
+            // Fetch the reviews data via AJAX
+            fetch(`/usage-paradigms/${encodeURIComponent('{{selected_product}}')}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Fetched data:', data);
+                    
+                    if (data.paradigms && data.paradigms[paradigmId]) {
+                        const paradigm = data.paradigms[paradigmId];
+                        const reviews = paradigm.all_reviews || paradigm.sample_reviews || [];
+                        
+                        openModal(paradigmId, name, description, reviews, totalReviews, context, role);
+                    } else {
+                        console.error('Paradigm not found in data:', paradigmId);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+        
         function openModal(paradigmId, name, description, reviews, totalReviews, context, role) {
+            console.log('openModal called with:', { paradigmId, name, description, reviews, totalReviews, context, role });
+            
             const modal = document.getElementById('reviewModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalDescription = document.getElementById('modalDescription');
             const modalReviews = document.getElementById('modalReviews');
+            
+            if (!modal) {
+                console.error('Modal element not found!');
+                return;
+            }
+            
+            // Store current modal data for export
+            currentModalData = {
+                paradigmId: paradigmId,
+                name: name,
+                description: description,
+                reviews: reviews || [],
+                totalReviews: totalReviews,
+                context: context,
+                role: role,
+                productName: '{{selected_product}}'
+            };
             
             // Set modal content
             modalTitle.textContent = name;
@@ -463,23 +579,28 @@
             modalReviews.innerHTML = '';
             
             // Add all reviews
-            reviews.forEach((review, index) => {
-                const reviewDiv = document.createElement('div');
-                reviewDiv.className = 'modal-review';
-                reviewDiv.innerHTML = `
-                    <div class="modal-review-header">
-                        <span>Review ${index + 1}</span>
-                    </div>
-                    <div class="modal-review-text">
-                        "${review}"
-                    </div>
-                `;
-                modalReviews.appendChild(reviewDiv);
-            });
+            if (reviews && Array.isArray(reviews)) {
+                reviews.forEach((review, index) => {
+                    const reviewDiv = document.createElement('div');
+                    reviewDiv.className = 'modal-review';
+                    reviewDiv.innerHTML = `
+                        <div class="modal-review-header">
+                            <span>Review ${index + 1}</span>
+                        </div>
+                        <div class="modal-review-text">
+                            "${review}"
+                        </div>
+                    `;
+                    modalReviews.appendChild(reviewDiv);
+                });
+            } else {
+                console.error('Reviews is not an array:', reviews);
+            }
             
             // Show modal
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            console.log('Modal should be visible now');
         }
         
         function closeModal() {
@@ -502,6 +623,50 @@
                 closeModal();
             }
         });
+        
+        // Global variables to store current modal data
+        let currentModalData = {
+            paradigmId: null,
+            name: null,
+            description: null,
+            reviews: [],
+            totalReviews: null,
+            context: null,
+            role: null,
+            productName: null
+        };
+        
+        function exportToCsv() {
+            if (!currentModalData.reviews || currentModalData.reviews.length === 0) {
+                alert('No reviews to export!');
+                return;
+            }
+            
+            // Create CSV content
+            const headers = ['Review Number', 'Review Text', 'Usage Context', 'Usage Role', 'Product Name', 'Paradigm Name'];
+            const csvContent = [
+                headers.join(','),
+                ...currentModalData.reviews.map((review, index) => [
+                    index + 1,
+                    `"${review.replace(/"/g, '""')}"`, // Escape quotes in review text
+                    currentModalData.context,
+                    currentModalData.role,
+                    currentModalData.productName,
+                    currentModalData.name
+                ].join(','))
+            ].join('\n');
+            
+            // Create and download the file
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `${currentModalData.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_reviews.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
 </html>

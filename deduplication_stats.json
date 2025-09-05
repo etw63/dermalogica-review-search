@@ -1,0 +1,9 @@
+{
+  "initial_count": 60026,
+  "short_reviews_removed": 6681,
+  "after_length_filter": 53345,
+  "exact_duplicates_removed": 11856,
+  "after_exact_dedup": 41489,
+  "near_duplicates_removed": 88,
+  "final_count": 41401
+}

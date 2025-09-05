@@ -1,0 +1,391 @@
+{
+  "dataset_summary": {
+    "total_reviews": 7945,
+    "products": 125,
+    "clusters_found": 3,
+    "outliers": 20
+  },
+  "cross_product_analysis": {
+    "cross_product_clusters": [
+      0,
+      2
+    ],
+    "single_product_clusters": [
+      1
+    ]
+  },
+  "cluster_interpretations": {
+    "0": {
+      "interpretation": "Cross-Product Usage Pattern",
+      "cluster_size": 103,
+      "percentage": 1.2964128382630586,
+      "is_cross_product": true,
+      "products": [
+        "multi-active toner",
+        "Only at Ulta Dermalogica Ultracalming Mist Toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+        "antioxidant hydramist",
+        "Only at Ulta Dermalogica Antioxidant Hydramist Toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+        "calm water gel",
+        "daily glycolic cleanser",
+        "Dermalogica Discover Healthy Skin Complete Regimen Kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 Kit Price",
+        "Dermalogica Hyaluronic Ceramide Mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+        "body hydrating cream",
+        "circular hydration serum",
+        "micro-pore mist",
+        "rapid reveal peel",
+        "skin resurfacing cleanser",
+        "skinperfect primer spf30",
+        "2 sizes Dermalogica Ultracalming Cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+        "Only at Ulta Dermalogica Clear Start Clarifying Bacne Spray 4.7 out of 5 stars ; 236 reviews (236) $28.00 Free Gift with purchase"
+      ],
+      "key_terms": [
+        "link https",
+        "amazon com gp",
+        "com gp",
+        "com",
+        "gp",
+        "skin",
+        "product",
+        "use",
+        "face",
+        "moisturizer"
+      ],
+      "sample_reviews": [
+        "My favorite toner ever. I love that I can just spray it on my face. I have rosacea and it doesn\u2019t hurt it. [Link](https://www.amazon.com/gp/customer-reviews/R1RC2R0XPOJBCZ/)",
+        "Super-hydrating\u00e2\u20ac\"I use after toner but before moisturizer and it makes my moisturizer extra effective.",
+        "It's so light weight and so fresh to put on my skin.  It's the 1st thing I put on my face after toner. It really does help calm my skin of it's irritated.  10/10 recommend  Also,,,, using a bunch of dermalogica products for my skin care, I can totally see a major difference in my complexion. Those are results!!  Love this line of product"
+      ]
+    },
+    "1": {
+      "interpretation": "Product-Specific Pattern (daily microfoliant)",
+      "cluster_size": 7313,
+      "percentage": 92.04531151667716,
+      "is_cross_product": false,
+      "products": [
+        "daily microfoliant",
+        "special cleansing gel",
+        "daily milkfoliant",
+        "biolumin-c eye serum",
+        "skin smoothing cream",
+        "biolumin-c serum",
+        "age bright clearing serum",
+        "circular hydration serum",
+        "phyto nature oxygen cream",
+        "calm water gel",
+        "daily glycolic cleanser",
+        "stabilizing repair cream",
+        "dynamic skin retinol serum",
+        "awaken peptide eye gel",
+        "biolumin-c gel moisturizer",
+        "multivitamin power recovery cream",
+        "retinol clearing oil",
+        "ultracalming serum concentrate",
+        "skin resurfacing cleanser",
+        "intensive moisture balance",
+        "breakout clearing booster",
+        "phyto-nature firming serum",
+        "pro-collagen banking serum",
+        "stress positive eye lift",
+        "Only at Ulta Dermalogica Smart Response Serum 4.7 out of 5 stars ; 687 reviews (687) $154.00",
+        "Only at Ulta Dermalogica Retinoid Clearing Oil 4.4 out of 5 stars ; 581 reviews (581) $89.00",
+        "Only at Ulta Dermalogica Clear Start Cooling Aqua Jelly Moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 Free Gift with purchase",
+        "Only at Ulta Dermalogica Clear Start Blackhead Clearing Fizz Mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 Free Gift with purchase",
+        "Dermalogica Discover Healthy Skin Complete Regimen Kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 Kit Price",
+        "multivitamin power recovery masque",
+        "oil to foam total cleanser",
+        "Only at Ulta Dermalogica Clear Start Breakout Clearing Kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 Kit Price Free Gift with purchase",
+        "discover healthy skin kit",
+        "NEW ARRIVAL Magnetic[+] Afterglow Cleanser A moisture-bonding cleanser that acts like a magnet to set the stage for radiant, healthy skin. 92% felt their skin was better primed for the rest of their skin care routine. Shop Now",
+        "Dermalogica Sound Sleep Cocoon Night Gel-Cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+        "2 sizes Precleanse Cleansing Oil $49.00 - $79.00",
+        "Only at Ulta Dermalogica Mini Daily Superfoliant Exfoliator 4.6 out of 5 stars ; 1978 reviews (1978) $19.50",
+        "2 sizes Dermalogica Super Rich Repair Moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+        "2 sizes Dermalogica Multivitamin Power Firm Eye Cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+        "phyto nature lifting eye cream",
+        "2 sizes Dermalogica Ultracalming Cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+        "multi-active toner",
+        "Only at Ulta Dermalogica Antioxidant Hydramist Toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+        "skinperfect primer spf30",
+        "clearing skin wash",
+        "Only at Ulta Dermalogica Multivitamin Thermafoliant Exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+        "powerbright dark spot serum",
+        "Only at Ulta Dermalogica Ultracalming Mist Toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+        "dynamic skin recovery spf50",
+        "Only at Ulta Dermalogica Sensitive Skin Rescue Kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 Kit Price",
+        "powerbright dark spot peel",
+        "multivitamin power firm",
+        "dynamic skin strengthening serum",
+        "daily superfoliant",
+        "Only at Ulta Dermalogica Dark Spot Solutions Kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 Kit Price",
+        "Only at Ulta Dermalogica PowerBright Overnight Cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+        "ULTA BEAUTY EXCLUSIVE Dynamic Skin Body Sculptor Serum An advanced sculpting body serum with Pro-NAD+ Complex that visibly firms and lifts skin. 90% experienced immediate tightening after 1 use. Shop Now",
+        "Only at Ulta Dermalogica Prisma Protect Moisturizer SPF 30 4.5 out of 5 stars ; 558 reviews (558) $69.00",
+        "active moist",
+        "Only at Ulta Dermalogica Liquid Peelfoliant Exfoliator 4.5 out of 5 stars ; 267 reviews (267) $69.00",
+        "smart response serum",
+        "super rich repair",
+        "ultracalming cleanser",
+        "Only at Ulta Dermalogica Clear Start Clarifying Bacne Spray 4.7 out of 5 stars ; 236 reviews (236) $28.00 Free Gift with purchase",
+        "Only at Ulta Dermalogica Clear Start Post-Breakout Fix Dark Spot Treatment 4.6 out of 5 stars ; 243 reviews (243) $25.00 Free Gift with purchase",
+        "Only at Ulta Dermalogica PowerBright Moisturizer SPF 50 4.4 out of 5 stars ; 415 reviews (415) $85.00",
+        "sound sleep cocoon",
+        "body hydrating cream",
+        "Only at Ulta Dermalogica Clear and Brighten Skincare Kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 Kit Price",
+        "Dermalogica Biolumin-C Vitamin C Night Restore Serum 4.9 out of 5 stars ; 187 reviews (187) $99.00",
+        "Dermalogica Precleanse Makeup Remover Face",
+        "biolumin-c night restore",
+        "Only at Ulta Dermalogica Acne Biotic Moisturizer 4.8 out of 5 stars ; 180 reviews (180) $76.00",
+        "Dermalogica Moisturizer Lightweight Hydrating Dehydration",
+        "deep acne liquid patch",
+        "Only at Ulta Dermalogica Clear Start Soothing Hydrating Lotion 4.4 out of 5 stars ; 181 reviews (181) $26.00 Free Gift with purchase",
+        "breakout clearing foaming wash",
+        "Dermalogica Stressed Skin Recovery System 5 out of 5 stars ; 146 reviews (146) $129.00 Kit Price",
+        "Dermalogica Skinperfect Anti Aging Spectrum Sunscreen",
+        "Dermalogica Hyaluronic Ceramide Mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+        "multivitamin thermafoliant",
+        "invisible physical defense spf30",
+        "skin soothing hydrating lotion",
+        "Only at Ulta Dermalogica Skin Aging Solutions Skincare Kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 Kit Price",
+        "blackhead clearing fizz mask",
+        "Dermalogica Daily Brightness Boosters Skincare Kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 Kit Price",
+        "antioxidant hydramist",
+        "Only at Ulta Dermalogica Porescreen Mineral Sunscreen SPF 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+        "biolumin-c heat aging protector spf 50",
+        "breakout clearing liquid peel",
+        "Dermalogica Anti Aging Moisturizer Medium Weight Non Greasy",
+        "Only at Ulta Dermalogica Clear Start Clearing Defense Moisturizer SPF 30 4.3 out of 5 stars ; 308 reviews (308) $29.50 Free Gift with purchase",
+        "age reversal eye complex",
+        "clarifying bacne spray",
+        "ultracalming mist",
+        "daily brightness boosters kit",
+        "Dermalogica Powerbright Visibly Prevent Future",
+        "Dermalogica Powerbright Pure Light Moisturiser",
+        "sensitive skin rescue",
+        "micro-pore mist",
+        "cooling aqua jelly",
+        "Dermalogica Extremely Moisturizing Nourishes Rehydrates",
+        "porescreen spf40",
+        "liquid peelfoliant",
+        "post-breakout fix",
+        "Dermalogica PowerBright Exfoliating Improve Hyperpigmentation",
+        "micellar prebiotic precleanse",
+        "powerbright moisturizer spf50",
+        "Dermalogica Invisible Treatment Blemishes Preventing",
+        "golden hour hydrating spf30 stick",
+        "Dermalogica MultiVitamin Hydrating Moisturizer Antioxidants",
+        "Dermalogica Stressed Recovery System Facial",
+        "intensive moisture cleanser",
+        "rapid reveal peel",
+        "protection 50 sport spf50",
+        "acne biotic moisturizer",
+        "Dermalogica Protect Renew Moisturizer Skincare",
+        "Dermalogica Expertise Skincare Contains Products",
+        "Dermalogica Moisturizer Sunscreen Hydrating Luminosity",
+        "Dermalogica All-Time Greats Set",
+        "Only at Ulta Dermalogica Mini Antioxidant Hydramist Toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+        "clearing defense spf30",
+        "Dermalogica Porescreen Sunscreen Supporting Multitasking",
+        "magnetic[+] afterglow cleanser",
+        "Dermalogica Mini BioLumin-C Vitamin C Face Serum 4.6 out of 5 stars ; 3366 reviews (3366) $39.00"
+      ],
+      "key_terms": [
+        "amazon",
+        "https www amazon",
+        "www amazon",
+        "www",
+        "www amazon com",
+        "skin",
+        "dermalogica",
+        "serum",
+        "feels",
+        "gifted"
+      ],
+      "sample_reviews": [
+        "I truly trust Dermalogica as a brand. Every product I've tried so far has been nothing but gentle on my skin and effective. This is a serum that sinks in quickly and visibly firms and tightens my skin. complimentary from dermalogica",
+        "I love this under my lotion. It makes my skin feel great and looks smooth. I don't know how well it improves my wrinkles, but it definitely softens my skin and helps make up sit well. My skin doesn't feel as nice without it.",
+        "I am in love with the phyto oxygen cream and this is the PERFECT companion! It is lightweight but hydrating and delivers a burst of freshness and dewy-ness to the skin. I've noticed a slight softening in fine lines, a brightening effect and overall just plumper and more hydrated, glowy skin. It has this kind of instant lifting and firming effect that just makes your skin look tighter and more even. The phyto oxygen line is my fav line from Dermalogica and they knocked it out of the park with this one! Kindly gifted by Dermalogica."
+      ]
+    },
+    "2": {
+      "interpretation": "Cross-Product Usage Pattern",
+      "cluster_size": 509,
+      "percentage": 6.406544996853366,
+      "is_cross_product": true,
+      "products": [
+        "dynamic skin recovery spf50",
+        "Only at Ulta Dermalogica Porescreen Mineral Sunscreen SPF 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+        "invisible physical defense spf30",
+        "Only at Ulta Dermalogica Prisma Protect Moisturizer SPF 30 4.5 out of 5 stars ; 558 reviews (558) $69.00",
+        "porescreen spf40",
+        "biolumin-c heat aging protector spf 50",
+        "Only at Ulta Dermalogica Clear Start Clearing Defense Moisturizer SPF 30 4.3 out of 5 stars ; 308 reviews (308) $29.50 Free Gift with purchase",
+        "Only at Ulta Dermalogica PowerBright Moisturizer SPF 50 4.4 out of 5 stars ; 415 reviews (415) $85.00",
+        "golden hour hydrating spf30 stick",
+        "skinperfect primer spf30",
+        "Dermalogica Anti Aging Moisturizer Medium Weight Non Greasy",
+        "biolumin-c gel moisturizer",
+        "protection 50 sport spf50",
+        "Dermalogica Porescreen Sunscreen Supporting Multitasking",
+        "dynamic skin retinol serum",
+        "clearing defense spf30",
+        "Dermalogica Skinperfect Anti Aging Spectrum Sunscreen",
+        "cooling aqua jelly",
+        "Dermalogica Protect Renew Moisturizer Skincare",
+        "Only at Ulta Dermalogica Clear Start Cooling Aqua Jelly Moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 Free Gift with purchase",
+        "calm water gel",
+        "2 sizes Dermalogica Super Rich Repair Moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+        "powerbright dark spot serum",
+        "2 sizes Dermalogica Multivitamin Power Firm Eye Cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+        "2 sizes Dermalogica Ultracalming Cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+        "Only at Ulta Dermalogica Acne Biotic Moisturizer 4.8 out of 5 stars ; 180 reviews (180) $76.00",
+        "skin smoothing cream",
+        "active moist",
+        "skin resurfacing cleanser",
+        "biolumin-c eye serum",
+        "Dermalogica Powerbright Pure Light Moisturiser",
+        "Dermalogica MultiVitamin Hydrating Moisturizer Antioxidants",
+        "intensive moisture balance",
+        "oil to foam total cleanser",
+        "breakout clearing booster",
+        "circular hydration serum",
+        "Only at Ulta Dermalogica Smart Response Serum 4.7 out of 5 stars ; 687 reviews (687) $154.00"
+      ],
+      "key_terms": [
+        "skin",
+        "spf",
+        "product",
+        "moisturizer",
+        "love",
+        "www amazon com",
+        "link https www",
+        "www amazon",
+        "https www amazon",
+        "https www"
+      ],
+      "sample_reviews": [
+        "The best sunscreen you can buy for anyone over 40. It's worth the money. [Link](https://www.amazon.com/gp/customer-reviews/R34L2RXTN1BBHE/)",
+        "I use this every day to soften and protect. It is not a bit greasy or heavy like some sunscreens. I dislike scented products but love the very very light and natural scent of this product. [Link](https://www.amazon.com/gp/customer-reviews/R1QYZX34BO1H2K/)",
+        "This is the only sunscreen I\u2019ve ever used that didn\u2019t dry out my skin, flake off, or pill up when I put makeup on over it! [Link](https://www.amazon.com/gp/customer-reviews/RZDF5YZ6G0Z2J/)"
+      ]
+    }
+  },
+  "divergent_outliers": {
+    "n_outliers": 20,
+    "percentage": 0.25173064820641916,
+    "over_represented_products": [
+      [
+        "Dermalogica Powerbright Visibly Prevent Future",
+        72.04545454545455
+      ],
+      [
+        "sensitive skin rescue",
+        39.625
+      ],
+      [
+        "protection 50 sport spf50",
+        36.02272727272727
+      ],
+      [
+        "multivitamin thermafoliant",
+        16.510416666666668
+      ],
+      [
+        "Dermalogica Moisturizer Lightweight Hydrating Dehydration",
+        13.663793103448278
+      ],
+      [
+        "Dermalogica Precleanse Makeup Remover Face",
+        12.3828125
+      ],
+      [
+        "retinol clearing oil",
+        9.51
+      ],
+      [
+        "super rich repair",
+        8.61413043478261
+      ],
+      [
+        "multivitamin power firm",
+        6.391129032258065
+      ],
+      [
+        "invisible physical defense spf30",
+        4.953125
+      ]
+    ],
+    "distinctive_terms": [
+      [
+        "amazon com",
+        0.1802208374986598
+      ],
+      [
+        "com",
+        0.1802208374986598
+      ],
+      [
+        "com gp",
+        0.1802208374986598
+      ],
+      [
+        "customer reviews",
+        0.1802208374986598
+      ],
+      [
+        "gp",
+        0.1802208374986598
+      ],
+      [
+        "gp customer",
+        0.1802208374986598
+      ],
+      [
+        "https",
+        0.1802208374986598
+      ],
+      [
+        "https www",
+        0.1802208374986598
+      ],
+      [
+        "link https",
+        0.1802208374986598
+      ],
+      [
+        "www",
+        0.1802208374986598
+      ],
+      [
+        "www amazon",
+        0.1802208374986598
+      ],
+      [
+        "link",
+        0.1800196042884123
+      ],
+      [
+        "customer",
+        0.1790134382371748
+      ],
+      [
+        "amazon",
+        0.17861097181667984
+      ],
+      [
+        "reviews",
+        0.17619617329370985
+      ]
+    ],
+    "sample_reviews": [
+      "Exelente producto cumple con todo [Link](https://www.amazon.com/gp/customer-reviews/R34U247AUCQJD2/)",
+      "Es un kit de limpieza facial \u00fatil y necesario, cumple con las expectativas [Link](https://www.amazon.com/gp/customer-reviews/R1TWEZR8ZYOEW6/)",
+      "Este serum tiene muy buena concentraci\u00f3n de retinol sin causar irritaci\u00f3n en tu piel adem\u00e1s contiene limpios ingredientes que ayudar\u00e1n proteger la barrera de tu piel [Link](https://www.amazon.com/gp/customer-reviews/R35FVZ988253EN/)",
+      "Excelente producto [Link](https://www.amazon.com/gp/customer-reviews/R2VRT9VXMQTHSC/)",
+      "Me encanta como queda la piel, mi piel es super delicada otros protectores me dejan la piel grasa este es muy bueno.. el precio lo vale.. [Link](https://www.amazon.com/gp/customer-reviews/R3B5VC7C7N9ERL/)",
+      "Muy buen producto lo uso todas las ma\u00f1anas y se disuelve r\u00e1pido y hidrata muy bien siento que me ha protegido de arrugas [Link](https://www.amazon.com/gp/customer-reviews/R11W5MTJPGSTU4/)",
+      "Excelente. Mi cara se ve radiante [Link](https://www.amazon.com/gp/customer-reviews/R2MH6RPFTSBU69/)",
+      "Tengo 3 semanas us\u00e1ndola a diario y no he notado ning\u00fan resultado \ud83d\ude22 creo que siendo tan cara iba a funcionar [Link](https://www.amazon.com/gp/customer-reviews/R27853ZPOWA7JG/)"
+    ]
+  },
+  "summary": "DIVERGENT DISCOVERY RESULTS:\n\u2022 Dataset: 7,945 reviews across 125 products\n\u2022 Natural patterns found: 3 clusters\n\u2022 Cross-product patterns: 2 (most divergent)\n\u2022 Product-specific patterns: 1\n\u2022 Outlier reviews: 20 (0.3%)\n\nCROSS-PRODUCT DISCOVERIES:\n\u2022 Cross-Product Usage Pattern: 509 reviews (6.4%)\n\u2022 Cross-Product Usage Pattern: 103 reviews (1.3%)\n\nTOP SINGLE-PRODUCT PATTERNS:\n\u2022 Product-Specific Pattern (daily microfoliant): 7313 reviews\n\nDIVERGENT OUTLIER SIGNALS:\n\u2022 'amazon com'\n\u2022 'com'\n\u2022 'com gp'\n\u2022 'customer reviews'\n\u2022 'gp'"
+}

@@ -459,7 +459,8 @@
             <!-- Navigation Tabs -->
             <div class="nav-tabs">
                 <a href="/" class="nav-tab active">🔍 Search Reviews</a>
-                <a href="/paradigms-dashboard" class="nav-tab">📊 Usage Paradigms</a>
+                <a href="/paradigms-dashboard{% if selected_product %}?product={{selected_product|urlencode}}{% endif %}" class="nav-tab">📊 Usage Paradigms</a>
+                <a href="/divergent-dashboard" class="nav-tab">🎯 Divergent Discovery</a>
             </div>
         </div>
         

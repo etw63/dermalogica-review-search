@@ -16,6 +16,7 @@ from collections import defaultdict
 import uvicorn
 # Add these imports to the top of your existing vector_search_app.py
 from collections import Counter, defaultdict
+from pathlib import Path
 
 # Set up logging
 logging.basicConfig(
@@ -388,8 +389,10 @@ class UsagePatternQueryEngine:
         
         # Filter for product
         if product_name != "all":
+            # Clean the product name for matching (same logic as main search engine)
+            cleaned_product_name = self._clean_product_name_for_matching(product_name)
             product_df = self.df_with_usage[self.df_with_usage['product_name'].str.contains(
-                product_name, case=False, na=False)]
+                cleaned_product_name, case=False, na=False)]
         else:
             product_df = self.df_with_usage
             
@@ -452,52 +455,68 @@ class UsagePatternQueryEngine:
     def _generate_paradigm_name(self, context, role):
         """Generate human-readable name for context+role combination"""
         
+        # Simplified, more intuitive context names
         context_names = {
-            'daily_routine': 'Daily Routine',
-            'shower_routine': 'Shower Routine', 
-            'pre_makeup': 'Pre-Makeup',
-            'special_events': 'Special Events',
-            'pre_workout': 'Pre-Workout',
+            'daily_routine': 'Daily Use',
+            'shower_routine': 'Shower Time', 
+            'pre_makeup': 'Before Makeup',
+            'special_events': 'Special Occasions',
+            'pre_workout': 'Before Exercise',
             'travel': 'Travel/On-the-Go',
-            'sensitive_periods': 'Sensitive Skin/Pregnancy'
+            'sensitive_periods': 'Skin Sensitivity'
         }
         
+        # More descriptive role names
         role_names = {
-            'replacement': 'Primary Product',
-            'consolidator': 'Multi-Function Product',
-            'prep_enhancer': 'Enhancement/Prep',
-            'treatment': 'Problem Treatment'
+            'replacement': 'Main Product',
+            'consolidator': 'Multi-Purpose',
+            'prep_enhancer': 'Prep Step',
+            'treatment': 'Treatment'
         }
         
         context_display = context_names.get(context, context.replace('_', ' ').title())
         role_display = role_names.get(role, role.replace('_', ' ').title())
         
-        return f"{context_display} {role_display}"
+        return f"{context_display} - {role_display}"
     
     def _generate_paradigm_description(self, context, role):
         """Generate description for context+role combination"""
         
         context_desc = {
-            'daily_routine': 'part of daily skincare routine',
+            'daily_routine': 'as part of daily skincare routine',
             'shower_routine': 'during shower or bath time',
             'pre_makeup': 'before applying makeup',
             'special_events': 'for special occasions or events',
             'pre_workout': 'before exercise or physical activity',
             'travel': 'during travel or on-the-go situations',
-            'sensitive_periods': 'during sensitive periods or for reactive skin'
+            'sensitive_periods': 'when skin is sensitive or reactive'
         }
         
         role_desc = {
-            'replacement': 'as primary/only product for this purpose',
-            'consolidator': 'combining multiple functions in one product',
-            'prep_enhancer': 'to prepare or enhance skin appearance',
-            'treatment': 'to treat specific skin problems'
+            'replacement': 'as the main product for this purpose',
+            'consolidator': 'to handle multiple skincare needs',
+            'prep_enhancer': 'to prepare skin for other products',
+            'treatment': 'to address specific skin concerns'
         }
         
         context_text = context_desc.get(context, context.replace('_', ' '))
         role_text = role_desc.get(role, role.replace('_', ' '))
         
         return f"Used {context_text} {role_text}"
+    
+    def _clean_product_name_for_matching(self, product_name):
+        """Clean product name for matching (same logic as main search engine)"""
+        if not product_name:
+            return ""
+        
+        # Convert to lowercase and remove extra whitespace
+        cleaned = str(product_name).lower().strip()
+        
+        # Remove common prefixes/suffixes
+        cleaned = re.sub(r'^dermalogica\s+', '', cleaned)
+        cleaned = re.sub(r'\s+', ' ', cleaned)
+        
+        return cleaned
     
     def _generate_paradigm_summary(self, paradigms, product_name):
         """Generate executive summary"""
@@ -524,6 +543,91 @@ class UsagePatternQueryEngine:
 # Initialize the usage pattern query engine (add after search_engine initialization)
 usage_query_engine = UsagePatternQueryEngine()
 
+class DivergentDiscoveryResults:
+    def __init__(self):
+        self.results = None
+        self.loaded = False
+    
+    def load_results(self, results_file="proper_divergent_discovery_results.json"):
+        """Load discovery results from file"""
+        try:
+            if Path(results_file).exists():
+                with open(results_file, 'r') as f:
+                    self.results = json.load(f)
+                self.loaded = True
+                return True
+            return False
+        except Exception as e:
+            print(f"Error loading discovery results: {e}")
+            return False
+    
+    def get_summary(self):
+        """Get summary of discovery results"""
+        if not self.loaded or not self.results:
+            return None
+        return self.results.get('summary', '')
+    
+    def get_cross_product_patterns(self):
+        """Get cross-product patterns"""
+        if not self.loaded or not self.results:
+            return []
+        
+        patterns = []
+        for cluster_id, info in self.results.get('cluster_interpretations', {}).items():
+            if info.get('is_cross_product', False):
+                patterns.append({
+                    'cluster_id': cluster_id,
+                    'interpretation': info.get('interpretation', ''),
+                    'size': info.get('cluster_size', 0),
+                    'percentage': info.get('percentage', 0),
+                    'products': info.get('products', []),
+                    'key_terms': info.get('key_terms', []),
+                    'sample_reviews': info.get('sample_reviews', [])
+                })
+        
+        return sorted(patterns, key=lambda x: x['size'], reverse=True)
+    
+    def get_single_product_patterns(self):
+        """Get single-product patterns"""
+        if not self.loaded or not self.results:
+            return []
+        
+        patterns = []
+        for cluster_id, info in self.results.get('cluster_interpretations', {}).items():
+            if not info.get('is_cross_product', False):
+                patterns.append({
+                    'cluster_id': cluster_id,
+                    'interpretation': info.get('interpretation', ''),
+                    'size': info.get('cluster_size', 0),
+                    'percentage': info.get('percentage', 0),
+                    'products': info.get('products', []),
+                    'key_terms': info.get('key_terms', []),
+                    'sample_reviews': info.get('sample_reviews', [])
+                })
+        
+        return sorted(patterns, key=lambda x: x['size'], reverse=True)
+    
+    def get_outliers(self):
+        """Get outlier analysis"""
+        if not self.loaded or not self.results:
+            return None
+        return self.results.get('noise_outliers', {})
+    
+    def get_minority_clusters(self):
+        """Get minority micro-cluster analysis"""
+        if not self.loaded or not self.results:
+            return []
+        return self.results.get('minority_microclusters', [])
+    
+    def get_dataset_summary(self):
+        """Get dataset summary"""
+        if not self.loaded or not self.results:
+            return None
+        return self.results.get('summary', {})
+
+# Initialize the discovery results loader
+discovery_results = DivergentDiscoveryResults()
+
 @app.on_event("startup")
 async def startup_event():
     """Initialize the database on startup"""
@@ -532,13 +636,16 @@ async def startup_event():
     
     # Try to load usage patterns if available
     usage_query_engine.load_usage_patterns("dermalogica_aggregated_reviews_with_usage_patterns.csv")
+    # Try to load divergent discovery results
+    discovery_results.load_results()
 
 @app.get("/", response_class=HTMLResponse)
-async def home(request: Request):
+async def home(request: Request, product: str = None):
     """Serve the main search page"""
     return templates.TemplateResponse("index.html", {
         "request": request, 
-        "products": search_engine.products
+        "products": search_engine.products,
+        "selected_product": product
     })
 
 @app.get("/products")
@@ -674,6 +781,54 @@ async def get_usage_distribution():
             (df['usage_context'].isin(['insufficient_text', 'general_context'])) |
             (df['usage_role'].isin(['insufficient_text', 'general_role']))
         ])
+    }
+
+@app.get("/divergent-dashboard", response_class=HTMLResponse)
+async def divergent_dashboard(request: Request):
+    """Dashboard showing divergent usage pattern discoveries"""
+    return templates.TemplateResponse("divergent_dashboard.html", {
+        "request": request,
+        "discovery_results": discovery_results,
+        "summary": discovery_results.get_summary(),
+        "dataset_summary": discovery_results.get_dataset_summary(),
+        "minority_clusters": discovery_results.get_minority_clusters(),
+        "outliers": discovery_results.get_outliers()
+    })
+
+@app.get("/cohort-reviews/{cohort_id}")
+async def get_cohort_reviews(cohort_id: str):
+    """Get all reviews for a specific outlier cohort"""
+    if not discovery_results.loaded or not discovery_results.results:
+        return {"error": "No discovery results available"}
+    
+    outliers = discovery_results.results.get('noise_outliers', {})
+    if not outliers or 'analysis' not in outliers:
+        return {"error": "No outlier analysis available"}
+    
+    cohorts = outliers['analysis'].get('cohorts', [])
+    
+    # Find the specific cohort
+    target_cohort = None
+    for cohort in cohorts:
+        if cohort.get('cohort_id') == cohort_id:
+            target_cohort = cohort
+            break
+    
+    if not target_cohort:
+        return {"error": f"Cohort {cohort_id} not found"}
+    
+    # Return cohort details with all reviews
+    return {
+        "cohort_id": cohort_id,
+        "interpretation": target_cohort.get('interpretation', ''),
+        "size": target_cohort.get('size', 0),
+        "percentage": target_cohort.get('percentage', 0),
+        "business_insights": target_cohort.get('business_insight', []),
+        "distinctive_terms": target_cohort.get('distinctive_terms', []),
+        "themes": target_cohort.get('themes', {}),
+        "product_focus": target_cohort.get('product_focus', {}),
+        "all_reviews": target_cohort.get('all_reviews', target_cohort.get('sample_reviews', [])),
+        "all_reviews_with_products": target_cohort.get('all_reviews_with_products', [])
     }
 
 if __name__ == "__main__":

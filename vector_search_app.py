@@ -100,7 +100,7 @@ class ReviewSearchEngine:
         clean = name_str
         prefixes_to_remove = [
             'Only at Ulta ', 'ULTA BEAUTY EXCLUSIVE ', 
-            'Dermalogica ', '2 sizes ', 'Mini '
+            'Dermalogica ', '2 sizes ', 'Mini ', 'Clear Start '
         ]
         
         for prefix in prefixes_to_remove:
@@ -546,19 +546,59 @@ usage_query_engine = UsagePatternQueryEngine()
 class DivergentDiscoveryResults:
     def __init__(self):
         self.results = None
+        self.meta_occasions = None
         self.loaded = False
     
-    def load_results(self, results_file="proper_divergent_discovery_results.json"):
-        """Load discovery results from file"""
+    def load_results(self, results_file="v5_occasion_discovery_results.json", search_engine=None):
+        """Load discovery results from file and clean product names"""
         try:
             if Path(results_file).exists():
                 with open(results_file, 'r') as f:
                     self.results = json.load(f)
+                
+                # Clean product names in outlier cohorts if search_engine is provided
+                if search_engine and 'outlier_cohorts' in self.results:
+                    for cohort in self.results['outlier_cohorts']:
+                        if 'product_name' in cohort and cohort['product_name']:
+                            cohort['clean_product_name'] = search_engine.clean_product_name(cohort['product_name'])
+                        
+                        # Also clean product names in reviews if they exist
+                        if 'reviews' in cohort:
+                            for review in cohort['reviews']:
+                                if 'product_name' in review and review['product_name']:
+                                    review['clean_product_name'] = search_engine.clean_product_name(review['product_name'])
+                
                 self.loaded = True
+                
+                # Also try to load meta-occasions if available
+                self.load_meta_occasions()
+                
                 return True
             return False
         except Exception as e:
             print(f"Error loading discovery results: {e}")
+            return False
+    
+    def load_meta_occasions(self, meta_file="enhanced_meta_occasions.json"):
+        """Load enhanced meta-occasion consolidation results"""
+        try:
+            # Try enhanced version first, fallback to original
+            enhanced_file = "enhanced_meta_occasions.json"
+            original_file = "meta_occasions_consolidated.json"
+            
+            if Path(enhanced_file).exists():
+                with open(enhanced_file, 'r') as f:
+                    self.meta_occasions = json.load(f)
+                print(f"Loaded {len(self.meta_occasions['meta_occasions'])} enhanced meta-occasions")
+                return True
+            elif Path(original_file).exists():
+                with open(original_file, 'r') as f:
+                    self.meta_occasions = json.load(f)
+                print(f"Loaded {len(self.meta_occasions['meta_occasions'])} meta-occasions")
+                return True
+            return False
+        except Exception as e:
+            print(f"Error loading meta-occasions: {e}")
             return False
     
     def get_summary(self):
@@ -610,8 +650,14 @@ class DivergentDiscoveryResults:
     def get_outliers(self):
         """Get outlier analysis"""
         if not self.loaded or not self.results:
-            return None
-        return self.results.get('noise_outliers', {})
+            return []
+        return self.results.get('outlier_cohorts', [])
+    
+    def get_meta_occasions(self):
+        """Get meta-occasion consolidation results"""
+        if not self.meta_occasions:
+            return []
+        return self.meta_occasions.get('meta_occasions', [])
     
     def get_minority_clusters(self):
         """Get minority micro-cluster analysis"""
@@ -637,7 +683,7 @@ async def startup_event():
     # Try to load usage patterns if available
     usage_query_engine.load_usage_patterns("dermalogica_aggregated_reviews_with_usage_patterns.csv")
     # Try to load divergent discovery results
-    discovery_results.load_results()
+    discovery_results.load_results(search_engine=search_engine)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request, product: str = None):
@@ -792,7 +838,8 @@ async def divergent_dashboard(request: Request):
         "summary": discovery_results.get_summary(),
         "dataset_summary": discovery_results.get_dataset_summary(),
         "minority_clusters": discovery_results.get_minority_clusters(),
-        "outliers": discovery_results.get_outliers()
+        "outliers": discovery_results.get_outliers(),
+        "meta_occasions": discovery_results.get_meta_occasions()
     })
 
 @app.get("/cohort-reviews/{cohort_id}")
@@ -830,6 +877,26 @@ async def get_cohort_reviews(cohort_id: str):
         "all_reviews": target_cohort.get('all_reviews', target_cohort.get('sample_reviews', [])),
         "all_reviews_with_products": target_cohort.get('all_reviews_with_products', [])
     }
+
+@app.get("/meta-occasion-reviews/{meta_cohort_id}")
+async def get_meta_occasion_reviews(meta_cohort_id: str):
+    """Get all reviews for a specific meta-occasion"""
+    if not discovery_results.meta_occasions:
+        return {"error": "Meta-occasions not loaded"}
+    
+    # Find the meta-occasion
+    for meta_occasion in discovery_results.meta_occasions.get('meta_occasions', []):
+        if meta_occasion.get('meta_cohort_id') == meta_cohort_id:
+            reviews = meta_occasion.get('all_reviews', [])
+            return {
+                "meta_cohort_id": meta_cohort_id,
+                "theme": meta_occasion.get('theme', ''),
+                "description": meta_occasion.get('description', ''),
+                "total_reviews": len(reviews),
+                "reviews": reviews
+            }
+    
+    return {"error": f"Meta-occasion {meta_cohort_id} not found"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

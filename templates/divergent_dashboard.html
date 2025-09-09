@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Divergent Discovery - Cross-Product Patterns</title>
+    <title>Usage Occasion Discovery - Product Insights</title>
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -111,6 +111,60 @@
         .pattern-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .meta-occasion-card {
+            border-left: 6px solid #6f42c1;
+            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+        }
+        
+        .meta-occasion-card:hover {
+            border-left-color: #5a32a3;
+            cursor: pointer;
+        }
+        
+        .type-meta-occasion {
+            background: linear-gradient(135deg, #6f42c1, #8b5cf6);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .meta-description {
+            background: #ffffff;
+            border: 2px solid #6f42c1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #2c3e50;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .click-hint {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .modal-description {
+            background: #ffffff;
+            border: 2px solid #0066cc;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #2c3e50;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .pattern-header {
@@ -403,16 +457,18 @@
         }
         
         .product-name {
-            font-size: 0.85em;
-            color: #667eea;
-            font-weight: 600;
-            background: rgba(102, 126, 234, 0.1);
-            padding: 4px 8px;
-            border-radius: 12px;
+            font-size: 0.9em;
+            color: #ffffff;
+            font-weight: 700;
+            background: #667eea;
+            padding: 6px 12px;
+            border-radius: 15px;
             max-width: 200px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .review-source {
@@ -499,7 +555,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🔍 Divergent Discovery</h1>
+            <h1>🔍 Usage Occasion Discovery</h1>
             <h2>Cross-Product Usage Pattern Analysis</h2>
             
             <!-- Navigation Tabs -->
@@ -513,17 +569,38 @@
         {% if dataset_summary %}
         <div class="summary-section">
             <h3>📋 Discovery Summary</h3>
-            <div class="summary-content">PROPER DIVERGENT DISCOVERY RESULTS:
+            <div class="summary-content">USAGE OCCASION DISCOVERY RESULTS:
 • Dataset: {{ "{:,}".format(dataset_summary.total_reviews) }} reviews analyzed
-• Coverage: {{ "%.1f"|format(dataset_summary.coverage_pct) }}% successfully clustered  
-• Noise outliers found: {{ dataset_summary.noise_outliers }}
-• Minority micro-clusters: {{ dataset_summary.minority_microclusters }}
+• Products analyzed: {{ dataset_summary.analyzed_products }} out of {{ dataset_summary.total_products }} total products
+• Usage occasions discovered: {{ outliers|length }} unique patterns
+• Generated: {{ dataset_summary.timestamp[:10] }}
 
-This analysis identifies genuinely unusual usage patterns using:
+This analysis identifies novel usage occasions using:
 • Semantic embeddings + UMAP dimensionality reduction
-• HDBSCAN density-based clustering  
-• c-TF-IDF distinctive vocabulary analysis
+• HDBSCAN density-based clustering for product cohorts
+• c-TF-IDF phrase extraction for usage patterns
 • Proper deduplication and noise filtering</div>
+        </div>
+        {% endif %}
+        
+        <!-- Product Filter -->
+        {% if outliers %}
+        <div class="summary-section">
+            <h3>🔍 Filter by Product</h3>
+            <div style="margin: 15px 0;">
+                <select id="productFilter" onchange="filterByProduct()" style="padding: 8px 12px; font-size: 14px; border: 1px solid #ddd; border-radius: 4px; background: white; width: 300px;">
+                    <option value="">All Products ({{ outliers|length }} occasions)</option>
+                    {% set products = {} %}
+                    {% for cohort in outliers %}
+                        {% if cohort.clean_product_name %}
+                            {% set _ = products.update({cohort.clean_product_name: products.get(cohort.clean_product_name, 0) + 1}) %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for product, count in products.items()|sort %}
+                        <option value="{{ product }}">{{ product }} ({{ count }} occasions)</option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
         {% endif %}
         
@@ -575,57 +652,71 @@ This analysis identifies genuinely unusual usage patterns using:
             
             <div class="outlier-stats">
                 <div class="outlier-stat">
-                    <div class="outlier-stat-number">{{ outliers.count }}</div>
-                    <div class="outlier-stat-label">Top Outlier Reviews</div>
+                    <div class="outlier-stat-number">{{ outliers|length }}</div>
+                    <div class="outlier-stat-label">Usage Occasion Cohorts</div>
                 </div>
                 <div class="outlier-stat">
-                    <div class="outlier-stat-number">{{ "%.1f"|format(outliers.percentage) }}%</div>
-                    <div class="outlier-stat-label">of Total Dataset</div>
+                    <div class="outlier-stat-number">{{ outliers|sum(attribute='size') if outliers else 0 }}</div>
+                    <div class="outlier-stat-label">Total Reviews in Cohorts</div>
                 </div>
             </div>
             
-            {% if outliers.analysis and outliers.analysis.themes %}
-            <div class="distinctive-terms">
-                <h4>Thematic Analysis:</h4>
-                {% for theme, count in outliers.analysis.themes.items() %}
-                {% if count > 0 %}
-                <span class="distinctive-term">{{ theme.replace('_', ' ').title() }}: {{ count }}</span>
-                {% endif %}
-                {% endfor %}
-            </div>
-            {% endif %}
-            
-            {% if outliers.analysis and outliers.analysis.languages %}
-            <div class="distinctive-terms">
-                <h4>Language Patterns:</h4>
-                {% if outliers.analysis.languages.spanish_indicators > 0 %}
-                <span class="distinctive-term">Spanish: {{ outliers.analysis.languages.spanish_indicators }}</span>
-                {% endif %}
-                {% if outliers.analysis.languages.english_indicators > 0 %}
-                <span class="distinctive-term">English: {{ outliers.analysis.languages.english_indicators }}</span>
-                {% endif %}
-                {% if outliers.analysis.languages.other > 0 %}
-                <span class="distinctive-term">Other: {{ outliers.analysis.languages.other }}</span>
-                {% endif %}
-            </div>
-            {% endif %}
-            
-            {% if outliers.sample_reviews %}
-            <div class="sample-reviews">
-                <h4>Outlier Examples:</h4>
-                {% for review in outliers.sample_reviews[:3] %}
-                <div class="sample-review">"{{ review[:300] }}{% if review|length > 300 %}...{% endif %}"</div>
-                {% endfor %}
-            </div>
-            {% endif %}
+            <!-- Old analysis structure removed - using new v5 cohort-based approach -->
         </div>
         {% endif %}
         
-        {% if outliers and outliers.analysis and outliers.analysis.cohorts %}
-        <h2 class="section-title">👥 Outlier Cohorts</h2>
-        <div class="patterns-grid">
-            {% for cohort in outliers.analysis.cohorts %}
-            <div class="pattern-card cohort-clickable" onclick="openCohortModal('{{ cohort.cohort_id }}', '{{ cohort.interpretation }}', {{ cohort.size }}, {{ "%.1f"|format(cohort.percentage) }})">
+        {% if meta_occasions %}
+        <h2 class="section-title">🎯 Strategic Meta-Occasions (Business-Ready Cohorts)</h2>
+        <div class="patterns-grid" id="metaOccasionsGrid">
+            {% for meta in meta_occasions %}
+            <div class="pattern-card meta-occasion-card" data-products="{% for product in meta.products %}{{ product.name if product.name else product }}{% if not loop.last %},{% endif %}{% endfor %}" onclick="openMetaOccasionModal('{{ meta.meta_cohort_id or meta.cluster_id }}', '{{ meta.theme }}', {{ meta.total_reviews }}, {{ "%.1f"|format(meta.percentage_of_reviews or meta.percentage or 0) }})">
+                <div class="pattern-header">
+                    <div class="pattern-title">{{ meta.theme }}</div>
+                    <div class="pattern-stats">
+                        <div class="pattern-percentage">{{ "%.1f"|format(meta.percentage_of_reviews or meta.percentage or 0) }}%</div>
+                        <div>{{ meta.total_reviews }} reviews</div>
+                        {% if meta.cohort_count %}
+                        <div>{{ meta.cohort_count }} cohorts</div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <span class="pattern-type type-meta-occasion">Meta-Occasion</span>
+                
+                {% if meta.description %}
+                <div class="meta-description">
+                    <p><strong>Description:</strong> {{ meta.description }}</p>
+                </div>
+                {% endif %}
+                
+                <div class="products-list">
+                    <h4>📦 Top Products:</h4>
+                    {% if meta.products %}
+                        {% for product in meta.products[:3] %}
+                        <span class="product-tag">{{ product.name }} ({{ product.review_count }})</span>
+                        {% endfor %}
+                    {% elif meta.top_products %}
+                        {% for product, count in meta.top_products.items() %}
+                        {% if loop.index <= 3 %}
+                        <span class="product-tag">{{ product }} ({{ count }})</span>
+                        {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                
+                <div class="click-hint">
+                    <small>💡 Click to view detailed reviews and customer quotes</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if outliers %}
+        <h2 class="section-title">🔍 Individual Usage Occasion Cohorts (Detailed)</h2>
+        <div class="patterns-grid" id="cohortsGrid">
+            {% for cohort in outliers %}
+            <div class="pattern-card cohort-clickable" data-product="{{ cohort.clean_product_name or '' }}" onclick="openCohortModal('{{ cohort.cohort_id }}', '{{ cohort.interpretation }}', {{ cohort.size }}, {{ "%.1f"|format(cohort.percentage) }})">
                 <div class="pattern-header">
                     <div class="pattern-title">{{ cohort.interpretation }}</div>
                     <div class="pattern-stats">
@@ -634,7 +725,7 @@ This analysis identifies genuinely unusual usage patterns using:
                     </div>
                 </div>
                 
-                <span class="pattern-type type-cross-product">Cohort {{ loop.index }}</span>
+                <span class="pattern-type type-cross-product">{{ cohort.clean_product_name or 'Multi-product' }}</span>
                 
                 {% if cohort.business_insight %}
                 <div class="products-list">
@@ -718,10 +809,143 @@ This analysis identifies genuinely unusual usage patterns using:
             </div>
         </div>
     </div>
+
+    <!-- Meta-Occasion Modal -->
+    <div id="metaOccasionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 id="metaModalTitle" class="modal-title"></h2>
+                    <div id="metaModalStats" class="modal-stats"></div>
+                    <div id="metaModalDescription" class="modal-description"></div>
+                </div>
+                <div>
+                    <button id="exportMetaCsvBtn" class="export-btn" onclick="exportMetaOccasionToCsv()">
+                        📥 Export CSV
+                    </button>
+                    <span class="close" onclick="closeMetaOccasionModal()">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body" id="metaModalBody">
+                <div id="metaLoadingMessage">Loading reviews...</div>
+            </div>
+        </div>
+    </div>
     
     <script>
         // Global variables for current cohort data
         let currentCohortData = null;
+        
+        // Filter cohorts by product
+        function filterByProduct() {
+            const selectedProduct = document.getElementById('productFilter').value;
+            const cohortCards = document.querySelectorAll('#cohortsGrid .pattern-card');
+            const metaCards = document.querySelectorAll('#metaOccasionsGrid .pattern-card');
+            
+            // Filter individual cohorts
+            cohortCards.forEach(card => {
+                const cardProduct = card.getAttribute('data-product');
+                if (!selectedProduct || cardProduct === selectedProduct) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Filter meta-occasions
+            metaCards.forEach(card => {
+                const cardProducts = card.getAttribute('data-products');
+                if (!selectedProduct || (cardProducts && cardProducts.split(',').includes(selectedProduct))) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Open meta-occasion modal
+        function openMetaOccasionModal(metaCohortId, theme, totalReviews, percentage) {
+            document.getElementById('metaModalTitle').textContent = theme;
+            document.getElementById('metaModalStats').textContent = `${totalReviews} reviews (${percentage}% of dataset)`;
+            document.getElementById('metaOccasionModal').style.display = 'block';
+            
+            // Fetch meta-occasion reviews
+            fetch(`/meta-occasion-reviews/${metaCohortId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        document.getElementById('metaModalBody').innerHTML = `<div style="color: red;">Error: ${data.error}</div>`;
+                        return;
+                    }
+                    
+                    // Display description
+                    if (data.description) {
+                        document.getElementById('metaModalDescription').innerHTML = `<p><strong>Usage Context:</strong> ${data.description}</p>`;
+                    }
+                    
+                    // Display reviews
+                    if (data.reviews && data.reviews.length > 0) {
+                        let reviewsHtml = '<div class="reviews-container">';
+                        data.reviews.forEach((review, index) => {
+                            reviewsHtml += `
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <strong>Review ${index + 1}</strong>
+                                        ${review.product_name ? `<span class="product-tag">${review.product_name}</span>` : ''}
+                                    </div>
+                                    <div class="review-text">"${review.review_text || review.text || 'No review text available'}"</div>
+                                </div>
+                            `;
+                        });
+                        reviewsHtml += '</div>';
+                        document.getElementById('metaModalBody').innerHTML = reviewsHtml;
+                        
+                        // Store data for export
+                        window.currentMetaOccasionData = data;
+                    } else {
+                        document.getElementById('metaModalBody').innerHTML = '<div>No reviews available for this meta-occasion.</div>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('metaModalBody').innerHTML = '<div style="color: red;">Error loading reviews</div>';
+                });
+        }
+        
+        function closeMetaOccasionModal() {
+            document.getElementById('metaOccasionModal').style.display = 'none';
+            window.currentMetaOccasionData = null;
+        }
+        
+        function exportMetaOccasionToCsv() {
+            if (!window.currentMetaOccasionData) {
+                alert('No data to export');
+                return;
+            }
+            
+            const data = window.currentMetaOccasionData;
+            const csvContent = [
+                ['Theme', 'Description', 'Review Text', 'Product Name'],
+                ...data.reviews.map(review => [
+                    data.theme,
+                    data.description,
+                    review.review_text || review.text || '',
+                    review.product_name || ''
+                ])
+            ];
+            
+            const csvString = csvContent.map(row => 
+                row.map(field => `"${(field || '').toString().replace(/"/g, '""')}"`).join(',')
+            ).join('\n');
+            
+            const blob = new Blob([csvString], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `meta_occasion_${data.theme.replace(/[^a-zA-Z0-9]/g, '_')}_reviews.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
         
         function openCohortModal(cohortId, interpretation, size, percentage) {
             document.getElementById('modalTitle').textContent = interpretation;

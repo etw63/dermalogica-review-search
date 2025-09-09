@@ -1,0 +1,503 @@
+{
+  "summary": {
+    "total_meta_occasions": 15,
+    "original_cohorts": 327,
+    "filtered_cohorts": 144,
+    "total_reviews_covered": 553
+  },
+  "meta_occasions": [
+    {
+      "theme": "Daily Gentle Routine",
+      "cluster_id": "meta_occasion_0",
+      "cohort_count": 101,
+      "total_reviews": 389,
+      "percentage": 0.7247997018818707,
+      "top_products": {
+        "dynamic skin recovery spf50": 12,
+        "biolumin-c gel": 12,
+        "multivitamin power recovery": 12,
+        "pro-collagen banking": 12,
+        "mini precleanse cleansing oil 4.7 out of 5 stars ; 3521 reviews (3521) $16.00": 12
+      },
+      "key_phrases": [
+        "complimentary dermalogica",
+        "fine lines",
+        "gifted dermalogica",
+        "multivitamin power",
+        "multivitamin power recovery"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_1",
+        "occasion_cohort_2",
+        "occasion_cohort_9",
+        "occasion_cohort_11",
+        "occasion_cohort_12",
+        "occasion_cohort_14",
+        "occasion_cohort_15",
+        "occasion_cohort_16",
+        "occasion_cohort_17",
+        "occasion_cohort_18",
+        "occasion_cohort_19",
+        "occasion_cohort_23",
+        "occasion_cohort_24",
+        "occasion_cohort_25",
+        "occasion_cohort_27",
+        "occasion_cohort_28",
+        "occasion_cohort_29",
+        "occasion_cohort_33",
+        "occasion_cohort_34",
+        "occasion_cohort_36",
+        "occasion_cohort_39",
+        "occasion_cohort_49",
+        "occasion_cohort_51",
+        "occasion_cohort_52",
+        "occasion_cohort_57",
+        "occasion_cohort_58",
+        "occasion_cohort_59",
+        "occasion_cohort_60",
+        "occasion_cohort_65",
+        "occasion_cohort_66",
+        "occasion_cohort_69",
+        "occasion_cohort_72",
+        "occasion_cohort_73",
+        "occasion_cohort_74",
+        "occasion_cohort_77",
+        "occasion_cohort_78",
+        "occasion_cohort_85",
+        "occasion_cohort_86",
+        "occasion_cohort_90",
+        "occasion_cohort_93",
+        "occasion_cohort_95",
+        "occasion_cohort_96",
+        "occasion_cohort_98",
+        "occasion_cohort_100",
+        "occasion_cohort_105",
+        "occasion_cohort_120",
+        "occasion_cohort_124",
+        "occasion_cohort_125",
+        "occasion_cohort_137",
+        "occasion_cohort_138",
+        "occasion_cohort_139",
+        "occasion_cohort_140",
+        "occasion_cohort_141",
+        "occasion_cohort_142",
+        "occasion_cohort_146",
+        "occasion_cohort_153",
+        "occasion_cohort_157",
+        "occasion_cohort_158",
+        "occasion_cohort_159",
+        "occasion_cohort_163",
+        "occasion_cohort_171",
+        "occasion_cohort_172",
+        "occasion_cohort_179",
+        "occasion_cohort_182",
+        "occasion_cohort_188",
+        "occasion_cohort_190",
+        "occasion_cohort_191",
+        "occasion_cohort_192",
+        "occasion_cohort_194",
+        "occasion_cohort_195",
+        "occasion_cohort_196",
+        "occasion_cohort_197",
+        "occasion_cohort_198",
+        "occasion_cohort_205",
+        "occasion_cohort_219",
+        "occasion_cohort_225",
+        "occasion_cohort_226",
+        "occasion_cohort_227",
+        "occasion_cohort_228",
+        "occasion_cohort_229",
+        "occasion_cohort_234",
+        "occasion_cohort_235",
+        "occasion_cohort_236",
+        "occasion_cohort_241",
+        "occasion_cohort_249",
+        "occasion_cohort_252",
+        "occasion_cohort_255",
+        "occasion_cohort_256",
+        "occasion_cohort_257",
+        "occasion_cohort_263",
+        "occasion_cohort_266",
+        "occasion_cohort_267",
+        "occasion_cohort_271",
+        "occasion_cohort_273",
+        "occasion_cohort_274",
+        "occasion_cohort_275",
+        "occasion_cohort_284",
+        "occasion_cohort_289",
+        "occasion_cohort_291",
+        "occasion_cohort_293",
+        "occasion_cohort_323"
+      ],
+      "sample_interpretations": [
+        "This daily microfoliant",
+        "Microfoliant exfoliator is",
+        "Loves this toner"
+      ]
+    },
+    {
+      "theme": "Eye Care",
+      "cluster_id": "meta_occasion_4",
+      "cohort_count": 10,
+      "total_reviews": 40,
+      "percentage": 0.07452953232718465,
+      "top_products": {
+        "awaken peptide eye": 12,
+        "phyto nature lifting eye": 12,
+        "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00": 8,
+        "stress positive eye lift": 4,
+        "multivitamin power firm": 4
+      },
+      "key_phrases": [
+        "eye area",
+        "eye cream",
+        "lifting eye",
+        "lifting eye cream",
+        "nature lifting"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_54",
+        "occasion_cohort_55",
+        "occasion_cohort_56",
+        "occasion_cohort_87",
+        "occasion_cohort_102",
+        "occasion_cohort_103",
+        "occasion_cohort_104",
+        "occasion_cohort_160",
+        "occasion_cohort_161",
+        "occasion_cohort_201"
+      ],
+      "sample_interpretations": [
+        "On eye cream",
+        "My under eye puffiness",
+        "Eyes reduces puffiness and"
+      ]
+    },
+    {
+      "theme": "Acne & Breakout Control",
+      "cluster_id": "meta_occasion_6",
+      "cohort_count": 8,
+      "total_reviews": 27,
+      "percentage": 0.05030743432084964,
+      "top_products": {
+        "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price": 8,
+        "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase": 7,
+        "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price": 6,
+        "discover healthy skin": 4,
+        "only at ulta dermalogica skin aging solutions skincare kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 kit price": 2
+      },
+      "key_phrases": [
+        "breakout clearing",
+        "brighten kit",
+        "clear brighten",
+        "clear brighten kit",
+        "clearing kit"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_126",
+        "occasion_cohort_127",
+        "occasion_cohort_132",
+        "occasion_cohort_211",
+        "occasion_cohort_212",
+        "occasion_cohort_246",
+        "occasion_cohort_248",
+        "occasion_cohort_286"
+      ],
+      "sample_interpretations": [
+        "Clearing kit and",
+        "Breakout kit gifted",
+        "Received this kit"
+      ]
+    },
+    {
+      "theme": "Exfoliation & Texture",
+      "cluster_id": "meta_occasion_5",
+      "cohort_count": 5,
+      "total_reviews": 19,
+      "percentage": 0.03540152785541271,
+      "top_products": {
+        "oil to foam total": 8,
+        "ultracalming serum concentrate": 4,
+        "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00": 4,
+        "clearing skin wash": 3
+      },
+      "key_phrases": [
+        "foam foam",
+        "foam foam foam",
+        "foam total",
+        "foam total cleanser",
+        "gel texture"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_63",
+        "occasion_cohort_108",
+        "occasion_cohort_109",
+        "occasion_cohort_169",
+        "occasion_cohort_276"
+      ],
+      "sample_interpretations": [
+        "It to foam",
+        "Foam total cleanser is",
+        "Again oil to foam"
+      ]
+    },
+    {
+      "theme": "Hydration & Moisture",
+      "cluster_id": "meta_occasion_1",
+      "cohort_count": 4,
+      "total_reviews": 14,
+      "percentage": 0.026085336314514623,
+      "top_products": {
+        "special cleansing": 4,
+        "phyto nature oxygen": 4,
+        "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00": 4,
+        "body hydrating": 2
+      },
+      "key_phrases": [
+        "does job",
+        "drying drying",
+        "drying drying drying",
+        "price price",
+        "pricey love"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_3",
+        "occasion_cohort_47",
+        "occasion_cohort_156",
+        "occasion_cohort_259"
+      ],
+      "sample_interpretations": [
+        "Drying on my",
+        "Of the price",
+        "As good as"
+      ]
+    },
+    {
+      "theme": "Daily Gentle Routine",
+      "cluster_id": "meta_occasion_2",
+      "cohort_count": 3,
+      "total_reviews": 12,
+      "percentage": 0.022358859698155393,
+      "top_products": {
+        "phyto-nature firming": 8,
+        "daily glycolic": 4
+      },
+      "key_phrases": [
+        "difference firmness",
+        "price tag",
+        "price tag product",
+        "pump does",
+        "pump great cleanse"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_53",
+        "occasion_cohort_79",
+        "occasion_cohort_80"
+      ],
+      "sample_interpretations": [
+        "One pump is",
+        "Difference in the firmness",
+        "Of the pump"
+      ]
+    },
+    {
+      "theme": "Daily Gentle Routine",
+      "cluster_id": "meta_occasion_13",
+      "cohort_count": 3,
+      "total_reviews": 12,
+      "percentage": 0.022358859698155393,
+      "top_products": {
+        "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50": 8,
+        "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00": 4
+      },
+      "key_phrases": [
+        "cocoon love",
+        "face helps",
+        "love sleep",
+        "love sleep cocoon",
+        "love smell"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_144",
+        "occasion_cohort_147",
+        "occasion_cohort_148"
+      ],
+      "sample_interpretations": [
+        "Love the sleep cocoon",
+        "Sleep cocoon the",
+        "Already use sleep cocoon"
+      ]
+    },
+    {
+      "theme": "Acne & Breakout Control",
+      "cluster_id": "meta_occasion_10",
+      "cohort_count": 2,
+      "total_reviews": 8,
+      "percentage": 0.014905906465436929,
+      "top_products": {
+        "super rich repair": 4,
+        "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase": 4
+      },
+      "key_phrases": [
+        "40 ages",
+        "bit heavy",
+        "heavy heavy",
+        "heavy skin",
+        "nice heavy acne"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_61",
+        "occasion_cohort_91"
+      ],
+      "sample_interpretations": [
+        "Heavy for my",
+        "Product is very light"
+      ]
+    },
+    {
+      "theme": "Travel & Convenience",
+      "cluster_id": "meta_occasion_3",
+      "cohort_count": 2,
+      "total_reviews": 8,
+      "percentage": 0.014905906465436929,
+      "top_products": {
+        "discover healthy skin": 8
+      },
+      "key_phrases": [
+        "great travel",
+        "link bought",
+        "little set",
+        "little set short",
+        "set set"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_133",
+        "occasion_cohort_134"
+      ],
+      "sample_interpretations": [
+        "This set and",
+        "Are great for travel"
+      ]
+    },
+    {
+      "theme": "Exfoliation & Texture",
+      "cluster_id": "meta_occasion_8",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "daily milkfoliant": 4
+      },
+      "key_phrases": [
+        "All it oat",
+        "Awesome oat",
+        "Anything oat"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_6"
+      ],
+      "sample_interpretations": [
+        "All it oat"
+      ]
+    },
+    {
+      "theme": "Teen/Young Adult",
+      "cluster_id": "meta_occasion_9",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "multi-active": 4
+      },
+      "key_phrases": [
+        "In spray it",
+        "Apply really",
+        "Easy and has"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_10"
+      ],
+      "sample_interpretations": [
+        "In spray it"
+      ]
+    },
+    {
+      "theme": "Daily Gentle Routine",
+      "cluster_id": "meta_occasion_11",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "breakout clearing foaming wash": 4
+      },
+      "key_phrases": [
+        "Arrives with broken lid"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_76"
+      ],
+      "sample_interpretations": [
+        "Arrives with broken lid"
+      ]
+    },
+    {
+      "theme": "Daily Gentle Routine",
+      "cluster_id": "meta_occasion_12",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "stress positive eye lift": 4
+      },
+      "key_phrases": [
+        "Out the cooling",
+        "The cooling tip",
+        "Loved the cooling"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_89"
+      ],
+      "sample_interpretations": [
+        "Out the cooling"
+      ]
+    },
+    {
+      "theme": "Acne & Breakout Control",
+      "cluster_id": "meta_occasion_7",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase": 4
+      },
+      "key_phrases": [
+        "Blackheads are definitely"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_116"
+      ],
+      "sample_interpretations": [
+        "Blackheads are definitely"
+      ]
+    },
+    {
+      "theme": "Travel & Convenience",
+      "cluster_id": "meta_occasion_14",
+      "cohort_count": 1,
+      "total_reviews": 4,
+      "percentage": 0.007452953232718464,
+      "top_products": {
+        "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price": 4
+      },
+      "key_phrases": [
+        "Been getting these smaller"
+      ],
+      "original_cohorts": [
+        "occasion_cohort_122"
+      ],
+      "sample_interpretations": [
+        "Been getting these smaller"
+      ]
+    }
+  ]
+}

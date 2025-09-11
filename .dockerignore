@@ -28,16 +28,15 @@ coverage.xml
 *.cover
 .hypothesis/
 deployment/
-*.csv
+# Exclude large processed files but keep the main data file
 *.pkl
-*.json
 v5_occasion_discovery_results*
 enhanced_meta_occasions.json
 meta_occasions_consolidated.json
 dermalogica_aggregated_reviews_with_usage_patterns.csv
 review_embeddings.pkl
-dermalogica_aggregated_reviews.csv
 usage occasions.docx
+# Include dermalogica_aggregated_reviews.csv (main data file)
 simple_search_app.py
 vector_search_app_full.py
 app.log

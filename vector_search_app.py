@@ -682,9 +682,45 @@ class DivergentDiscoveryResults:
 # Initialize the discovery results loader
 discovery_results = DivergentDiscoveryResults()
 
+def download_data_file_if_needed(filename):
+    """Download data file if it doesn't exist locally"""
+    import requests
+    
+    if not os.path.exists(filename):
+        # Try to download from a public URL
+        urls_to_try = [
+            "https://raw.githubusercontent.com/etw63/dermalogica-review-search/main/dermalogica_aggregated_reviews.csv",
+            "https://github.com/etw63/dermalogica-review-search/raw/main/dermalogica_aggregated_reviews.csv"
+        ]
+        
+        for url in urls_to_try:
+            try:
+                print(f"Downloading {filename} from {url}...")
+                response = requests.get(url, timeout=30)
+                response.raise_for_status()
+                with open(filename, 'wb') as f:
+                    f.write(response.content)
+                print(f"Downloaded {filename} successfully")
+                return True
+            except Exception as e:
+                print(f"Failed to download from {url}: {e}")
+                continue
+        
+        # If all downloads failed, create a minimal placeholder
+        print(f"Warning: Could not download {filename}")
+        print("Creating placeholder file. Please upload the actual data file.")
+        with open(filename, 'w') as f:
+            f.write("Product,Review_Text,Rating,Date,Source\n")
+            f.write("placeholder,Data file not available - please upload dermalogica_aggregated_reviews.csv,5,2024-01-01,placeholder\n")
+        return False
+    return True
+
 @app.on_event("startup")
 async def startup_event():
     """Initialize the database on startup"""
+    # Download data file if needed
+    download_data_file_if_needed("dermalogica_aggregated_reviews.csv")
+    
     search_engine.load_data("dermalogica_aggregated_reviews.csv")
     search_engine.create_vector_database()
     

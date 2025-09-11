@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usage Occasions - {{selected_product}}</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 40px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 30px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-tab:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-tab.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        .header h1 { 
+            color: #333; 
+            font-size: 2.5em; 
+            margin: 0 0 10px 0;
+            font-weight: 300;
+        }
+        .header h2 { 
+            color: #667eea; 
+            font-size: 1.8em; 
+            margin: 0;
+            text-transform: capitalize;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .product-selector {
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .product-selector select {
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            font-size: 16px;
+            margin: 0 10px;
+            background: white;
+            min-width: 200px;
+            max-width: 400px;
+        }
+        
+        .product-selector option {
+            max-width: 350px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .summary {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-left: 5px solid #667eea;
+        }
+        .summary h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.4em;
+        }
+        .summary pre {
+            font-family: inherit;
+            white-space: pre-wrap;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .paradigms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .paradigm {
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .paradigm:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .paradigm-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .paradigm-name {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.2;
+        }
+        
+        .paradigm-stats {
+            text-align: right;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .paradigm-percentage {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            line-height: 1;
+        }
+        
+        .paradigm-description {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+        
+        .context-role {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .context-tag, .role-tag {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        .context-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        .role-tag {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+        }
+        
+        .sample-reviews {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .sample-review {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 10px 0;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.4;
+        }
+        
+        .error, .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.2em;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .paradigms-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+        
+        .modal-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .close:hover {
+            opacity: 1;
+        }
+        
+        .export-btn {
+            position: absolute;
+            right: 70px;
+            top: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .export-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-1px);
+        }
+        
+        .modal-body {
+            padding: 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .modal-reviews {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .modal-review {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .modal-review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .modal-review-rating {
+            background: #ffd700;
+            color: #333;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        .modal-review-text {
+            line-height: 1.6;
+            color: #333;
+            font-style: italic;
+        }
+        
+        .paradigm-clickable {
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .paradigm-clickable:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .paradigm-clickable::after {
+            content: "Click to view all reviews";
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 0.8em;
+            color: #667eea;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .paradigm-clickable:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Usage Occasions</h1>
+            <h2>{{selected_product}}</h2>
+            
+            <!-- Navigation Tabs -->
+            <div class="nav-tabs">
+                <a href="/{% if selected_product %}?product={{selected_product|urlencode}}{% endif %}" class="nav-tab">🔍 Search Reviews</a>
+                <a href="/paradigms-dashboard" class="nav-tab active">📊 Usage Paradigms</a>
+                <a href="/divergent-dashboard" class="nav-tab">🎯 Divergent Discovery</a>
+            </div>
+        </div>
+        
+        <div class="product-selector">
+            <label><strong>Select Product:</strong></label>
+            <select onchange="window.location.href='/paradigms-dashboard?product=' + encodeURIComponent(this.value)">
+                {% for product in products %}
+                <option value="{{product}}" {{'selected' if product == selected_product else ''}}>
+                    {% set display_name = product.replace('_', ' ').title() %}
+                    {% if display_name|length > 50 %}
+                        {{ display_name[:47] }}...
+                    {% else %}
+                        {{ display_name }}
+                    {% endif %}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        {% if analysis.error %}
+            <div class="error">
+                <h3>{{analysis.error}}</h3>
+                <p>This usually means:</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Not enough reviews for this product</li>
+                    <li>Usage patterns haven't been preprocessed yet</li>
+                    <li>Try running <code>python preprocess_usage_patterns.py</code> first</li>
+                </ul>
+            </div>
+        {% elif not analysis.paradigms %}
+            <div class="no-data">
+                <h3>No usage occasions found</h3>
+                <p>This product may not have enough reviews or distinct usage patterns.</p>
+            </div>
+        {% else %}
+            <div class="summary">
+                <h3>Usage Occasions Summary</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span><strong>Total Reviews:</strong> {{analysis.total_reviews}}</span>
+                    <span><strong>Major Occasions:</strong> {{analysis.paradigms|length}}</span>
+                </div>
+                <pre>{{analysis.summary}}</pre>
+            </div>
+
+            <div class="paradigms-grid">
+                {% for paradigm_id, paradigm in analysis.paradigms.items() %}
+                <div class="paradigm paradigm-clickable" 
+                     data-paradigm-id="{{paradigm_id}}"
+                     data-paradigm-name="{{paradigm.name}}"
+                     data-paradigm-description="{{paradigm.description}}"
+                     data-paradigm-size="{{paradigm.size}}"
+                     data-paradigm-context="{{paradigm.context}}"
+                     data-paradigm-role="{{paradigm.role}}"
+                     onclick="openModalFromData(this)">
+                    <div class="paradigm-header">
+                        <div class="paradigm-name">{{paradigm.name}}</div>
+                        <div class="paradigm-stats">
+                            <div class="paradigm-percentage">{{paradigm.percentage|round}}%</div>
+                            <div>{{paradigm.size}} reviews</div>
+                            {% if paradigm.avg_rating and paradigm.avg_rating > 0 %}
+                            <div>{{paradigm.avg_rating|round(1)}}⭐ avg</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="paradigm-description">
+                        {{paradigm.description}}
+                    </div>
+                    
+                    <div class="context-role">
+                        <span class="context-tag">{{paradigm.context.replace('_', ' ')|title}}</span>
+                        <span class="role-tag">{{paradigm.role.replace('_', ' ')|title}}</span>
+                    </div>
+                    
+                    <div class="sample-reviews">
+                        <h4 style="margin: 0 0 15px 0; color: #333;">Sample Reviews</h4>
+                        {% for sample in paradigm.sample_reviews %}
+                            <div class="sample-review">
+                                "{{sample[:250]}}{% if sample|length > 250 %}...{% endif %}"
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Usage Occasion</h2>
+                <p id="modalDescription">Description</p>
+                <button id="exportCsvBtn" class="export-btn" onclick="exportToCsv()">
+                    📥 Export to CSV
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-reviews" id="modalReviews">
+                    <!-- Reviews will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openModalFromData(element) {
+            console.log('openModalFromData called');
+            
+            const paradigmId = element.getAttribute('data-paradigm-id');
+            const name = element.getAttribute('data-paradigm-name');
+            const description = element.getAttribute('data-paradigm-description');
+            const totalReviews = element.getAttribute('data-paradigm-size');
+            const context = element.getAttribute('data-paradigm-context');
+            const role = element.getAttribute('data-paradigm-role');
+            
+            console.log('Data from element:', { paradigmId, name, description, totalReviews, context, role });
+            
+            // Fetch the reviews data via AJAX
+            fetch(`/usage-paradigms/${encodeURIComponent('{{selected_product}}')}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Fetched data:', data);
+                    
+                    if (data.paradigms && data.paradigms[paradigmId]) {
+                        const paradigm = data.paradigms[paradigmId];
+                        const reviews = paradigm.all_reviews || paradigm.sample_reviews || [];
+                        
+                        openModal(paradigmId, name, description, reviews, totalReviews, context, role);
+                    } else {
+                        console.error('Paradigm not found in data:', paradigmId);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+        
+        function openModal(paradigmId, name, description, reviews, totalReviews, context, role) {
+            console.log('openModal called with:', { paradigmId, name, description, reviews, totalReviews, context, role });
+            
+            const modal = document.getElementById('reviewModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalReviews = document.getElementById('modalReviews');
+            
+            if (!modal) {
+                console.error('Modal element not found!');
+                return;
+            }
+            
+            // Store current modal data for export
+            currentModalData = {
+                paradigmId: paradigmId,
+                name: name,
+                description: description,
+                reviews: reviews || [],
+                totalReviews: totalReviews,
+                context: context,
+                role: role,
+                productName: '{{selected_product}}'
+            };
+            
+            // Set modal content
+            modalTitle.textContent = name;
+            modalDescription.textContent = `${description} (${totalReviews} reviews)`;
+            
+            // Clear previous reviews
+            modalReviews.innerHTML = '';
+            
+            // Add all reviews
+            if (reviews && Array.isArray(reviews)) {
+                reviews.forEach((review, index) => {
+                    const reviewDiv = document.createElement('div');
+                    reviewDiv.className = 'modal-review';
+                    reviewDiv.innerHTML = `
+                        <div class="modal-review-header">
+                            <span>Review ${index + 1}</span>
+                        </div>
+                        <div class="modal-review-text">
+                            "${review}"
+                        </div>
+                    `;
+                    modalReviews.appendChild(reviewDiv);
+                });
+            } else {
+                console.error('Reviews is not an array:', reviews);
+            }
+            
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            console.log('Modal should be visible now');
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('reviewModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('reviewModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Global variables to store current modal data
+        let currentModalData = {
+            paradigmId: null,
+            name: null,
+            description: null,
+            reviews: [],
+            totalReviews: null,
+            context: null,
+            role: null,
+            productName: null
+        };
+        
+        function exportToCsv() {
+            if (!currentModalData.reviews || currentModalData.reviews.length === 0) {
+                alert('No reviews to export!');
+                return;
+            }
+            
+            // Create CSV content
+            const headers = ['Review Number', 'Review Text', 'Usage Context', 'Usage Role', 'Product Name', 'Paradigm Name'];
+            const csvContent = [
+                headers.join(','),
+                ...currentModalData.reviews.map((review, index) => [
+                    index + 1,
+                    `"${review.replace(/"/g, '""')}"`, // Escape quotes in review text
+                    currentModalData.context,
+                    currentModalData.role,
+                    currentModalData.productName,
+                    currentModalData.name
+                ].join(','))
+            ].join('\n');
+            
+            // Create and download the file
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `${currentModalData.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_reviews.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dermalogica Review Search</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        .search-form { margin-bottom: 30px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        select, input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .results { margin-top: 20px; }
+        .result-item { background: #f8f9fa; padding: 15px; margin: 10px 0; border-radius: 5px; border-left: 4px solid #007bff; }
+        .error { color: red; background: #ffe6e6; padding: 10px; border-radius: 5px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Dermalogica Review Search</h1>
+            <p>Lightweight search interface for pre-computed review data</p>
+        </div>
+        
+        <form class="search-form" method="post" action="/search">
+            <div class="form-group">
+                <label for="product">Product:</label>
+                <select name="product" id="product">
+                    {% for product in products %}
+                    <option value="{{ product }}" {{ 'selected' if product == selected_product else '' }}>
+                        {{ product|title }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="query">Search Query:</label>
+                <input type="text" name="query" id="query" placeholder="Enter your search terms..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="limit">Max Results:</label>
+                <input type="number" name="limit" id="limit" value="100" min="1" max="1000">
+            </div>
+            
+            <button type="submit">Search Reviews</button>
+        </form>
+        
+        <div class="results" id="results"></div>
+        
+        <div style="margin-top: 30px; text-align: center;">
+            <a href="/divergent-dashboard" style="color: #007bff; text-decoration: none;">
+                📊 View Divergent Discovery Dashboard
+            </a>
+        </div>
+    </div>
+</body>
+</html>

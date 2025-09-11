@@ -1,0 +1,3222 @@
+{
+  "summary": {
+    "total_meta_occasions": 15,
+    "original_cohorts": 327,
+    "filtered_cohorts": 281,
+    "total_reviews_covered": 1102,
+    "total_reviews_dataset": 53670
+  },
+  "meta_occasions": [
+    {
+      "meta_cohort_id": "meta_cohort_0",
+      "theme": "Sun & Environment Defense",
+      "description": "Customers use these to shield against UV, pollution, and visible aging triggers. Often layered with antioxidants.",
+      "products": [
+        {
+          "name": "daily microfoliant",
+          "review_count": 24
+        },
+        {
+          "name": "daily milkfoliant",
+          "review_count": 24
+        },
+        {
+          "name": "multi-active",
+          "review_count": 24
+        },
+        {
+          "name": "skin smoothing",
+          "review_count": 24
+        },
+        {
+          "name": "dynamic skin recovery spf50",
+          "review_count": 24
+        }
+      ],
+      "percentage_of_reviews": 1.3,
+      "total_reviews": 723,
+      "cohort_count": 185,
+      "original_cohorts": [
+        "occasion_cohort_0",
+        "occasion_cohort_1",
+        "occasion_cohort_2",
+        "occasion_cohort_6",
+        "occasion_cohort_7",
+        "occasion_cohort_8",
+        "occasion_cohort_9",
+        "occasion_cohort_10",
+        "occasion_cohort_11",
+        "occasion_cohort_12",
+        "occasion_cohort_13",
+        "occasion_cohort_14",
+        "occasion_cohort_15",
+        "occasion_cohort_16",
+        "occasion_cohort_17",
+        "occasion_cohort_18",
+        "occasion_cohort_19",
+        "occasion_cohort_21",
+        "occasion_cohort_22",
+        "occasion_cohort_23",
+        "occasion_cohort_24",
+        "occasion_cohort_25",
+        "occasion_cohort_26",
+        "occasion_cohort_27",
+        "occasion_cohort_28",
+        "occasion_cohort_29",
+        "occasion_cohort_33",
+        "occasion_cohort_34",
+        "occasion_cohort_39",
+        "occasion_cohort_40",
+        "occasion_cohort_42",
+        "occasion_cohort_45",
+        "occasion_cohort_46",
+        "occasion_cohort_47",
+        "occasion_cohort_48",
+        "occasion_cohort_49",
+        "occasion_cohort_51",
+        "occasion_cohort_52",
+        "occasion_cohort_57",
+        "occasion_cohort_58",
+        "occasion_cohort_59",
+        "occasion_cohort_60",
+        "occasion_cohort_62",
+        "occasion_cohort_63",
+        "occasion_cohort_64",
+        "occasion_cohort_65",
+        "occasion_cohort_66",
+        "occasion_cohort_72",
+        "occasion_cohort_73",
+        "occasion_cohort_74",
+        "occasion_cohort_77",
+        "occasion_cohort_78",
+        "occasion_cohort_81",
+        "occasion_cohort_82",
+        "occasion_cohort_83",
+        "occasion_cohort_84",
+        "occasion_cohort_85",
+        "occasion_cohort_86",
+        "occasion_cohort_87",
+        "occasion_cohort_90",
+        "occasion_cohort_92",
+        "occasion_cohort_93",
+        "occasion_cohort_94",
+        "occasion_cohort_96",
+        "occasion_cohort_98",
+        "occasion_cohort_99",
+        "occasion_cohort_100",
+        "occasion_cohort_105",
+        "occasion_cohort_106",
+        "occasion_cohort_107",
+        "occasion_cohort_108",
+        "occasion_cohort_109",
+        "occasion_cohort_110",
+        "occasion_cohort_111",
+        "occasion_cohort_112",
+        "occasion_cohort_124",
+        "occasion_cohort_129",
+        "occasion_cohort_131",
+        "occasion_cohort_135",
+        "occasion_cohort_136",
+        "occasion_cohort_138",
+        "occasion_cohort_139",
+        "occasion_cohort_140",
+        "occasion_cohort_141",
+        "occasion_cohort_142",
+        "occasion_cohort_150",
+        "occasion_cohort_152",
+        "occasion_cohort_153",
+        "occasion_cohort_154",
+        "occasion_cohort_157",
+        "occasion_cohort_158",
+        "occasion_cohort_159",
+        "occasion_cohort_162",
+        "occasion_cohort_163",
+        "occasion_cohort_164",
+        "occasion_cohort_167",
+        "occasion_cohort_168",
+        "occasion_cohort_169",
+        "occasion_cohort_170",
+        "occasion_cohort_171",
+        "occasion_cohort_172",
+        "occasion_cohort_173",
+        "occasion_cohort_174",
+        "occasion_cohort_176",
+        "occasion_cohort_177",
+        "occasion_cohort_182",
+        "occasion_cohort_183",
+        "occasion_cohort_184",
+        "occasion_cohort_186",
+        "occasion_cohort_188",
+        "occasion_cohort_190",
+        "occasion_cohort_191",
+        "occasion_cohort_192",
+        "occasion_cohort_193",
+        "occasion_cohort_194",
+        "occasion_cohort_195",
+        "occasion_cohort_196",
+        "occasion_cohort_197",
+        "occasion_cohort_198",
+        "occasion_cohort_200",
+        "occasion_cohort_202",
+        "occasion_cohort_204",
+        "occasion_cohort_205",
+        "occasion_cohort_206",
+        "occasion_cohort_210",
+        "occasion_cohort_213",
+        "occasion_cohort_214",
+        "occasion_cohort_216",
+        "occasion_cohort_219",
+        "occasion_cohort_220",
+        "occasion_cohort_222",
+        "occasion_cohort_224",
+        "occasion_cohort_225",
+        "occasion_cohort_226",
+        "occasion_cohort_227",
+        "occasion_cohort_228",
+        "occasion_cohort_229",
+        "occasion_cohort_230",
+        "occasion_cohort_231",
+        "occasion_cohort_234",
+        "occasion_cohort_235",
+        "occasion_cohort_236",
+        "occasion_cohort_237",
+        "occasion_cohort_238",
+        "occasion_cohort_240",
+        "occasion_cohort_241",
+        "occasion_cohort_242",
+        "occasion_cohort_249",
+        "occasion_cohort_250",
+        "occasion_cohort_251",
+        "occasion_cohort_252",
+        "occasion_cohort_253",
+        "occasion_cohort_255",
+        "occasion_cohort_256",
+        "occasion_cohort_257",
+        "occasion_cohort_261",
+        "occasion_cohort_263",
+        "occasion_cohort_264",
+        "occasion_cohort_265",
+        "occasion_cohort_266",
+        "occasion_cohort_267",
+        "occasion_cohort_268",
+        "occasion_cohort_269",
+        "occasion_cohort_271",
+        "occasion_cohort_273",
+        "occasion_cohort_275",
+        "occasion_cohort_278",
+        "occasion_cohort_279",
+        "occasion_cohort_282",
+        "occasion_cohort_284",
+        "occasion_cohort_285",
+        "occasion_cohort_289",
+        "occasion_cohort_290",
+        "occasion_cohort_291",
+        "occasion_cohort_292",
+        "occasion_cohort_293",
+        "occasion_cohort_294",
+        "occasion_cohort_295",
+        "occasion_cohort_305",
+        "occasion_cohort_308",
+        "occasion_cohort_316",
+        "occasion_cohort_317",
+        "occasion_cohort_322",
+        "occasion_cohort_323",
+        "occasion_cohort_324"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i use dermalogica products and i\u2019m not impressed with this primer. [link](",
+          "product_name": "skinperfect anti aging spectrum",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am really liking the dermalogica biolumin-c vitamin-c face serum.i like that the formula is lightwright.i have been using it daily and it seems ti have brightened my skin up.i also like that it does not feel greasy on my skin.i was gifted by dermalogica.",
+          "product_name": "biolumin-c",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "amazing. my skin loves this toner. it has been hydrating after cleansing my face and before moisturizer. i do recommend",
+          "product_name": "multi-active",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great product. foams nicely and fast feels clean after. doesn't dry out my face at all. [link](",
+          "product_name": "oil to foam total",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my daughter has used prescription retinol for acne for several years. i bought her this as a trial - and within two weeks there was visible clearing of her skin, decongestion, without redness or peeling/flaking. fantastic!",
+          "product_name": "only at ulta dermalogica retinoid clearing oil 4.4 out of 5 stars ; 581 reviews (581) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is by far the best sunscreen i have ever tried! i love how it blurs my skin but has really high spf at the same time! i have very sensitive skin and i didn't have any issues with breakouts. highly recommend! gifted by dermalogica",
+          "product_name": "only at ulta dermalogica porescreen mineral sunscreen spf 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this i have been using thia for 4 days and i have been seeing a change in my skin and i absolutely love this my skin will be clear as day i reccomend this product alot",
+          "product_name": "calm water",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i\u2019m in love with this product! finally i found an eye serum that has helped my dark circles!! i\u2019ve been using it for a few days and can definitely see a difference. i also like that it doesn\u2019t dry out the skin around my eye.",
+          "product_name": "biolumin-c eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "nice toner. does the job. good base for face creams. [link](",
+          "product_name": "antioxidant hydramist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "loved this bacne spray gifted by dermalogica. love the convenience and the idea of it. it is super easy to use. it is not too irritating on my skin. it does the job and has helped my back acne a bit. .",
+          "product_name": "only at ulta dermalogica clear start clarifying bacne spray 4.7 out of 5 stars ; 236 reviews (236) $28.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love it! my skin looks great! would purchase again",
+          "product_name": "dynamic skin retinol",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received this product as complimentary from dermologica. i really am enjoying this moisturizer because it is lightweight and also helps with fighting acne. i have very acne prone skin and i have noticed a difference with using this product. would recommend!",
+          "product_name": "only at ulta dermalogica acne biotic moisturizer 4.8 out of 5 stars ; 180 reviews (180) $76.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have been using the power bright dark spot serum gifted by dermalogica and i am obsessed. it did not take long to see the dark spots fading away day by day. i love the formula as well, feels hydrating. i absolutely recommend this product.",
+          "product_name": "powerbright dark spot",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is my favorite toner! i use it morning and night, i feel me it to be extra hydrating and provides and instant refresh. the smell is light, and it calms my dry and irritated skin.",
+          "product_name": "multi-active",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "spray does not work from the second try. toner could be better too.",
+          "product_name": "multi-active",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this moisturizer has an absolutely amazing formula!! it is a winter game changer. my skin feels refreshed after just one pump and i've received multiple compliments on my skin since i started using this product. (gifted by dermalogica)",
+          "product_name": "biolumin-c gel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "out of all the brands i've tried through working at ulta, dermalogica has the best spf! this one is mineral and blends right into you're skin with no white cast, which is hard to find. esthetician approved :)",
+          "product_name": "only at ulta dermalogica porescreen mineral sunscreen spf 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received this complimentary from dermalogica. it has a very strong scent and it's great at keeping my skin hydrated and feel cool on skin. however, i prefer to have fragrance free in my skincare so this is not for me",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received this product from bzzagent for free, this product was really good it left my skin smooth and had a great scent which i love. i would totally buy another.",
+          "product_name": "active moist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "will get rid of foundation in one go. however, for mascara i recommend presoaking lashes and removing mascara from lashes with pads soaked in eye makeup remover prior to using precleanse to clean the rest away. [link](",
+          "product_name": "precleanse makeup remover face",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "amazing. my skin loves this toner. it has been hydrating after cleansing my face and before moisturizer. i do recommend",
+          "product_name": "multi-active",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my daughter swears by this product. really helps her with breakouts.",
+          "product_name": "only at ulta dermalogica clear start post-breakout fix dark spot treatment 4.6 out of 5 stars ; 243 reviews (243) $25.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the bottom fell out after a few days use. the instructions on the bottle are not clear. i think it might be good for firming the skin, howe, because of construe defects and unclear instructions, i\u2019ll never know. [link](",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i purchase this for my husband he says it works well and doesn't burn his skin. even though it is expensive if it works well for him and he will use it then we will stick with it - great product thank you! [link](",
+          "product_name": "anti aging moisturizer medium weight non greasy",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product was suggested by my daughter. my skin reacts to creams but not this one. was put off by the price and the small container but it has lasted well. i will buy again. [link](",
+          "product_name": "powerbright pure light moisturiser",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've been using this constantly and actually see my dark spots starting to look brighter! i have a lot of pigmentation and the dark spots don't seem as pronounced anymore and seem to be going away! i'm loving this!! gifted by dermalogica",
+          "product_name": "powerbright dark spot",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is such a great product! i always love trying out new spf products and this one exceeeded my expectations! such a great product for everyone and just worked great for both me and wife! gifted by detmlogica",
+          "product_name": "only at ulta dermalogica porescreen mineral sunscreen spf 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i genuinely enjoy using powerbright\u2019s products. each one feels thoughtfully formulated, and they consistently deliver visible results. the dark spot peel is one of my favorites\u2014it brightens and smooths without irritation. overall, i trust this brand and look forward to trying more from their line!",
+          "product_name": "powerbright dark spot peel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i got this product was gifted by dermalogica and was excited to try it. it fits perfectly into my busy routine\u2014fast absorbing, no heavy scent, and it actually helped soothe my skin during a breakout. so happy with it!",
+          "product_name": "only at ulta dermalogica acne biotic moisturizer 4.8 out of 5 stars ; 180 reviews (180) $76.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was gifted by dermalogica this oil cleanser in exchange for an honest review and i love this! i really like oil and cream cleansers! but this oil one foams up sooo much you need so little of it to go far. it's amazing!",
+          "product_name": "oil to foam total",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "gentle yet effective! dermalogica daily microfoliant leaves my skin smooth, bright, and refreshed without irritation. perfect for daily use \u2014 even on sensitive skin. love it! [link](",
+          "product_name": "daily microfoliant",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this recovery cream is so good, it's lightweight, and easy to apply, it doe not feel greasy at all, it makes my skin feel so hydrating and glowing, i have dry skin and this cream is perfect for my skin, i definitely recommend it.",
+          "product_name": "multivitamin power recovery",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this sunblock protects my fair skin in the sun. it also does not go on greasy in the sun, which i love. [link](",
+          "product_name": "protection 50 sport spf50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "unfortunately this product was not for me, after using it burned and irritated skin.",
+          "product_name": "daily superfoliant exfoliator 4.6 out of 5 stars ; 1978 reviews (1978) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i like this toner, have used it for awhile. when i received the product, the box was damaged and the safety seal broken. the bottle itself was fine but i can only hope it's the correct product inside. [link](",
+          "product_name": "antioxidant hydramist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my skin has gone through it these last few months and i'm so glad i found this new multivitamin power recovery cream! it has soothed my dry and irritated skin and i love how it's hydrating but doesn't feel heavy",
+          "product_name": "multivitamin power recovery",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "received complimentary from dermalogica a smallest size of porescreen spf 40 which i used today and a tiny amount was left that i reapplied. it's really a good one blurs pores and slight tint makes skin look healthy. didn't cause any pilling.",
+          "product_name": "only at ulta dermalogica porescreen mineral sunscreen spf 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love a gentle but effective cleanser and dermalogica superfoliant it's gentle enough to remove all the impurities and leave my skin soft and clean",
+          "product_name": "only at ulta dermalogica mini daily superfoliant exfoliator 4.6 out of 5 stars ; 1978 reviews (1978) $19.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have been using it for almost a year great line of products [link](",
+          "product_name": "powerbright pure light moisturiser",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this moisturizer has an absolutely amazing formula!! it's truly a winter game changer. my skin feels refreshed after one pump. i combine this moisturiser with c-serum and it's game change for my skin! gifted by dermalogica (ulta team).",
+          "product_name": "biolumin-c gel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "excellent face wash for my combination skin. i struggle with white heads all over my cheeks underneath the skin and i\u2019ve tried everything to help me get rid of it and this cleanser really seems to make a difference.",
+          "product_name": "clearing skin wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the biolumin-c gel moisturizer is an incredible new addition to my routine. after using for a couple of weeks, my skin feels more hydrated (especially impressive during the transitional fall weather, which is usually tricky), and my skin is noticeably brighter #giftedbydermalogica",
+          "product_name": "biolumin-c gel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great product!! it's light and leaves my skin glowing",
+          "product_name": "mini biolumin-c vitamin c face serum 4.6 out of 5 stars ; 3366 reviews (3366) $39.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love daily superfoliant, it's the absolutely best. i noticed a difference in my skin on the 3rd day of usage!",
+          "product_name": "daily superfoliant exfoliator 4.6 out of 5 stars ; 1978 reviews (1978) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "didnt help with a single pimple. also pricey. possibly first product from dermalogica that i didnt like",
+          "product_name": "deep acne liquid patch",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this primer is a total disappointment. it made my skin look soooo textured and my pores became even more visible. i washed my face asap and applied a face mask. i\u2019ve never seen my skin look as awful as it did...",
+          "product_name": "skinperfect primer spf30",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have ultra sensitive skin and i have used this skin smoothing cream for years and before that ( when i was younger) i used the moist cream. i\u2019ve had people tell me there are better moisturizers but i have not found anything better. [link](",
+          "product_name": "skin smoothing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is my go to favorite spf moistirizer",
+          "product_name": "only at ulta dermalogica powerbright moisturizer spf 50 4.4 out of 5 stars ; 415 reviews (415) $85.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this stuff is magic. i have struggled with bacne for years and was looking for a solution for my upcoming wedding. this has worked better than i could have imagined!",
+          "product_name": "only at ulta dermalogica clear start clarifying bacne spray 4.7 out of 5 stars ; 236 reviews (236) $28.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received this product complimentary from dermalogica, i simply cannot contain my excitement over the dermalogica phyto-nature oxygen cream. this cream is my holy grail for daytime skincare, as it effortlessly enhances my natural radiance and leaves me feeling confident and refreshed.",
+          "product_name": "phyto nature oxygen",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells kind of strong like chemical. smooth gel. left skin feeling lightly cleansed.",
+          "product_name": "clearing skin wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this retinol complimentary from dermalogica is really gentle and light weight. typically using a retinol every single night makes my skin sensitive but i didn't have a reaction to this product at all. ive been using it for about two weeks now.",
+          "product_name": "dynamic skin retinol",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i really like this fave cleanser. although this cleanser doesn\u2019t foam up, it was still effective in cleaning off a full face of makeup. i also liked that the cleanser is a thick product and nothing runny.",
+          "product_name": "ultracalming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was gifted by dermalogica the magnetic[+] afterglow cleanser - dermalogica. com , i was using this cleanser for a while now i really love the results on my skin so amazing and smooth, glowing, also healthy skin. i highly recommend it, must have,",
+          "product_name": "new arrival magnetic[+] afterglow cleanser a moisture-bonding cleanser that acts like a magnet to set the stage for radiant, healthy skin. 92% felt their skin was better primed for the rest of their skin care routine. shop now",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received the multivitamin power recovery cream and multivitamin power recovery masque (stressed skin recovery system) gifted by dermalogica in exchange for an honest review. i have used it for about 2 weeks and have noticed a positive change in my skin's texture.",
+          "product_name": "stressed skin recovery system 5 out of 5 stars ; 146 reviews (146) $129.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've been using this for over 20 years...i cant use anything else! only product that does awesome hydration and light weight plus i dont get breakouts from using it. my daughter is hooked too [link](",
+          "product_name": "moisturizer lightweight hydrating dehydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "second time buying this serum. absolutely love it!",
+          "product_name": "mini biolumin-c vitamin c face serum 4.6 out of 5 stars ; 3366 reviews (3366) $39.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this biolumin-c restore serum by dermalogica is soooo good!! my skin loves all the delicious ingredients and soaks it right in every night. my skin looks noticeably brighter and plumper. beautiful results! gifted by dermalogica.",
+          "product_name": "biolumin-c night restore",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received the dermalogica pro-collagen banking serum in exchange for a review.",
+          "product_name": "pro-collagen banking",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "gifted by dermalogica this barrier repair cream. it has truly been a life saver during the colder months with my dry combo skin. it helps to add enough moisture to my drier skin but it's not overpowering/heavy feeling!",
+          "product_name": "stabilizing repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've been using dermalogica skin smoothing cream for years and it is a wonderful product. i live in an area where the climate is hot and dry and, although i've tried other moisturizers, i always return to this product. [link](",
+          "product_name": "skin smoothing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a very nice product. my dark circles are much reduced. it has definitely enhanced the look of my eyes and their texture. it is a real refresher product. my skin looks much more youthful.",
+          "product_name": "stress positive eye lift",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this, super hydration, is very easy to apply",
+          "product_name": "age reversal eye complex",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this retinol serum! gifted by dermalogica - sephora - it\u2019s extremely lightweight and leaves my skin feeling really plump. i\u2019ve noticed a clearer and brighter complexion since using this and i\u2019m excited to add this into my skin cycling routine.",
+          "product_name": "dynamic skin retinol",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this sunscreen not only protects but it\u2019s so light weight on my skin . i don\u2019t have that greasy look or feel. it does all this plus moisturizes my face. i couldn\u2019t ask for anything more! [link](",
+          "product_name": "protection 50 sport spf50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great hydration and wonderful texture to skin with relief of wrinkles",
+          "product_name": "biolumin-c gel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love love love this product. i've been using it for years and it works wonders everytime. don't know why it's not more readily available. [link](",
+          "product_name": "skin soothing hydrating lotion",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "perfect moisturizer for pinpoint dry spots. have normal to oily skin with spots of dryness that putting a moisturizer over my entire face woils cause breakouts. this works great and you only need a small amount. [link](",
+          "product_name": "skin soothing hydrating lotion",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "after one use this has helped lighten up my dark spots and post blemish marks! i have been trying to find products to lighten these marks and this has done the job!! i love the blend of different powerful ingredients!",
+          "product_name": "powerbright dark spot peel",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "notice more hydration &amp; even skin than when using multi-active toner",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "biolumin-c serum is my absolute favorite product. love how the serum just melts into your skin. moisturizes and brightens. i am a fan of dermalogica as it does not test on animals.",
+          "product_name": "mini biolumin-c vitamin c face serum 4.6 out of 5 stars ; 3366 reviews (3366) $39.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "fine lines appear to be diminishing. it goes on slightly dry so i have to use a larger amount. [link](",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the super rich repair moisturizer makes my skin feel smooth and good. i love it.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this eye cream is used every night and lines are not as deep as they once were.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this as part of a new regimen to help with breakouts",
+          "product_name": "breakout clearing booster",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "only bought this product because sheer tint was discontinued it was ok, not a natural feel/look. miss the sheer tint",
+          "product_name": "skinperfect primer spf30",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "if you're working on repairing your skin's barrier, this is a solid choice. the texture is not greasy, and feels nice going on. i also like that it includes ceramides and cica! it's gentle, soothing, and keeps my skin moisturized. (gifted by dermalogica)",
+          "product_name": "stabilizing repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "such a huge fan of dermalogica when it comes to any treatments or products for breakouts & acne. this has worked really well for any breakouts i might get and definitely will continue using it for whenever i get any! gifted by dermalogica",
+          "product_name": "deep acne liquid patch",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i used it the first time it did foam up. after that it hasn't. eventually nothing would come out and there was still a lot of product in it. not worth the money.",
+          "product_name": "ultracalming serum concentrate",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i'm always a fan of dermalogica products and this is no exception! the results feel professional and i love that i can use it in the convenience of my own home! highly recommend this liquid peelfoliant. gifted by dermalogica",
+          "product_name": "only at ulta dermalogica liquid peelfoliant exfoliator 4.5 out of 5 stars ; 267 reviews (267) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "doesn\u2019t make my skin break out and is handy to have spf50 built in into a day moisturiser. provides the right level of hydration for my skin (30s, slightly dry and air conditioned all day in a hot and humid climate) [link](",
+          "product_name": "powerbright pure light moisturiser",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is super serum for all to repair firm and hydrate their aging skin! great results on fine lines and wrinkles as well boosting some healthy look of he face and overal such a good product! thank you dermalogica",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i like this product because it is transparent on my skin. i dislike other sunscreen which gave a white layer on the face. also, my skin looks homogenous and radiant. the only inconvenient is the price :( it is too expensive",
+          "product_name": "only at ulta dermalogica powerbright moisturizer spf 50 4.4 out of 5 stars ; 415 reviews (415) $85.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a great every day face wash. i use it with my spinning facial brush. only a very small less than pea sized amount of this face wash is needed. it\u2019s very good for those with normal skin without any issues. [link](",
+          "product_name": "clearing skin wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great product, but it worked so much better with sheer tint moisturizer. i used that product for years and it was wonderful. please stop discontinuing your best products and bring this one back!",
+          "product_name": "skinperfect primer spf30",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have heavy adult acne on my cheeks and forehead. been using this stuff for a week and it has helped tremendously! redness is almost gone. this paired with the breakout face wash is a must. definitely want to try the whole line !",
+          "product_name": "only at ulta dermalogica clear start post-breakout fix dark spot treatment 4.6 out of 5 stars ; 243 reviews (243) $25.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "gifted by dermatitis i was sooo excited to use this spf! i love how seamlessly it covered my pores and provided sun protection. it's also the perfect travel size spf. i look forward to taking this w me everywhere to use and have full coverage",
+          "product_name": "only at ulta dermalogica porescreen mineral sunscreen spf 40 4.6 out of 5 stars ; 565 reviews (565) $55.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i wasn't sure about this double-cleanse business and the oiliness of this precleanser, but it's now a real treat to use! it's excellent at removing makeup, and it feels so soothing to my skin. i love using this!",
+          "product_name": "2 sizes precleanse cleansing oil $49.00 - $79.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love that spf gives you nice hudration!! protect your skin without white face! love that! good fourmula, makes you skin look good and heathy! nice pacaging as well!would recomend for my friends and family.",
+          "product_name": "dynamic skin recovery spf50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this gifted by dermalogica clear start cooling aqua jelly moisturizer is great as a moisturizer and even more so if you have combination or oily skin, it is light, it adsorbs quickly, it feels like water, excellent texture, perfect to use with any skin routine.",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the only sunscreen i\u2019ll wear on my face. it doesn\u2019t get into my eyes when i sweat or get wet. it doesn\u2019t have a scent and i don\u2019t break out. only choice for me [link](",
+          "product_name": "protection 50 sport spf50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "absolutely love this pre cleanse! i cannot live without it. love the smell, the way it melts away my makeup and how my skin feels afterwards.",
+          "product_name": "mini precleanse cleansing oil 4.7 out of 5 stars ; 3521 reviews (3521) $16.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the smell of this is the best! it feels like i'm at the spa when i use it daily. great product! just sent a sample to my daughter who loved using it while she travelled.",
+          "product_name": "only at ulta dermalogica antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it's not bad, but i miss sheer tint spf. i hope you'll bring it back.",
+          "product_name": "skinperfect primer spf30",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i recently got a chance to try their new dermalogica circular hydration serum!",
+          "product_name": "circular hydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i really struggled with breakouts and when i switched to using dermalogica exclusively this breakout clearing booster was one of the products that helped my skin immediately. it cleared up my blemishes without drying out my skin. it is amazing!",
+          "product_name": "breakout clearing booster",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received biolumin-c night restore with vitamin c + pro-vitamin d complex complimentary from dermalogica. the serum instantly hydrates my skin and brightens my skin tone and improves the skin texture!",
+          "product_name": "biolumin-c vitamin c night restore serum 4.9 out of 5 stars ; 187 reviews (187) $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the pre cleanse, washes away all your makeup and dirt so seamlessly and gently!",
+          "product_name": "mini precleanse cleansing oil 4.7 out of 5 stars ; 3521 reviews (3521) $16.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "clean start breakout clearing booster works great! non greasy formula. clears small breakouts in 48 hours. i reccomend this product.",
+          "product_name": "breakout clearing booster",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was given a free product in return for my review and all opinions are my own. i was really surprised when dermalogica created a smart response serum, and i have to say it certainly lives up to its name.",
+          "product_name": "smart response",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "In powder",
+        "This daily microfoliant",
+        "Microfoliant exfoliator is",
+        "All it oat",
+        "Milkfoliant to"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_2",
+      "theme": "Clear & Smooth Control",
+      "description": "Used daily or every other day by acne-prone and textured-skin users. Customers frame it as a must-have rescue step that prevents future breakouts and unclogs pores.",
+      "products": [
+        {
+          "name": "awaken peptide eye",
+          "review_count": 24
+        },
+        {
+          "name": "phyto nature lifting eye",
+          "review_count": 24
+        },
+        {
+          "name": "multivitamin power firm",
+          "review_count": 16
+        },
+        {
+          "name": "biolumin-c eye",
+          "review_count": 8
+        },
+        {
+          "name": "multivitamin power recovery masque",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 80,
+      "cohort_count": 20,
+      "original_cohorts": [
+        "occasion_cohort_35",
+        "occasion_cohort_36",
+        "occasion_cohort_54",
+        "occasion_cohort_55",
+        "occasion_cohort_56",
+        "occasion_cohort_102",
+        "occasion_cohort_103",
+        "occasion_cohort_104",
+        "occasion_cohort_113",
+        "occasion_cohort_144",
+        "occasion_cohort_146",
+        "occasion_cohort_147",
+        "occasion_cohort_148",
+        "occasion_cohort_160",
+        "occasion_cohort_161",
+        "occasion_cohort_201",
+        "occasion_cohort_203",
+        "occasion_cohort_217",
+        "occasion_cohort_218",
+        "occasion_cohort_243"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "so far i\u2019m loving this under eye serum! i love the way it makes my under eyes feel. it gives an instant brightening effect. no complaints here!",
+          "product_name": "biolumin-c eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this serum! absorbs quickly and the skin around my eyes is brighter, i have noticed my under eyes become more moisturized when i apply it.",
+          "product_name": "biolumin-c eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this brand and was very excited to discover and try their new eye serum that i received complimentary from dermalogica. it is well worth the money and makes the under eye area super bright and hydrated. it is super easy to apply it too!",
+          "product_name": "biolumin-c eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this brand and was very excited to discover and try their new eye serum that i received complimentary from dermalogica. it is well worth the money and makes the under eye area super bright and hydrated. it is super easy to apply it too!",
+          "product_name": "biolumin-c eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i like this masque, buy it always, especially that it can be applied under eye area, as my esthetician said",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bought it before my holidays to mexico. the skin is so smooth after this masque.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is very good masque and and don't need to use big amount in the face. in order to keep my skin smooth and fresh, this masque is excellent for my skin.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great for dull skin needing a boost of radiance. i apply the masque the night before a big event and wake up with a glow.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great ice cream, i really like the way it feels and helps my eyes to look more alive. i definitely recommend him for sensitive skin and in general for all types of skin! i saw the difference very very quick. gifted by dermalogica",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "complimentary from dermalogica. i not big on eye cream, i always use my face cream in the eye area as well, that being said, i like the effect of this cream. it\u2019s very refreshing and moisturizing. i\u2019m excited to see the long term results.",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a very light yet super hydrating eye cream. i have oily type skin and the same goes for the skin around my eyes but this eye cream doesn\u2019t feel too heavy or greasy like other moisturizing creams. gifted by dermalogica.",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it is an excellent eye cream, it moisturizes well the skin around the eyes, nourishes and nourishes it",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "definitely helped with puffiness under eyes. i use it everyday. [link](",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "works great reducing puffiness under my eyes i can see the difference it was worth the money [link](",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i purchased this due to the puffiness under my eyes and it didn\u2019t work at all! i wanted to give it some time so i tried it twice a day for about 10 days. absolutely no change. [link](",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "don't waste your money. it didn't make any difference in puffiness at all. [link](",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "reduces eye puffiness and improves skin texture around the eyes. i like it! [link](",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "a great product for overworked and under-slept eyes! a little goes a long way, this is very light and moisturizing. the caffeine makes my eyes look normal even after a night of zero sleep. super important for my insomniac self!",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "provides immediate relief, effectively de-puffing my eyes with a refreshing sensation.",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have a terrible allergy and quite often eyes are red and itchy. this grl keeps the area around my eyes well hydrated.",
+          "product_name": "awaken peptide eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have used the face cream and decided to splurge for the eye cream. i noticed a tightening and lifting on one application. it is a little pricey, but it does what it says \ud83d\ude0a",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "dermalogica phyto nature lifting eye cream in a pump dispenser. the eye cream gives an instant refreshing lifted look around my eye area. it\u2019s a light cream texture that quickly absorbs on to my skin.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i really really enjoy using the phyto nature lifting eye cream. after using for 3 weeks now i can say after the first 7 days i noticed an appearance in the skin around my eye area. i look a lot n more refreshed.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am loving dermalogica's phyto nature lifting eye cream! this eye cream is perfect for mature skin. it is a thicker, rich cream that feels so soothing to the delicate eye area. i haven't had any irritation. i love this whole line!",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have used the face cream and decided to splurge for the eye cream. i noticed a tightening and lifting on one application. it is a little pricey, but it does what it says \ud83d\ude0a",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "dermalogica phyto nature lifting eye cream in a pump dispenser. the eye cream gives an instant refreshing lifted look around my eye area. it\u2019s a light cream texture that quickly absorbs on to my skin.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i really really enjoy using the phyto nature lifting eye cream. after using for 3 weeks now i can say after the first 7 days i noticed an appearance in the skin around my eye area. i look a lot n more refreshed.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am loving dermalogica's phyto nature lifting eye cream! this eye cream is perfect for mature skin. it is a thicker, rich cream that feels so soothing to the delicate eye area. i haven't had any irritation. i love this whole line!",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great eye cream works quickly and does a good job. no irritation as we know around the eye can be a bit sensitive. [link](",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i\u2019m really excited trying this eye cream because i have their moisturizer and i really love it the formula is incredible lightweight and it makes my eyes feel more brighter and fresher every time i use it",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is an awesome lifting eye cream. the formula is nice blends in seamlessly. it does help alot with tired eyes. i have noticed my eyes look brighter and less tired. definitely happy to have this eye cream.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "ok, i'm a lover of trying new eye creams and dermalogica. this one is so thick and goes to work right away. tightens up those bags and fine lines. everything is smooth and juicy. i use all around my eyes.",
+          "product_name": "phyto nature lifting eye",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "wasn't a big fan of this eye cream- found it to absorb well but felt it was much too overpriced and therefore returned it. [link](",
+          "product_name": "age reversal eye complex",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i tried it on puffy-after-sleep eyes, and there was no change, not even a subtle change, my eyes looked as if i used nothing? i was hoping for so much more, i'm seriously disappointed, i'll be returning it and trying another product. [link](",
+          "product_name": "age reversal eye complex",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this product it's so amazing helps from puffynes under my eyes especially in the morning when i awake [link](",
+          "product_name": "age reversal eye complex",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "a little goes a long way and it does not burn. i have noticed the lines around my eyes are smoother. love it! [link](",
+          "product_name": "age reversal eye complex",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i just purchased the sound sleep cocoon again. i love the smell and the silky feel on my face. it helps me to relax and get to sleep.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the sleep cocoon! the feel is indeed velvety, but most of all i love the smell. it always makes the night cleansing a treat. so i will bring it with me in small size when i travel.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i think i will add sound sleep cocoon to may daily routine. i really like how it feels on my skin.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love adding sound sleep cocoon as my last step during night routine. the scent is absolutely lovely and very enjoyable-light not over powering. so pleasing to fall asleep to and wake to skin feeling revitalized.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "everything about this night cream is amazing. so glad i have added this to my skin care routine.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my night time ritual is this cream. it smooths out my wrinkles over night. the lavender smell put me right to sleep.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is my favourite night cream. i love the smell and texture and wake up with very soft skin",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "wow just decided to try, wanted something for the night. i wake up with beautiful smooth skin. i am saying this is a miracle gel cream!!! my skin is brighter and smoother, i look in the mirror and say beautiful!!! love this product.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i just purchased the sound sleep cocoon again. i love the smell and the silky feel on my face. it helps me to relax and get to sleep.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the sleep cocoon! the feel is indeed velvety, but most of all i love the smell. it always makes the night cleansing a treat. so i will bring it with me in small size when i travel.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i think i will add sound sleep cocoon to may daily routine. i really like how it feels on my skin.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love adding sound sleep cocoon as my last step during night routine. the scent is absolutely lovely and very enjoyable-light not over powering. so pleasing to fall asleep to and wake to skin feeling revitalized.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i just purchased the sound sleep cocoon again. i love the smell and the silky feel on my face. it helps me to relax and get to sleep.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i think i will add sound sleep cocoon to may daily routine. i really like how it feels on my skin.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love adding sound sleep cocoon as my last step during night routine. the scent is absolutely lovely and very enjoyable-light not over powering. so pleasing to fall asleep to and wake to skin feeling revitalized.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the sleep sound cocoon is amazing. i wake up with the softest skin. it's very smooth and feels like you're rubbing silk on your face. i apply it every night after my serum to have soft hydrated skin.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "due to aging i wanted a non- invasive way to open up my eyes and firm up the upper lids. it really works!",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "have used this for many years. smooths and moisturizes my eye area.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the way this feels, although this is the one product that causes a bit of a reaction to my eyes. i will try an alternative next time.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "makes your under eye skin feel soft and silky, help minimize eye wrinkles. feels very nice on the skin.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "due to aging i wanted a non- invasive way to open up my eyes and firm up the upper lids. it really works!",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "have used this for many years. smooths and moisturizes my eye area.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "makes your under eye skin feel soft and silky, help minimize eye wrinkles. feels very nice on the skin.",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it keeps my eyes hydrated, youthful and bright. i absolutely love it!",
+          "product_name": "2 sizes dermalogica multivitamin power firm eye cream 4.5 out of 5 stars ; 742 reviews (742) $69.00 - $99.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great under eye cream. i have small white bumps form under my eyes and this has helped not only clear up the bumps but also help smooth the under eye area out. i use every night and morning under my makeup. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i like the way it feels. i didn't really notice any change to my eye area. i'm looking for something that helps with some mild undereye puffiness... the search continues. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product worked wonders for my under eye area! i could tell a difference after a couple of uses! 10/10 would definitely recommend to everyone!",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this eye cream made a huge difference on my under eyes in a positive way. it made them less puffy and it helped with the discoloration. i would totally recommend the multivitamin power firm eye cream.",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i bought this eye cream recommended by my esthetician and i liked the feeling on the eyes. i am not a fan of products in tubes as i feel there is product wasted, but overall good product. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "not as good as your total eye care. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i used this product for two days and woke up on the third day and the circles under my eyes were so dark i didn\u2019t recognize myself. scared this won\u2019t go away. don\u2019t recommend. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've tried many products from dermalogica and this is my favorite for the area under the eyes. if you live in a dry climate like utah this cream will save you. [link](",
+          "product_name": "multivitamin power firm",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great night time cream. this restores my skin after a long day. my skin feels much better after using this. i made the right selection. and it doesn't leave a residue.",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have tried tons of night creams and this is top notch! glides on smoothly! soin feels soft and moistured in the morning! definitely recommend this for your skincare routine!!",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the power bright overnight moisturizer is heaven sent. it makes my skin feel nice and moisturized when i wake up in the morning.it gives me a glow.",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this night cream. you don't need a lot and it spreads evenly over my skin. my skin feels soft and my complexion looks even. my only criticism is the unpleasant musty scent. overall, i'm very happy with this product.",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the powerbright overnight cream. my skin is softer and the age spots are lightening. my skin looks soft in the morning.",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the power bright overnight moisturizer is heaven sent. it makes my skin feel nice and moisturized when i wake up in the morning.it gives me a glow.",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love all my dermalogica products. the powerbright overnight cream i thought would be bigger. but it is doing the job. thank you!",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i haven't used this cream for too many night. but my initial impression is great- fantastic feel on my face especially for colorado winter months. clean ingredients as usual. can't speak to brightening effect but fingers crossed!",
+          "product_name": "only at ulta dermalogica powerbright overnight cream 4.6 out of 5 stars ; 351 reviews (351) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "amazing! better than many medicines for sleep i have taken over the years [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product enables a great sleep as well as great skin in the morning. as a cpap wearer, i have noticed an additional benefit from this product. no cpap mask indentations in the morning. love this overnight moisturizer! [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a great night time moisturizer. i love it, even though it is pricey. it is worth it! [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "every time i use this product before bed it helps me go right to sleep. very happy with this product. i love dermologica skincare! [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Undereyes look",
+        "This masque it",
+        "On eye cream",
+        "My under eye puffiness",
+        "Eyes reduces puffiness and"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_3",
+      "theme": "Calm & Restore After Stress",
+      "description": "Functions as a 'reset button' \u2014 chosen when skin is compromised. Customers value the calming, non-stinging relief that restores comfort and confidence.",
+      "products": [
+        {
+          "name": "discover healthy skin",
+          "review_count": 24
+        },
+        {
+          "name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "review_count": 10
+        },
+        {
+          "name": "only at ulta dermalogica clear start breakout clearing kit",
+          "review_count": 10
+        },
+        {
+          "name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "review_count": 8
+        },
+        {
+          "name": "only at ulta dermalogica sensitive skin rescue kit",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 65,
+      "cohort_count": 17,
+      "original_cohorts": [
+        "occasion_cohort_120",
+        "occasion_cohort_126",
+        "occasion_cohort_127",
+        "occasion_cohort_128",
+        "occasion_cohort_132",
+        "occasion_cohort_133",
+        "occasion_cohort_134",
+        "occasion_cohort_207",
+        "occasion_cohort_208",
+        "occasion_cohort_211",
+        "occasion_cohort_212",
+        "occasion_cohort_246",
+        "occasion_cohort_247",
+        "occasion_cohort_288",
+        "occasion_cohort_296",
+        "occasion_cohort_297",
+        "occasion_cohort_312"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "great set to get started with. all great products. my skin feels fresh, clean and tight!",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this set! it has transformed my skin. i have very oily skin with patches of dry areas. i feel like this has evened my skin tone tremendously. this is the face care kit i've been looking for.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i liked the set. thank you! good for first testing.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a great set to try out the products for the first time. my skin feels smoother and is already looking clearer! i'm looking forward to trying more products!",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the breakout clearing line. the products work great &amp; the packaging looks nice for display",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i ordered the breakout clearing kit and am very happy with the results",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i received this product gifted by dermalogica', this clearing kit includes cleanser, treat breakouts, and hydrate skin. very travel-friendly. feels good after using these three product! will buy full sized one",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the dermalogica clear start breakout clearing kit was gifted to me complimentary by dermalogica. it worked great! the acne clearing wash to wash off my makeup and i loved that the moisturizer was a serum gel base",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "a great starter set contains foaming wash, booster, and moisturizer. it's very gentle and safe even for sensitive skin - none of them irritated my face. but it didn't work for me... i have received this clear start breakout clearing kit complimentary from dermalogica.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was very pleasantly surprised with this breakout clearing kit complimentary from dermalogica (ulta team) the set comes with everything i need, the foaming wash the booster and the aqua jelly. my face was left feeling clean and moisturized . will definitely recommend.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i got this dermalogica clear start breakout kit gifted by dermaligica. so happy to try them. there are foaming wash, booster, and moisturizer within the kit. they work well for my oil skin. i hope they can help solve my acne and blackhead issues.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "a great starter set contains foaming wash, booster, and moisturizer. it's very gentle and safe even for sensitive skin - none of them irritated my face. but it didn't work for me... i have received this clear start breakout clearing kit complimentary from dermalogica.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was very pleasantly surprised with this breakout clearing kit complimentary from dermalogica (ulta team) the set comes with everything i need, the foaming wash the booster and the aqua jelly. my face was left feeling clean and moisturized . will definitely recommend.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i got this dermalogica clear start breakout kit gifted by dermaligica. so happy to try them. there are foaming wash, booster, and moisturizer within the kit. they work well for my oil skin. i hope they can help solve my acne and blackhead issues.",
+          "product_name": "only at ulta dermalogica clear start breakout clearing kit 4.7 out of 5 stars ; 697 reviews (697) $29.50 kit price free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "everything in this kit is amazing, with exception to the \u201cskin smoothing cream\u201d. i have been using dermatologica for a long time now. the scent is very strong in my opinion and it left bumps and hives all over my face.",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "first time using the kit. i love it so far. i love the way my skin feels after. i wish it wasn\u2019t so expensive",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this kit is so great! it was gifted by dermalogica. i feel like my skin is so much happier with these products. especially the skin smoothing cream. i will absolutely be buying full sizes of these once i run out of the smaller sizes.",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great kit! love how it had sample sizes of dermalogica\u2019s products. i wish the sizes were at least an ounce instead of .5 but overall i though this was a great samples. i really liked the moisturizer! gifted by dermalogica",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the prefect little set for a short trip! [link](",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bought for grandson who appreciated the extra goodies he received in this selection. he had two of the items and was happy to try the additional items that he hasn\u2019t used. glad to purchase at a great price!!! [link](",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i bought this set to go on vacation with. it works very well with cleansing renewing and moisturizing my skin. it made me by the full size version of the exact set. [link](",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this set so much, the oil cleanser is so good at removing my makeup! i also love the moisturizer because it doesn\u2019t leave my face feeling greasy! i would 100% recommend this set! so amazing!",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the prefect little set for a short trip! [link](",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this set because i\u2019m an avid traveler. it has all my essentials consolidated into a small and portable set that i can take everywhere, whether i\u2019m flying across the country or sleeping over a friend\u2019s house. this product was gifted by dermalogica.",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "absolutely love this set and all the products! love all dermalogical products. this set is perfect if you\u2019re traveling!! my skin feels amazing after using. i would definitely recommend this product!!! gifted by dermalogical.",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "(gifted by dermalogica) love this set! it's perfect for traveling and has everything you need and is also great for giving as a small gift to someone trying for the first time! great for moisturizing skin and smells very clean",
+          "product_name": "discover healthy skin",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i enjoy this kit a lot, i have very sensitive skin and it does my skin just right. after letting my daughter use it she loves it also. will be buying again.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this kit was suggested to me by my facial lady. very great product and consistent. the price is affordable. really helps with very sensitive skin.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "did like this kit, however i did find the spray a little heavy on the lavender smell.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "kit is nice. the moisturizer is very different. but i like it. it there enough of it to last? seems like a person would need to order more before next kit comes. i am using very little",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it's a travel must have. it has everything you need. it's gentle on my sensitive skin.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the travel size was good to check out the product. the cleanser bottle was too stiff to squeeze so i had to pound it on my hand wasting some of the product. the moisturizer was very good although the face spray was not.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "tsa ready and a great way to experience a new favorite product:)",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "skin calming range are my go to products after a day in the mountains. been using for years and love these little trial sizes. great for travel or gym bag too.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the kit gives the user a 'taste' of what to expect from the dark spot solutions products. i look forward to purchasing the products in larger portions to use on a daily basis.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the dark spot kit. already seeing results. this product is amazing :clap:",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "not impressed with the kit at all - a lot smaller for the amount of $$ and hasn't done anything in the past month to help with dark spots.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love my spot solutions kit. finishing these up tonight so i can use my new tomorrow.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the kit gives the user a 'taste' of what to expect from the dark spot solutions products. i look forward to purchasing the products in larger portions to use on a daily basis.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the dark spot kit. already seeing results. this product is amazing :clap:",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "not impressed with the kit at all - a lot smaller for the amount of $$ and hasn't done anything in the past month to help with dark spots.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "using this kit made me start using the products full time. i love how my skin looks & feels.",
+          "product_name": "only at ulta dermalogica dark spot solutions kit 4.4 out of 5 stars ; 355 reviews (355) $68.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i absolutely love this clear and brighten kit by dermalogica! it has drastically improved my complexion over just a few uses! it also doesn't sting or damage my sensitive skin. i highly recommend! gifted by dermalogica",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "gifted by dermalogica, i received this clear and brighten kit! this clear and brighten kit comes with every essential to achieve clearer and brighter skin. i experienced no negative reactions and have seen a difference in my skin! i recommend",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i was gifted by dermatologica this clear and bright kit. this kit includes daily microfoliant, age bright clearing serum and clearing skin wash. all of these used together has really cleared my skin! i haven't seen a single pimple or blemish since starting",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this clear and brighten kit contains highly active ingredients to clear breakouts, smooth skin and brighten skin tone. this kit is perfect to test several skin conditions like acne and breakouts.",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i like this kit! it is saver and travel size is super convenient! it moisturize well my skin and it looks well rested and hydrated. love all the product, cleanser is a must! highly recommend it. gifted by dermalogica.",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "one of the few mini trial/travel kits that's actually worth every penny of the price. you can see such a huge difference with just the minis it's insane. i absolutely love these product in this line. gifted by dermalogica",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this clear and brighten kit gifted by dermalogica. it is the perfect t size to travel with. my favorite is the serum! it keeps my skin super clean snd i noticed my skin is much brighter after each use",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this set. i revived it gifted by dermalogica. the products are nice clean and effective. the products work great on my sensitive skin and make my skin feel smooth and look glowy. will definitely continue using these products",
+          "product_name": "only at ulta dermalogica clear and brighten skincare kit 4.6 out of 5 stars ; 200 reviews (200) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this kit also gave me away to test new products.",
+          "product_name": "only at ulta dermalogica skin aging solutions skincare kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a great starter kit that helped rejuvenate my face. i use this set every night and my skin feels a lot more plump and alive. i also have dry skin and this does a great job hydrating it. highly recommend. gifted by dermalogica",
+          "product_name": "only at ulta dermalogica skin aging solutions skincare kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great kit, as always from dermalogica. skin feels renewed and fresh. important to use all the steps! really recommend for all skin types even sensitive skin! gifted by dermalogica in exchange of my honest opinion.",
+          "product_name": "only at ulta dermalogica skin aging solutions skincare kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "another great kit gifted by dermalogica! it's a nice way to try out a lot of their pricier items for a fraction of the cost and get several uses. my favorite product was the cream. my face felt soft and looked bright!",
+          "product_name": "only at ulta dermalogica skin aging solutions skincare kit 4.5 out of 5 stars ; 120 reviews (120) $78.00 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love!! i bought the kit to see how i would like the products. within a week of using them, my skin was softer, more vibrant and very hydrated. i will be purchasing full size bottles!!!!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my go to travel set. all essentials in travel size of cleanser, serum and moisturizer. great package to try if you don't want to buy full size bottles. leaves my skin feeling smooth and glowy. i have noticed a reduction in aging spots",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love all these products and this little kit is perfect for travel or gym bag",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the whole kit worked really well with my skin!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this was the best purchase. was a bit skeptical because my face is very sensitive. but this kit! i started looking and feeling confident:u1f970: my spots were fading, and my skin was glowing, i'm really happy with this kit.",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love all 3 of these products! this kit is the perfect, take me on holidays size, so i can keep my favorites with me always.",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this kit is absolutely amazing! i have used it every day and noticed such a difference in my skin! i will buy again and highly recommend!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the whole kit worked really well with my skin!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this set is such a great value and amazing quality! these vitamin c products are so brightening, they give me such a great glow! definitely recommend!! [link](",
+          "product_name": "daily brightness boosters",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "absolutely love dermalogica and this is a perfect little set , especially for traveling. it has the basic skincare steps. i especially enjoy the cleanser that leaves my skin feeling clean but soft, not drying at all. i do recommend!",
+          "product_name": "daily brightness boosters",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this little set! i brought it for a weekend trip away and it was everything i needed for my skincare routine. the sizes are great for travel. i like how they smell too. they smell like citrus/ orange which is very refreshing!",
+          "product_name": "daily brightness boosters",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Great set to",
+        "Clearing kit and",
+        "Breakout kit gifted",
+        "Contains foaming",
+        "Received this kit"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_13",
+      "theme": "Clear & Smooth Control",
+      "description": "Used daily or every other day by acne-prone and textured-skin users. Customers frame it as a must-have rescue step that prevents future breakouts and unclogs pores.",
+      "products": [
+        {
+          "name": "body hydrating",
+          "review_count": 14
+        },
+        {
+          "name": "special cleansing",
+          "review_count": 8
+        },
+        {
+          "name": "active moist",
+          "review_count": 8
+        },
+        {
+          "name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "review_count": 7
+        },
+        {
+          "name": "hyaluronic ceramide mist",
+          "review_count": 7
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 46,
+      "cohort_count": 12,
+      "original_cohorts": [
+        "occasion_cohort_5",
+        "occasion_cohort_118",
+        "occasion_cohort_143",
+        "occasion_cohort_145",
+        "occasion_cohort_149",
+        "occasion_cohort_185",
+        "occasion_cohort_223",
+        "occasion_cohort_258",
+        "occasion_cohort_260",
+        "occasion_cohort_272",
+        "occasion_cohort_276",
+        "occasion_cohort_277"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i\u2019ve ordered this twice already it\u2019s expensive but a little goes a long way. it last me like 3 months or more. there is barely any smell and if anything the smell doesn\u2019t bother me. i love it! \ud83e\udd70 [link](",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it\u2019s not scented. i love the lather it produces. [link](",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "pretty good general cleanser. takes a little bit of effort to fully wash off. no strong fragrance. [link](",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "nice but smells like cleaning supplies to me ?? takes away from the experience unfortunately. works well though so if you don\u2019t care about smell it doesn\u2019t really matter.",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells like baby oatmeal but it's obviously natural so i expected that. the overall tone and texture of my skin has improved in just a few weeks!",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells horrible, turns into mush. when you get it, wet. do not waste your money.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have the original exfoliate, which is excellent when i have acne, but this particular one is extremely gentle yet effective this one is it i don't know what people are complaining about the smell what smell?",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i do feel this product works. however, the smell. and i get it, it's \"milk\"-foliant....but it does smell like baby barf. the price we pay for beauty, i guess.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "while i love the initial smell of this product, the scent becomes musty and almost smells like weed once water is added. i developed a pretty bad case of contact dermatitis after using it, as well. i will definitely be returning it.",
+          "product_name": "2 sizes precleanse cleansing oil $49.00 - $79.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the way this stuff smells. and the glow i have after i use it.",
+          "product_name": "2 sizes precleanse cleansing oil $49.00 - $79.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the smell of the product is amazing..it melts the makeup off your face while keeping moisture in your skin. one of my favorite products.",
+          "product_name": "2 sizes precleanse cleansing oil $49.00 - $79.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this made me break out in hives all over my jawline and cheeks. too scented. very poor clogging for sensitive oily/combo skin",
+          "product_name": "2 sizes precleanse cleansing oil $49.00 - $79.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the scent and how it softens my skin.",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product is great. texture is lovely, the scent helps me to relax for bed and it feels soothing on my skin",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the way my skin looks in the morning after using this. great scent!",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love love love the smell that it leaves on my skin. wish the size were larger!",
+          "product_name": "sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $89.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells like rosemary , we have those bushes in our yard, my husband wont come near me with this on my face. its really strong!!!!!",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i just love this product. it makes my skin feel so good. live the lavender smell and i'm sure it makes me sleep better.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love a lavender infusion of hydration. this gel makes me feel relax, emulsified with water and fresh.",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the lavender in this smells soooo good. and it's just relaxing, i lo e putting g it on before bed",
+          "product_name": "only at ulta dermalogica mini sound sleep cocoon night gel-cream 4.5 out of 5 stars ; 1806 reviews (1806) $22.50",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "excellent light mist. moisturizing and gentle on skin.",
+          "product_name": "only at ulta dermalogica ultracalming mist toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this mist has given me relief to some of my painful acne symptoms. i use it twice daily and love the calming sensation it offers!",
+          "product_name": "only at ulta dermalogica ultracalming mist toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the ultra calming mist, i use it twice daily. it leaves my skin smooth and well hydrated. great product!",
+          "product_name": "only at ulta dermalogica ultracalming mist toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this mist is so great at calming redness in the skin, lightweight mist feels and smells great !",
+          "product_name": "only at ulta dermalogica ultracalming mist toner 4.5 out of 5 stars ; 487 reviews (487) $47.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "lovely soft scent, goes on smoothly, not too thick, yet skin feels nicely moisturized",
+          "product_name": "active moist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells a little like lavender, but also like mildew. i don't find it to be very moisturizing, but it absorbs rather well. i usually stay away from heavily scented moisturizers anyway.",
+          "product_name": "active moist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is an amazinggggg moisturizer. it is odorless and super light on my skin. i use it every morning as part of my skincare routine. a little product goes a long way. this product was gifted by dermalogica.",
+          "product_name": "active moist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "unique smell. love the consistency of the product, but it made my rosacea redness visibly worse after application. seemed to ever fully absorb and sits on the skin.",
+          "product_name": "active moist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "has a light and pleasant scent. pump works well. not cheap, but as you know dermalogica is expensive stuff. so reasonably priced considering who makes it. medium suds. recommended with a 4 star rating. [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this hyaluronic mist feels very refreshing on the skin and leaves my skin very soft and hydrated. i like to use this product few times a day to refresh my face and neck. also, i like the delicate scent of this product. [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a nice facial mist by dermologica. i like that it is lightweight and feels good on my skin. doesn't make me greasy either. very slight fragrance. [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very refreshing with a light scent of rose. very gentle to my sensitive skin, and adds that boost of strengthening to the skin barrier that i know i\u2019ve damaged over the years. it\u2019s a great size bottle for the price, highly recommended [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it seems expensive for a body wash, however; just a little bit pretty much covers your entire body. feels fresh and clean with very light clean scent. love it. [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "while i'm not a fan of lavender scented things, this is a nice body wash. the scent was light and didn't linger on my skin. the wash makes a nice lather and rinses easily. left me feeling fresh and clean. [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "smells amazing and even though the container is small, only a pump or two will wash all of you. it\u2019s pricey, but i love it and will definitely buy it again! [link](",
+          "product_name": "body hydrating",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "feels amazing and doesn't take too long to absorb. it also smells really good and makes my skin feel hydrated!",
+          "product_name": "only at ulta dermalogica clear start soothing hydrating lotion 4.4 out of 5 stars ; 181 reviews (181) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "would like it to be more hydrating, but great product",
+          "product_name": "only at ulta dermalogica clear start soothing hydrating lotion 4.4 out of 5 stars ; 181 reviews (181) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very light hydrating lotion. it's not too heavy feeling yet it leaves me feeling hydrated.",
+          "product_name": "only at ulta dermalogica clear start soothing hydrating lotion 4.4 out of 5 stars ; 181 reviews (181) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "hydrated without feeling like you're caking on anything. it feels so balanced. i use this to moisturize day and night after cleansing, it has totally transformed my skin! the formula is super lightweight and non greasy. love it!",
+          "product_name": "only at ulta dermalogica clear start soothing hydrating lotion 4.4 out of 5 stars ; 181 reviews (181) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this mist! i use it before and after applying make-up and it gives my skin a nice pick me up.",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the best mist. 10/10 add this to your regime. i felt and saw a noticeable difference .",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this mist is a wonderful product. it is easy to use, feels light on my skin while moisturizing, and smells so good!",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the mist. great hydration prepare my skin for additional product in my skin routine",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the hyaluronic ceramide mist is wonderful! i use it every night and in the morning, before my moisturizer! make my face feel fabulous, so hydrated.",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the hyaluronic ceramide mist gifted by dermalogica was super great on the skin! locked in my skin's moisture and left me feeling hydrated- not to mention the super fun spray bottle and application process!",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "gifted by dermalogica. it has a very fine mist. it is truly hydrating. plays well under makeup. it's also good as extra hydration after finishing your makeup. it takes away any right feeling after cleansing the face.",
+          "product_name": "hyaluronic ceramide mist 4.8 out of 5 stars ; 158 reviews (158) $49.00",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "By boy",
+        "Smell is",
+        "The feel",
+        "Scent the",
+        "Lavender in"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_5",
+      "theme": "Sun & Environment Defense",
+      "description": "Customers use these to shield against UV, pollution, and visible aging triggers. Often layered with antioxidants.",
+      "products": [
+        {
+          "name": "intensive moisture balance",
+          "review_count": 24
+        },
+        {
+          "name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "review_count": 8
+        },
+        {
+          "name": "only at ulta dermalogica mini antioxidant hydramist toner",
+          "review_count": 8
+        },
+        {
+          "name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "review_count": 4
+        },
+        {
+          "name": "dermalogica super rich repair moisturizer",
+          "review_count": 4
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 32,
+      "cohort_count": 8,
+      "original_cohorts": [
+        "occasion_cohort_69",
+        "occasion_cohort_70",
+        "occasion_cohort_71",
+        "occasion_cohort_165",
+        "occasion_cohort_175",
+        "occasion_cohort_178",
+        "occasion_cohort_179",
+        "occasion_cohort_180"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "great moisturizer, i have used it year round great for sensitive skin and dry skin after retinol treatment",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "in the winter this is my go-to moisturizer. i use active moist in the summer and always keep this one for colder months when i need more hydration. no breakouts on my sensitive skin and doesn\u2019t feel greasy!",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this moisturizer is my go to in the winter months. it really soaks in and hydrates. this will always be in my skin routine.",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i typically switch to this moisturizer in the winter and it's everything my skin needs. love it!",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "at 52 i needed more moisture and this delivers!",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've used this moisturizer for years. i'm 65+ and this really hydrates and rejuvenates so well! i love this product.",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am 65 & i have been using this product since the early 1990s. it makes such a difference in the way my facial skin feels. i apply it after my serum is asbsorbed. this helps my makeup go on smoothly & it feels fantastic.",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "oh my gosh, just sent a review and realized there were two 60 year olds i am in the quicksilver gray hat-all 60 years of me",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "at 52 i needed more moisture and this delivers!",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've used this moisturizer for years. i'm 65+ and this really hydrates and rejuvenates so well! i love this product.",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am 65 & i have been using this product since the early 1990s. it makes such a difference in the way my facial skin feels. i apply it after my serum is asbsorbed. this helps my makeup go on smoothly & it feels fantastic.",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "oh my gosh, just sent a review and realized there were two 60 year olds i am in the quicksilver gray hat-all 60 years of me",
+          "product_name": "intensive moisture balance",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "received a sample of this with my order and i love it! best for winter time imo",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "during the winter my face became dry and flaky with more pronounced wrinkles. this reversed that! it also absorbs easily. this will be my go to year round.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is an excellent cream to use during the harsh winter months in chicago. my skin looks and feels so hydrated! also love that it dispenses the correct amount to ise on your face!",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have found this to be great for use in winter, not too thick/heavy, but helps with dryness caused by winter's extremes. i apply for daytime, and will even use at night over my serum, if feeling really dry.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this lightweight, non-fragranced moisturizer works best for warmer weather. it's a little bit on the watery side, but it's hydrating enough and absorbs quickly.",
+          "product_name": "only at ulta dermalogica antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a light yet effective moisturizer. i like using it in the warner months when my skin isn't as dry as it is in the winter. love it! been using it for many years!",
+          "product_name": "only at ulta dermalogica antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the perfect moisturizer for my cold dry winter climate in canada,",
+          "product_name": "only at ulta dermalogica antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it's not as moisturizing as others i have used in the really cold winter weather but i still love how my skin feels after using it.",
+          "product_name": "only at ulta dermalogica antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $49.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this lightweight, non-fragranced moisturizer works best for warmer weather. it's a little bit on the watery side, but it's hydrating enough and absorbs quickly.",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a light yet effective moisturizer. i like using it in the warner months when my skin isn't as dry as it is in the winter. love it! been using it for many years!",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the perfect moisturizer for my cold dry winter climate in canada,",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it's not as moisturizing as others i have used in the really cold winter weather but i still love how my skin feels after using it.",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this lightweight, non-fragranced moisturizer works best for warmer weather. it's a little bit on the watery side, but it's hydrating enough and absorbs quickly.",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a light yet effective moisturizer. i like using it in the warner months when my skin isn't as dry as it is in the winter. love it! been using it for many years!",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the perfect moisturizer for my cold dry winter climate in canada,",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is an everyday basic for me, year round. it has light texture and feels so refreshing when applied, but provides enough hydration even in winter months.",
+          "product_name": "only at ulta dermalogica mini antioxidant hydramist toner 4.6 out of 5 stars ; 4523 reviews (4523) $15.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "at 52 i needed more moisture and this delivers!",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've used this moisturizer for years. i'm 65+ and this really hydrates and rejuvenates so well! i love this product.",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i am 65 & i have been using this product since the early 1990s. it makes such a difference in the way my facial skin feels. i apply it after my serum is asbsorbed. this helps my makeup go on smoothly & it feels fantastic.",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "oh my gosh, just sent a review and realized there were two 60 year olds i am in the quicksilver gray hat-all 60 years of me",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "The winter but",
+        "Am 39",
+        "60 me",
+        "Year round",
+        "Year round"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_7",
+      "theme": "Weekend Recovery or Skin SOS",
+      "description": "Masks framed as a ritual of indulgence and repair \u2014 either 'me-time' or a fix after late nights/travel.",
+      "products": [
+        {
+          "name": "multivitamin power recovery masque",
+          "review_count": 16
+        },
+        {
+          "name": "blackhead clearing fizz",
+          "review_count": 16
+        },
+        {
+          "name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "review_count": 12
+        },
+        {
+          "name": "only at ulta dermalogica clear start blackhead clearing fizz mask",
+          "review_count": 12
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 28,
+      "cohort_count": 7,
+      "original_cohorts": [
+        "occasion_cohort_37",
+        "occasion_cohort_38",
+        "occasion_cohort_114",
+        "occasion_cohort_115",
+        "occasion_cohort_116",
+        "occasion_cohort_299",
+        "occasion_cohort_300"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i love this mask. great for my 74 year old face.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this product! skin is super refreshed after using this mask.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "dedicated weekly routine mask! super rich and moisturizing",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very good mask. my skin has a glow after i rinse it off.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i ordered this thinking that it would be more of a mask to help with my acne self care routine but instead it's like a hydrating moisturizer that you rinse off. will try it a few more times",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "my go to recovery mask!! every time i use it someone mentions how refreshed my skin looks!",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this mask. best one i ever purchased. if your skin is dry use this mask and amazingly it works.",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a great mask!! i can see a noticeable difference in my skin after using it as an overnight mask. i love this product!!",
+          "product_name": "multivitamin power recovery masque",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this mask is awesome! i love how it fizzes as i apply it to my blackhead areas. i look forward to using it a lot more through the week!",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this fun fizzy mask, it really helps clear up my blackheads.",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this mask definitely fizzes up and then when you wipe it off it makes your face feel soft and clean but as far as getting rid of black head on my nose it was a no go.",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this blackhead clearing fizz mask, is awesome. first the easy application, then the fizzing of acne clearing magic. i love how much results you can see in such a short period. would highly recommend. dermalogica saves skin!",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "ok so far! as far as blackheads i haven't seen any improvement",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "after first use black heads began falling out",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "mask is amazing and makes your skin feel great. defiantly helps with black heads !!",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the best blackhead remover i have ever found . it totally removes them of your face!",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the fizzy bubbles are so fun :grinning_face_with_star_eyes: after each use i do notice less blackheads",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this fun fizzy mask, it really helps clear up my blackheads.",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this blackhead fizz mask has made my skin visibly so much smoother looking and feeling too. blackheads are definitely getting smaller! i love the way it feels too.",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i really liked the blackhead clearing fizz. it seemed to help my blackheads and i loved the tingly feeling!",
+          "product_name": "only at ulta dermalogica clear start blackhead clearing fizz mask 4.3 out of 5 stars ; 1050 reviews (1050) $27.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "not amazing but i guess it removes some of the blackheads [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this feels odd at first but really helps to clear out black heads. i\u2019ve noticed a difference in just the first week of use. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "using for my teenage daughter who has stubborn blackheads. you can see difference in less than 3-5 min five uses. no tool or strip required. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "while the product feels nice on my skin, i can't really tell if it is doing anything for my blackheads. i feel like my skin feels the same. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i used this to help clean my pores. i have extremely oily skin. the fizz is nice but i cannot leave it on long as it was annoying. have to to wash off really well or else, it fizzes on your face. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it makes it easier to extract my blackheads after i use it, but it's not like they come out with the mask. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product does not work as described. from the site: \"unique fizzing formula clears pores and targets blackheads.\" yes...it cleans, but the fizz is all flash and no substance. give it a pass. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "fizz\u2019s goes on smooth but it does kind of stink so if you have gag reflux\u2019s don\u2019t use on your clients!! if you can get past the smell works amazing [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Best mask",
+        "Of mask",
+        "Mask because",
+        "Of blackheads",
+        "Blackheads are definitely"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_10",
+      "theme": "Calm & Restore After Stress",
+      "description": "Functions as a 'reset button' \u2014 chosen when skin is compromised. Customers value the calming, non-stinging relief that restores comfort and confidence.",
+      "products": [
+        {
+          "name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "review_count": 8
+        },
+        {
+          "name": "daily milkfoliant exfoliator",
+          "review_count": 8
+        },
+        {
+          "name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "review_count": 8
+        },
+        {
+          "name": "discover healthy skin complete regimen kit",
+          "review_count": 8
+        },
+        {
+          "name": "sensitive skin rescue",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.1,
+      "total_reviews": 28,
+      "cohort_count": 7,
+      "original_cohorts": [
+        "occasion_cohort_117",
+        "occasion_cohort_119",
+        "occasion_cohort_121",
+        "occasion_cohort_122",
+        "occasion_cohort_181",
+        "occasion_cohort_209",
+        "occasion_cohort_318"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "it is a small size. very convenient for travelling",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great travel size the the exfoliator. i love that i can bring it on the plane and don't have to miss a step of my skincare! the effects are very gentle.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the perfect size for travel! this is a much gentler exfoliation than the daily microfoliant but it gets the job done just as well! perfect for very sensitive skin.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "loving all the travel size products! love the lite milky scrub on my face!",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it is a small size. very convenient for travelling",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great travel size the the exfoliator. i love that i can bring it on the plane and don't have to miss a step of my skincare! the effects are very gentle.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great size. i feel like it made my skin so soft. i also felt like there were less beads then the daily exfoliant. which made it way easy to get all off the skin",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "size is great for travel. i like to use this product. easy to use it gives me great shinny look.",
+          "product_name": "daily milkfoliant exfoliator 4.7 out of 5 stars ; 1109 reviews (1109) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "all the products were a good travel size.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i'm a huge fan of these products! i have the full-size version of all of these products, so i have been getting these smaller versions to get my friends and family hooked as well.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i will definitely buy the larger size products! my face looks rejuvenated!",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great products but wish the size of the products were bigger.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love it. my skin looks great. i however would have liked them to be larger than just. sample size.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "loved these products! very small bottles though for the price.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i'm a huge fan of these products! i have the full-size version of all of these products, so i have been getting these smaller versions to get my friends and family hooked as well.",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i will definitely buy the larger size products! my face looks rejuvenated!",
+          "product_name": "discover healthy skin complete regimen kit 4.5 out of 5 stars ; 622 reviews (622) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've loved dermologica for at least 20 years & absolutely love love love this larger size!! lasts sooooooo long!!",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bought this travel size for a friend going on a ski trip. she was thrilled to have a high end effective moisturizer to put in pocket or purse.",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "needed a bit more moisture for winter dry skin. this is working perfectly. jumbo size was bigger than i was anticipating and price was good value. pleased with purchase.",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i needed a thicker moisturizer. i got the travel size but now i am definitely purchasing the bigger size. keeps my dry skin moistured especially in this weather",
+          "product_name": "only at ulta dermalogica mini intensive moisture balance moisturizer 4.7 out of 5 stars ; 1487 reviews (1487) $19.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love having travel sizes of my favorite products but it was very difficult to get the cleanser out of the bottle. i could not squeeze like i can with the full size version to help move the product to the lid.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "loving this. wanted to try this size before i bought the full size bottles. loving it. will be a customer for life with these products.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the travel size was good to check out the product. the cleanser bottle was too stiff to squeeze so i had to pound it on my hand wasting some of the product. the moisturizer was very good although the face spray was not.",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "great product! will definitely be purchasing the full size bottles when i finish these!",
+          "product_name": "only at ulta dermalogica sensitive skin rescue kit 4.4 out of 5 stars ; 376 reviews (376) $39.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "favorite product line. so happy to get travel size which is good for flying requirements. products received quickly and packaged well. [link](",
+          "product_name": "sensitive skin rescue",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "sample size so small that it is a terrible value for the price [link](",
+          "product_name": "sensitive skin rescue",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "small size for the price. items should have been bigger for the price paid. will not be buying again. [link](",
+          "product_name": "sensitive skin rescue",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "good product. but tiny tiny tiny tiny tiny. like the contents of 2 or 3 would be under us airport regulation \ud83e\udd0f\ud83c\udffc [link](",
+          "product_name": "sensitive skin rescue",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Get travel",
+        "Size is",
+        "To full",
+        "Been getting these smaller",
+        "The travel"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_6",
+      "theme": "Weekend Recovery or Skin SOS",
+      "description": "Masks framed as a ritual of indulgence and repair \u2014 either 'me-time' or a fix after late nights/travel.",
+      "products": [
+        {
+          "name": "breakout clearing foaming wash",
+          "review_count": 16
+        },
+        {
+          "name": "sound sleep cocoon",
+          "review_count": 16
+        },
+        {
+          "name": "ultracalming mist",
+          "review_count": 16
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 24,
+      "cohort_count": 6,
+      "original_cohorts": [
+        "occasion_cohort_75",
+        "occasion_cohort_76",
+        "occasion_cohort_244",
+        "occasion_cohort_245",
+        "occasion_cohort_307",
+        "occasion_cohort_309"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "this came with the top being broken also leaked out a mess [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i usually always order this and i love it but when i received it today it was open and the liquid was everywhere which was really disappointing since i love this product [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "product container leaked, no instructions on opening foaming top. [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this product and its my third time ordering it but this time the bottle was opened/damaged and most of the product came out. [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this came with the top being broken also leaked out a mess [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i usually always order this and i love it but when i received it today it was open and the liquid was everywhere which was really disappointing since i love this product [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have been using this facewash for years and it is great. every time i order it on amazon, it arrives with a broken lid. [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "product container leaked, no instructions on opening foaming top. [link](",
+          "product_name": "breakout clearing foaming wash",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this stuff is expensive. i received it in great time. i unscrewed what i thought was the lid and a plastic bag came out and won\u2019t go back in. beware of opening. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product had previously been opened. the seal had been opened and replaced with a piece of tape. the actual product already been opened and the cream had leaked inside the box. this returned product was returned on september 8th.. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "why is is locked - i've now ruined it upon opening; there are no instructions except to twist - how would you know to pump if you don't now watch the video. booo! [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the package came open and i can tell it was used. very disappointed for the amount i paid i was expecting better. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this stuff is expensive. i received it in great time. i unscrewed what i thought was the lid and a plastic bag came out and won\u2019t go back in. beware of opening. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product had previously been opened. the seal had been opened and replaced with a piece of tape. the actual product already been opened and the cream had leaked inside the box. this returned product was returned on september 8th.. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the package came open and i can tell it was used. very disappointed for the amount i paid i was expecting better. [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i think i have a reasonably high iq but i cannot figure out this packaging. it\u2019s ridiculous. i guess i\u2019ll have to poke a hole in it. pretty bad for over $80 [link](",
+          "product_name": "sound sleep cocoon",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "first order had a broken seal. the replacement also came with a broken seal. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i\u2019m concerned if this was a bootleg cause the sticker on top of the package was clear. i just bought the same product from ulta & that sticker has a code on it & says factory sealed. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the only problem was that the seal on the box was broken. can\u2019t imagine why or how that happened accidentally. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "original box was tampered so that it was open from the bottom without breaking the seal on the top. the spray bottle also had no seal. i don\u2019t know what\u2019s in the product. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the only problem was that the seal on the box was broken. can\u2019t imagine why or how that happened accidentally. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i use this product all the time, and despite being in what appeared to be a sealed box, this was not the same! it lacked the usual scent and irritated my skin. returning! [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is not the real product. this spray smells rotten. this is fake product without a doubt. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "y\u2019all this product is not real\u2026 if you love yourself do not purchase! smells nothing like the real one. [link](",
+          "product_name": "ultracalming mist",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "This time",
+        "Arrives with broken lid",
+        "Been opened",
+        "The package",
+        "Seal on"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_9",
+      "theme": "Clear & Smooth Control",
+      "description": "Used daily or every other day by acne-prone and textured-skin users. Customers frame it as a must-have rescue step that prevents future breakouts and unclogs pores.",
+      "products": [
+        {
+          "name": "super rich repair",
+          "review_count": 8
+        },
+        {
+          "name": "anti aging moisturizer medium weight non greasy",
+          "review_count": 8
+        },
+        {
+          "name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "review_count": 4
+        },
+        {
+          "name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer",
+          "review_count": 4
+        },
+        {
+          "name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "review_count": 4
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 16,
+      "cohort_count": 4,
+      "original_cohorts": [
+        "occasion_cohort_61",
+        "occasion_cohort_91",
+        "occasion_cohort_166",
+        "occasion_cohort_283"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "just a little heavy for my skin type. [link](",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "a little bit heavy for 40's ages. [link](",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "lightweight and really makes my skin look fabulous.",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this whole line of products. this product goes on smooth but not heavy.",
+          "product_name": "super rich repair",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bought this for my son. very light, helps keep skin feeling balanced and doesn't cause breakouts (he's a teenager).",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it feels very nice and not heavy for acne prone skin.",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product is very light and smells good. it has proven to be the perfect moisturizer for my teenage son's acne.",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "light and super hydrated. great for summer. skin feels so good",
+          "product_name": "only at ulta dermalogica clear start cooling aqua jelly moisturizer 4.7 out of 5 stars ; 775 reviews (775) $26.00 free gift with purchase",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "lightweight and really makes my skin look fabulous.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love this whole line of products. this product goes on smooth but not heavy.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love the thickness. makes skin feel amazing and plump. definitely need the moisture from it as i live in a dry climate.",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a nice thick moisturizing cream, that absorbs nicely into your skin leaving it feeling soft and nourished. love this moisturizer!!",
+          "product_name": "2 sizes dermalogica super rich repair moisturizer 4.8 out of 5 stars ; 1265 reviews (1265) $98.00 - $149.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the moisturizer is light, not heavy of greasy. [link](",
+          "product_name": "anti aging moisturizer medium weight non greasy",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i don\u2019t like how greasy it makes me look! no matter how small i apply it i\u2019m still greasy! but what might work for you may not work for me. i\u2019d still recommend it to someone though. [link](",
+          "product_name": "anti aging moisturizer medium weight non greasy",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "non greasy with great coverage. really love it! [link](",
+          "product_name": "anti aging moisturizer medium weight non greasy",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "on my face/neck for many years. love it. not greasy. [link](",
+          "product_name": "anti aging moisturizer medium weight non greasy",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Heavy for my",
+        "Product is very light",
+        "To thick",
+        "Greasy or"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_1",
+      "theme": "Body Confidence Boost",
+      "description": "Firming and smoothing body treatments used when skin confidence matters \u2014 tightening arms, stomach, thighs.",
+      "products": [
+        {
+          "name": "special cleansing",
+          "review_count": 8
+        },
+        {
+          "name": "clarifying bacne spray",
+          "review_count": 8
+        },
+        {
+          "name": "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+          "review_count": 4
+        },
+        {
+          "name": "dermalogica ultracalming cleanser",
+          "review_count": 4
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 12,
+      "cohort_count": 3,
+      "original_cohorts": [
+        "occasion_cohort_3",
+        "occasion_cohort_156",
+        "occasion_cohort_306"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "it\u2019s a good cleanser. not drying like some cleansers. my face actually felt soft and moisturized after cleansing. removed makeup better than most cleansers i\u2019ve tried. my only complaint is that it\u2019s a bit pricey for a cleanser.",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "one of the best cleansers i have used by far. i have dry skin but didnt find this product too drying or harsh. has a slight citrus smell which i love. i bought the value size and have been loving it!",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this cleanser wasn\u2019t as drying on my skin like some others i have used. it doesn\u2019t have a weird smell or anything and felt good on my face. i do have to moisturize more after using it but it does the job.",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very drying!!! i used this product for about 2 weeks and my face broke out into tiny hives all over. i immediately stopped using and went back to using mario badescu acne cleanser and my skin improved within two days. do not buy!",
+          "product_name": "special cleansing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have been using this cleaner for years and love it.",
+          "product_name": "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have been using this product for over 20 years. it's my favorite cleanser.",
+          "product_name": "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "been using this cleanser for years especially during the winter times when skin is drier.",
+          "product_name": "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is the only cleanser i have used for the past 10 years.",
+          "product_name": "2 sizes dermalogica ultracalming cleanser 4.7 out of 5 stars ; 1299 reviews (1299) $48.00 - $72.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "tbe smell and fumes are overwhelming but, its easy to spary on your back and does thd job. i have fewer bumos now. i also use differin body wash so i guess the combination works. [link](",
+          "product_name": "clarifying bacne spray",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this is a pump spray that is difficult for my wife\u2019s hands to spray on my back, which i can\u2019t reach myself. just takes more hand strength. [link](",
+          "product_name": "clarifying bacne spray",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i had such a bad reoccurring blackhead on my back real painful with is it helped soooo much i also used witch hazel too it worked sooo well.. i did have to have help on my back tho [link](",
+          "product_name": "clarifying bacne spray",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "absolutely love this stuff! it\u2019s easy to spray on and go. i have noticed it helps my back and those in between sweat sessions! highly recommend [link](",
+          "product_name": "clarifying bacne spray",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Drying on my",
+        "As good as",
+        "On my"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_12",
+      "theme": "Calm & Restore After Stress",
+      "description": "Functions as a 'reset button' \u2014 chosen when skin is compromised. Customers value the calming, non-stinging relief that restores comfort and confidence.",
+      "products": [
+        {
+          "name": "circular hydration",
+          "review_count": 8
+        },
+        {
+          "name": "biolumin-c",
+          "review_count": 8
+        },
+        {
+          "name": "precleanse makeup remover face",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 12,
+      "cohort_count": 3,
+      "original_cohorts": [
+        "occasion_cohort_20",
+        "occasion_cohort_41",
+        "occasion_cohort_262"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i love it but honestly for the price, the bottle feels kind of empty. it\u2019s such little product. stop taking advantage of your customers and give us more product for the price.",
+          "product_name": "circular hydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it\u2019s great so far but why does the bottle come half full??? i thought i\u2019d accidentally spilled some of it but i checked the one i have for backup and it\u2019s also about 3/4 of the way full??? disappointing for such an expensive serum",
+          "product_name": "circular hydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "when i opened the brand new package, the bottle wasn't full. looks like it's only about 3/4 full. pretty weird if this is typical, hopefully just a one-off mistake during production.",
+          "product_name": "circular hydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "when i opened the brand new package, the bottle wasn't full. looks like it's only about 3/4 full. pretty weird if this is typical, hopefully just a one-off mistake during production.",
+          "product_name": "circular hydration",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bottle was empty when i received it [link](",
+          "product_name": "biolumin-c",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this bottle is really tiny, but it seems to be working really well so far. my skin does look brighter overall after using it for a month. it layers well under my daily moisturizer and sunscreen, i wear it during the day. [link](",
+          "product_name": "biolumin-c",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love this product, but the bottle doesn\u2019t even come 3/4 full so it really doesn\u2019t last long for the cost",
+          "product_name": "biolumin-c",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "bottle arrived nearly half empty. product is just ok - a little bit slimy. i haven't noticed a difference in my skin. normally love dermalogica products, but this one is a letdown and overpriced for the amount of product you (don't) get.",
+          "product_name": "biolumin-c",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it's a great product, it's just not full and i bought the big one. at first, i thought it leaked out. [link](",
+          "product_name": "precleanse makeup remover face",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "love, love this stuff but it leaks terribly. arrived half empty and i lost most of the rest when i traveled with it. get it local and keep it at home. [link](",
+          "product_name": "precleanse makeup remover face",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "the top is a pump and it leaks [link](",
+          "product_name": "precleanse makeup remover face",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "super expensive and half of it was missing, make sure you check your product [link](",
+          "product_name": "precleanse makeup remover face",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Half full",
+        "Bottle for",
+        "Half empty"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_11",
+      "theme": "Forever-Young Maintenance",
+      "description": "Midlife and older customers use these as anchor products in 'age-smart' routines \u2014 balancing potency (retinol, vitamin C) with barrier safety.",
+      "products": [
+        {
+          "name": "phyto-nature firming",
+          "review_count": 16
+        },
+        {
+          "name": "daily glycolic",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 12,
+      "cohort_count": 3,
+      "original_cohorts": [
+        "occasion_cohort_53",
+        "occasion_cohort_79",
+        "occasion_cohort_80"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "this is one of the best cleansers i've ever used! it makes my skin feel so soft and clean without over-stripping my skin. the pump makes it so much easier as well. i love this! definitely going to use again.",
+          "product_name": "daily glycolic",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "absolutely the best. love that you only need one pump for a great cleanse. had a little purge at first but now manages my hormonal acne great. used to get long term cystic bumps that now are just little and go away quickly.",
+          "product_name": "daily glycolic",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product was very gentle on my face. i use it everyday . my face was never dried out. so i will continue to use in my routine. the texture is a gel formula and one pump is all you need.",
+          "product_name": "daily glycolic",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "one pump is all it takes\u203c\ufe0f i truly love this gel based cleanser",
+          "product_name": "daily glycolic",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "used the entire bottle which has more plastic than product. no visible signs of firming or lifting and for the price tag i expected more results. this was very disappointing and not worth the hefty price tag.",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "product provides noticed firming. however the label chips away and the pump mechanism broke almost immediately after opening. it's too expensive to be such a pain in the rump to use the product. change the packaging!",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "definite firmness. love the tingly. i do feel a different. no idea if it is worth the money. its the first time i ever spent money on this stuff",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "dermalogica's phyto-nature firming serum boasts a luxurious texture that absorbs effortlessly. with consistent use, i've experienced smoother, more hydrated skin, along with reduced fine lines and improved firmness. it's become my must-have for a youthful glow. gifted by dermalogica",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "within the first week of using, the clear serum pump stopped working and i cannot get it to work. using just the brown serum isn\u2019t very effective. [link](",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "at first only one side of the pump was working but i poked the other side with a pin and it worked. serum is very hydrating. too soon to tell about lifting but leaves my skin so soft & smooth. \ud83d\udc9c",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "only one side of the product comes out tried two different bottles same issue with both bottles very disappointing considering the price tag on this product",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i have purchased multiple bottles of this serum to have the same issue. the dual product does not come out of the pump. too expensive to not fix the known issue.",
+          "product_name": "phyto-nature firming",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "One pump is",
+        "Difference in the firmness",
+        "Of the pump"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_4",
+      "theme": "Everyday Skin Polish Ritual",
+      "description": "Built into daily showers or AM cleanses \u2014 skin feels lightly polished and reset without irritation. Trusted 'forever product' for routine balance.",
+      "products": [
+        {
+          "name": "skin resurfacing",
+          "review_count": 8
+        },
+        {
+          "name": "only at ulta dermalogica multivitamin thermafoliant exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+          "review_count": 4
+        },
+        {
+          "name": "only at ulta dermalogica multivitamin thermafoliant exfoliator",
+          "review_count": 4
+        },
+        {
+          "name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "review_count": 4
+        },
+        {
+          "name": "daily brightness boosters skincare kit",
+          "review_count": 4
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 12,
+      "cohort_count": 3,
+      "original_cohorts": [
+        "occasion_cohort_67",
+        "occasion_cohort_189",
+        "occasion_cohort_298"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i really like this product. i don't use it everyday, because my skin is uber sensitive and everyday use was drying. i use it about twice a week and i've really noticed a difference in my complexion. [link](",
+          "product_name": "skin resurfacing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i recommend using this every other day in combination with another cleanser as its a deep clean cleanser and is very drying if used everyday. [link](",
+          "product_name": "skin resurfacing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i use this a few times a week. been really great for evening skin tone and preventing acne.",
+          "product_name": "skin resurfacing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i use it every morning and night after the precleanse oil. keeps my skin very smooth and soft.",
+          "product_name": "skin resurfacing",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "using this product 2-3 times/week. love the warmth and slight exfoliating sensation on my skin. my skin can feel sensitive at times, but no issues with this product. very pleased with the results so far.",
+          "product_name": "only at ulta dermalogica multivitamin thermafoliant exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i use it three times a week, and the benefits are visible. it's a self-care practice that i look forward to.",
+          "product_name": "only at ulta dermalogica multivitamin thermafoliant exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i use this product twice weekly in conjunction with the recovery mask. you can see visable results the very time you use it. your skin just glows!",
+          "product_name": "only at ulta dermalogica multivitamin thermafoliant exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "after the first time use, my skin is already feels smooth and silky, will keep to do it at lease twice per week.",
+          "product_name": "only at ulta dermalogica multivitamin thermafoliant exfoliator 4.8 out of 5 stars ; 426 reviews (426) $69.00",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "using this day and night people noticed how glowy/ bright i look (i noticed instantly!)!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i've been using this consistently for over a week and i see the brightness for sure! i love how light these products feel and the smell is great too.",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i'm so happy i tried the daily brightness booster kit, it made my skin feel so good. i was impressed how my face looked even after a week using it.",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "just using this for a week and can see increased brightness!",
+          "product_name": "daily brightness boosters skincare kit 4.6 out of 5 stars ; 134 reviews (134) $49.50 kit price",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Day use",
+        "Per week",
+        "Daily brightness"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_14",
+      "theme": "Specialized Skincare Applications",
+      "description": "Unique usage patterns and applications that don't fit standard skincare routines but serve specific customer needs.",
+      "products": [
+        {
+          "name": "stress positive eye lift",
+          "review_count": 8
+        },
+        {
+          "name": "ultracalming",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 8,
+      "cohort_count": 2,
+      "original_cohorts": [
+        "occasion_cohort_89",
+        "occasion_cohort_239"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "smooth brightening settles puffiness and the cooling tip is unique",
+          "product_name": "stress positive eye lift",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the cooling metal applicator and have noticed it helps with my dark circles. will continue this in my daily routine",
+          "product_name": "stress positive eye lift",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "cooling metal applicator feels fantastic in the morning. already noticing reduced dark circles and crows feet.",
+          "product_name": "stress positive eye lift",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "i love the metal tip is so cooling when applies helps with outshines.",
+          "product_name": "stress positive eye lift",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very smooth and calming. love this product! [link](",
+          "product_name": "ultracalming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very light and soothing on my face ! [link](",
+          "product_name": "ultracalming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "very very very calming. smells great. only 4 stars bc it doesn\u2019t remove makeup. have to double cleanse. but works well on my very sensitive skin and feels good on the skin even if irritated.",
+          "product_name": "ultracalming",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "this product smells really good to me. it also is really calming. i wasn\u2019t expecting it to be so gentle on my skin. it also doesn\u2019t dry your skin out. it\u2019s a perfect addition for my night time routine.",
+          "product_name": "ultracalming",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "Out the cooling",
+        "Calming for"
+      ]
+    },
+    {
+      "meta_cohort_id": "meta_cohort_8",
+      "theme": "Weekend Recovery or Skin SOS",
+      "description": "Masks framed as a ritual of indulgence and repair \u2014 either 'me-time' or a fix after late nights/travel.",
+      "products": [
+        {
+          "name": "blackhead clearing fizz",
+          "review_count": 8
+        }
+      ],
+      "percentage_of_reviews": 0.0,
+      "total_reviews": 4,
+      "cohort_count": 1,
+      "original_cohorts": [
+        "occasion_cohort_301"
+      ],
+      "all_reviews": [
+        {
+          "review_text": "i am very sensitive to touch and i would not recommend this product. while it\u2019s drying it tickles and itches at the same time. don\u2019t know if it works because i will not be using it. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "don't waste your money, it doesn't work [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it feels like it\u2019s doing work, but i have not seen a difference. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        },
+        {
+          "review_text": "it seems to actually work! it feels strange, but that kinda makes it fun. i will purchase again. [link](",
+          "product_name": "blackhead clearing fizz",
+          "source": "aggregated"
+        }
+      ],
+      "sample_interpretations": [
+        "It works"
+      ]
+    }
+  ]
+}

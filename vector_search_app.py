@@ -39,7 +39,9 @@ templates = Jinja2Templates(directory="templates")
 
 # Initialize the sentence transformer model for embeddings
 print("Loading sentence transformer model...")
-model = SentenceTransformer('all-MiniLM-L6-v2')
+import os
+cache_folder = os.environ.get('SENTENCE_TRANSFORMERS_HOME', '/root/.cache/huggingface')
+model = SentenceTransformer('all-MiniLM-L6-v2', cache_folder=cache_folder)
 
 class ReviewSearchEngine:
     def __init__(self):

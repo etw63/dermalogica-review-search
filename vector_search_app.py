@@ -715,11 +715,44 @@ def download_data_file_if_needed(filename):
         return False
     return True
 
+def download_embeddings_file_if_needed(filename):
+    """Download embeddings file if it doesn't exist locally"""
+    import requests
+    
+    if not os.path.exists(filename):
+        # Try to download from a public URL
+        urls_to_try = [
+            "https://raw.githubusercontent.com/etw63/dermalogica-review-search/main/review_embeddings.pkl",
+            "https://github.com/etw63/dermalogica-review-search/raw/main/review_embeddings.pkl"
+        ]
+        
+        for url in urls_to_try:
+            try:
+                print(f"Downloading {filename} from {url}...")
+                response = requests.get(url, timeout=120)  # Longer timeout for large file
+                response.raise_for_status()
+                with open(filename, 'wb') as f:
+                    f.write(response.content)
+                print(f"Downloaded {filename} successfully")
+                return True
+            except Exception as e:
+                print(f"Failed to download from {url}: {e}")
+                continue
+        
+        # If all downloads failed, the app will generate embeddings
+        print(f"Warning: Could not download {filename}")
+        print("Will generate embeddings at startup (this may take a while)")
+        return False
+    return True
+
 @app.on_event("startup")
 async def startup_event():
     """Initialize the database on startup"""
     # Download data file if needed
     download_data_file_if_needed("dermalogica_aggregated_reviews.csv")
+    
+    # Download embeddings file if needed
+    download_embeddings_file_if_needed("review_embeddings.pkl")
     
     search_engine.load_data("dermalogica_aggregated_reviews.csv")
     search_engine.create_vector_database()

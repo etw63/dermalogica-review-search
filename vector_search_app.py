@@ -41,10 +41,18 @@ templates = Jinja2Templates(directory="templates")
 print("Loading sentence transformer model...")
 import os
 
-# Ensure cache directories are set
-os.environ['SENTENCE_TRANSFORMERS_HOME'] = os.environ.get('SENTENCE_TRANSFORMERS_HOME', '/app/model_cache')
-os.environ['HF_HOME'] = os.environ.get('HF_HOME', '/app/.cache')
-os.environ['TRANSFORMERS_CACHE'] = os.environ.get('TRANSFORMERS_CACHE', '/app/.cache')
+# Ensure cache directories are set (only if not already set)
+# Use Docker paths if HOME is set to /app (Docker environment), otherwise use local paths
+if os.environ.get('HOME') == '/app':
+    # Docker environment - use Docker paths
+    os.environ['SENTENCE_TRANSFORMERS_HOME'] = os.environ.get('SENTENCE_TRANSFORMERS_HOME', '/app/model_cache')
+    os.environ['HF_HOME'] = os.environ.get('HF_HOME', '/app/.cache')
+    os.environ['TRANSFORMERS_CACHE'] = os.environ.get('TRANSFORMERS_CACHE', '/app/.cache')
+else:
+    # Local environment - use default cache paths
+    os.environ['SENTENCE_TRANSFORMERS_HOME'] = os.environ.get('SENTENCE_TRANSFORMERS_HOME', os.path.expanduser('~/.cache/huggingface'))
+    os.environ['HF_HOME'] = os.environ.get('HF_HOME', os.path.expanduser('~/.cache/huggingface'))
+    os.environ['TRANSFORMERS_CACHE'] = os.environ.get('TRANSFORMERS_CACHE', os.path.expanduser('~/.cache/huggingface'))
 
 # Load model
 model = SentenceTransformer('all-MiniLM-L6-v2')
